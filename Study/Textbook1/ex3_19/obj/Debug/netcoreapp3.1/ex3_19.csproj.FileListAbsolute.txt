@@ -1,0 +1,12 @@
+E:\study\C#\Study\Textbook1\ex3_19\obj\Debug\netcoreapp3.1\ex3_19.csproj.CoreCompileInputs.cache
+E:\study\C#\Study\Textbook1\ex3_19\obj\Debug\netcoreapp3.1\ex3_19.AssemblyInfoInputs.cache
+E:\study\C#\Study\Textbook1\ex3_19\obj\Debug\netcoreapp3.1\ex3_19.AssemblyInfo.cs
+E:\study\C#\Study\Textbook1\ex3_19\bin\Debug\netcoreapp3.1\ex3_19.exe
+E:\study\C#\Study\Textbook1\ex3_19\bin\Debug\netcoreapp3.1\ex3_19.deps.json
+E:\study\C#\Study\Textbook1\ex3_19\bin\Debug\netcoreapp3.1\ex3_19.runtimeconfig.json
+E:\study\C#\Study\Textbook1\ex3_19\bin\Debug\netcoreapp3.1\ex3_19.runtimeconfig.dev.json
+E:\study\C#\Study\Textbook1\ex3_19\bin\Debug\netcoreapp3.1\ex3_19.dll
+E:\study\C#\Study\Textbook1\ex3_19\bin\Debug\netcoreapp3.1\ex3_19.pdb
+E:\study\C#\Study\Textbook1\ex3_19\obj\Debug\netcoreapp3.1\ex3_19.dll
+E:\study\C#\Study\Textbook1\ex3_19\obj\Debug\netcoreapp3.1\ex3_19.pdb
+E:\study\C#\Study\Textbook1\ex3_19\obj\Debug\netcoreapp3.1\ex3_19.genruntimeconfig.cache

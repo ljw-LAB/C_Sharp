@@ -1,0 +1,12 @@
+E:\study\C#\Study\Textbook1\ex3_21\bin\Debug\netcoreapp3.1\ex3_21.exe
+E:\study\C#\Study\Textbook1\ex3_21\bin\Debug\netcoreapp3.1\ex3_21.deps.json
+E:\study\C#\Study\Textbook1\ex3_21\bin\Debug\netcoreapp3.1\ex3_21.runtimeconfig.json
+E:\study\C#\Study\Textbook1\ex3_21\bin\Debug\netcoreapp3.1\ex3_21.runtimeconfig.dev.json
+E:\study\C#\Study\Textbook1\ex3_21\bin\Debug\netcoreapp3.1\ex3_21.dll
+E:\study\C#\Study\Textbook1\ex3_21\bin\Debug\netcoreapp3.1\ex3_21.pdb
+E:\study\C#\Study\Textbook1\ex3_21\obj\Debug\netcoreapp3.1\ex3_21.csproj.CoreCompileInputs.cache
+E:\study\C#\Study\Textbook1\ex3_21\obj\Debug\netcoreapp3.1\ex3_21.AssemblyInfoInputs.cache
+E:\study\C#\Study\Textbook1\ex3_21\obj\Debug\netcoreapp3.1\ex3_21.AssemblyInfo.cs
+E:\study\C#\Study\Textbook1\ex3_21\obj\Debug\netcoreapp3.1\ex3_21.dll
+E:\study\C#\Study\Textbook1\ex3_21\obj\Debug\netcoreapp3.1\ex3_21.pdb
+E:\study\C#\Study\Textbook1\ex3_21\obj\Debug\netcoreapp3.1\ex3_21.genruntimeconfig.cache
