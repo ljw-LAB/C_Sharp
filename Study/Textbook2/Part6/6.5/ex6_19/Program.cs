@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex6_19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1, j = 0, k;
+            k = i/j;
+        }
+    }
+}
