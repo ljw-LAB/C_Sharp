@@ -1,0 +1,34 @@
+﻿<Window x:Class="ex_181.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ex_181"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="525.199" Width="648.409">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="495*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox HorizontalAlignment="Left" Height="199" Margin="0,35,0,0" VerticalAlignment="Top" Width="450" Name="listBox1" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="24.796,262,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.897,0.789" Grid.Column="3" Name="txtID"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="0,262,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.437,0.706" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="24.796,315,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.897,0.789" Grid.Column="3" Name="txtSId"/>
+        <Label Content="학번" HorizontalAlignment="Left" Margin="0,315,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.437,0.706" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="24.796,372,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.897,0.789" Grid.Column="3" Name="txtSName"/>
+        <Label Content="이름" HorizontalAlignment="Left" Margin="0,372,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.437,0.706" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="24.796,430,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="181" RenderTransformOrigin="0.897,0.789" Grid.Column="3" Name="txtPhone"/>
+        <Label Content="전화번호" HorizontalAlignment="Left" Margin="0,430,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.437,0.706" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Button Content="View All" HorizontalAlignment="Left" Margin="227.796,262,0,0" VerticalAlignment="Top" Width="73" Height="33" Grid.Column="3"/>
+        <Button Content="추가" HorizontalAlignment="Left" Margin="227.796,315,0,0" VerticalAlignment="Top" Width="73" Height="33" Grid.Column="3"/>
+        <Button Content="검색" HorizontalAlignment="Left" Margin="227.796,372,0,0" VerticalAlignment="Top" Width="73" Height="33" Grid.Column="3"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="227.796,430,0,0" VerticalAlignment="Top" Width="73" Height="33" Grid.Column="3"/>
+        <Button Content="삭제" HorizontalAlignment="Left" Margin="327.796,315,0,0" VerticalAlignment="Top" Width="73" Height="33" Grid.Column="3"/>
+        <Button Content="수정" HorizontalAlignment="Left" Margin="327.796,372,0,0" VerticalAlignment="Top" Width="73" Height="33" Grid.Column="3" AutomationProperties.Name="btnUpdate"/>
+        <Button Content="끝" HorizontalAlignment="Left" Margin="327.796,430,0,0" VerticalAlignment="Top" Width="73" Height="33" Grid.Column="3" Click="Button_Click"/>
+
+    </Grid>
+</Window>
