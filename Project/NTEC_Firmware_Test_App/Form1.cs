@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
@@ -17,6 +18,7 @@ namespace NTEC_Firmware_Test_App
         int test_data = 0;
         static int Rx_Str_Cnt;
         static int Tx_Str_Cnt;
+        bool Multi_flag = false;
 
         public NTEC_Form()
         {
@@ -418,7 +420,7 @@ namespace NTEC_Firmware_Test_App
 
         private void ShowValue(string s)
         {
-            string item = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") +"    "+s+"   "+(s.Count()+1)+"   "+"R"+Rx_Str_Cnt++;
+            string item = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") +"    "+s+"      "+(s.Count()+1)+"      "+"R"+Rx_Str_Cnt++;
             Serial_TRX_listBox.Items.Add(item);
             Serial_TRX_listBox.SelectedIndex = Serial_TRX_listBox.Items.Count - 1;  // 계속 스크롤이 되도록 처리
         }
@@ -427,13 +429,15 @@ namespace NTEC_Firmware_Test_App
         {
             //텍스트박스의 텍스트를 시리얼통신으로 송신
             serialPort1.Write(Tx_Single_textBox.Text+"\r\n");
-            Serial_TRX_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " +Tx_Single_textBox.Text + "   " +(Tx_Single_textBox.Text.Count()+2)+ "   " +"T"+Tx_Str_Cnt++);
+            Serial_TRX_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " +Tx_Single_textBox.Text + "      " +(Tx_Single_textBox.Text.Count()+2)+ "      " +"T"+Tx_Str_Cnt++);
             Serial_TRX_listBox.SelectedIndex = Serial_TRX_listBox.Items.Count - 1;  // 계속 스크롤이 되도록 처리
         }
 
         private void listBox2_Clr_Button_Click(object sender, EventArgs e)
         {
             Serial_TRX_listBox.Items.Clear(); // 송, 수신 문자열 관련 리스트박스 화면 클리어(지우기)
+            Rx_Str_Cnt = 0;
+            Tx_Str_Cnt = 0;
         }
 
         private void Tx_Str_Insert_Button_Click(object sender, EventArgs e)
@@ -446,6 +450,40 @@ namespace NTEC_Firmware_Test_App
             /*문자열 없는데 불구하고 삭제되고 추가되는 버그 발견 추후 검토 할 것*/
             Tx_Single_textBox.Text = Tx_Str_listBox.Text;
             Tx_Str_listBox.Items.Remove(Tx_Str_listBox.Text); //복수의 문자열 송신을 위한 리스트 박스에 아이템 삭제
+        }
+
+        async private void Tx_One_button_Click(object sender, EventArgs e)
+        {
+            int msc = Convert.ToInt32(Delay_textBox.Text);
+
+            foreach ( var item in Tx_Str_listBox.Items)
+            {
+                serialPort1.Write(item.ToString() + "\r\n");
+                Serial_TRX_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                await Task.Delay(msc);
+
+            }
+        }
+
+        async private void Tx_Multi_button_Click(object sender, EventArgs e)
+        {
+            int msc = Convert.ToInt32(Delay_textBox.Text);
+
+            Multi_flag = true;
+            while(Multi_flag)
+            {
+                foreach (var item in Tx_Str_listBox.Items)
+                {
+                    serialPort1.Write(item.ToString() + "\r\n");
+                    Serial_TRX_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                    await Task.Delay(msc);
+                }
+            }
+        }
+
+        private void Multi_Stop_button_Click(object sender, EventArgs e)
+        {
+            Multi_flag = false;
         }
     }
 }

@@ -308,9 +308,9 @@
             this.Tx_Str_listBox = new System.Windows.Forms.ListBox();
             this.Tx_Single_textBox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.Tx_One_button = new System.Windows.Forms.Button();
+            this.Delay_textBox = new System.Windows.Forms.TextBox();
+            this.Tx_Multi_button = new System.Windows.Forms.Button();
             this.Tx_Single_Button = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -320,6 +320,11 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.listBox2_Clr_Button = new System.Windows.Forms.Button();
+            this.Serial_Time_label = new System.Windows.Forms.Label();
+            this.Data_Str_label = new System.Windows.Forms.Label();
+            this.Length_label = new System.Windows.Forms.Label();
+            this.TRx_label = new System.Windows.Forms.Label();
+            this.Multi_Stop_button = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -3355,7 +3360,16 @@
             this.Tx_Str_listBox.FormattingEnabled = true;
             this.Tx_Str_listBox.ItemHeight = 12;
             this.Tx_Str_listBox.Items.AddRange(new object[] {
-            "&NRT40,NOR,ff,ff,ff,ff,ff"});
+            "&NRT01,NOR,ff,ff,ff,ff,ff",
+            "&NRT02,NOR,ff,ff,ff,ff,ff",
+            "&NRT03,NOR,ff,ff,ff,ff,ff",
+            "&NRT04,NOR,ff,ff,ff,ff,ff",
+            "&NRT05,NOR,ff,ff,ff,ff,ff",
+            "&NRT06,NOR,ff,ff,ff,ff,ff",
+            "&NRT07,NOR,ff,ff,ff,ff,ff",
+            "&NRT08,NOR,ff,ff,ff,ff,ff",
+            "&NRT09,NOR,ff,ff,ff,ff,ff",
+            "&NRT0A,NOR,ff,ff,ff,ff,ff"});
             this.Tx_Str_listBox.Location = new System.Drawing.Point(788, 42);
             this.Tx_Str_listBox.Name = "Tx_Str_listBox";
             this.Tx_Str_listBox.Size = new System.Drawing.Size(184, 448);
@@ -3363,7 +3377,7 @@
             // 
             // Tx_Single_textBox
             // 
-            this.Tx_Single_textBox.Location = new System.Drawing.Point(788, 539);
+            this.Tx_Single_textBox.Location = new System.Drawing.Point(905, 549);
             this.Tx_Single_textBox.Name = "Tx_Single_textBox";
             this.Tx_Single_textBox.Size = new System.Drawing.Size(297, 21);
             this.Tx_Single_textBox.TabIndex = 18;
@@ -3377,35 +3391,37 @@
             this.button5.Text = ">>";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // Tx_One_button
             // 
-            this.button7.Location = new System.Drawing.Point(901, 493);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(84, 30);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "한번 전송";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Tx_One_button.Location = new System.Drawing.Point(930, 492);
+            this.Tx_One_button.Name = "Tx_One_button";
+            this.Tx_One_button.Size = new System.Drawing.Size(84, 30);
+            this.Tx_One_button.TabIndex = 21;
+            this.Tx_One_button.Text = "한번 전송";
+            this.Tx_One_button.UseVisualStyleBackColor = true;
+            this.Tx_One_button.Click += new System.EventHandler(this.Tx_One_button_Click);
             // 
-            // textBox2
+            // Delay_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(1148, 499);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(67, 21);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Text = "500";
+            this.Delay_textBox.Location = new System.Drawing.Point(857, 498);
+            this.Delay_textBox.Name = "Delay_textBox";
+            this.Delay_textBox.Size = new System.Drawing.Size(67, 21);
+            this.Delay_textBox.TabIndex = 24;
+            this.Delay_textBox.Text = "500";
             // 
-            // button8
+            // Tx_Multi_button
             // 
-            this.button8.Location = new System.Drawing.Point(991, 493);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(84, 30);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "연속 전송";
-            this.button8.UseVisualStyleBackColor = true;
+            this.Tx_Multi_button.Location = new System.Drawing.Point(1020, 492);
+            this.Tx_Multi_button.Name = "Tx_Multi_button";
+            this.Tx_Multi_button.Size = new System.Drawing.Size(84, 30);
+            this.Tx_Multi_button.TabIndex = 25;
+            this.Tx_Multi_button.Text = "연속 전송";
+            this.Tx_Multi_button.UseVisualStyleBackColor = true;
+            this.Tx_Multi_button.Click += new System.EventHandler(this.Tx_Multi_button_Click);
             // 
             // Tx_Single_Button
             // 
-            this.Tx_Single_Button.Location = new System.Drawing.Point(1091, 533);
+            this.Tx_Single_Button.Location = new System.Drawing.Point(1208, 543);
             this.Tx_Single_Button.Name = "Tx_Single_Button";
             this.Tx_Single_Button.Size = new System.Drawing.Size(84, 30);
             this.Tx_Single_Button.TabIndex = 26;
@@ -3425,7 +3441,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1077, 504);
+            this.label10.Location = new System.Drawing.Point(786, 503);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 12);
             this.label10.TabIndex = 41;
@@ -3433,7 +3449,7 @@
             // 
             // Tx_Str_Insert_Button
             // 
-            this.Tx_Str_Insert_Button.Location = new System.Drawing.Point(788, 492);
+            this.Tx_Str_Insert_Button.Location = new System.Drawing.Point(788, 539);
             this.Tx_Str_Insert_Button.Name = "Tx_Str_Insert_Button";
             this.Tx_Str_Insert_Button.Size = new System.Drawing.Size(49, 31);
             this.Tx_Str_Insert_Button.TabIndex = 42;
@@ -3443,7 +3459,7 @@
             // 
             // Tx_Str_Delete_Button
             // 
-            this.Tx_Str_Delete_Button.Location = new System.Drawing.Point(843, 492);
+            this.Tx_Str_Delete_Button.Location = new System.Drawing.Point(843, 539);
             this.Tx_Str_Delete_Button.Name = "Tx_Str_Delete_Button";
             this.Tx_Str_Delete_Button.Size = new System.Drawing.Size(52, 31);
             this.Tx_Str_Delete_Button.TabIndex = 43;
@@ -3475,7 +3491,7 @@
             // 
             // listBox2_Clr_Button
             // 
-            this.listBox2_Clr_Button.Location = new System.Drawing.Point(1336, 496);
+            this.listBox2_Clr_Button.Location = new System.Drawing.Point(1336, 492);
             this.listBox2_Clr_Button.Name = "listBox2_Clr_Button";
             this.listBox2_Clr_Button.Size = new System.Drawing.Size(52, 31);
             this.listBox2_Clr_Button.TabIndex = 47;
@@ -3483,14 +3499,65 @@
             this.listBox2_Clr_Button.UseVisualStyleBackColor = true;
             this.listBox2_Clr_Button.Click += new System.EventHandler(this.listBox2_Clr_Button_Click);
             // 
+            // Serial_Time_label
+            // 
+            this.Serial_Time_label.AutoSize = true;
+            this.Serial_Time_label.Location = new System.Drawing.Point(978, 28);
+            this.Serial_Time_label.Name = "Serial_Time_label";
+            this.Serial_Time_label.Size = new System.Drawing.Size(34, 12);
+            this.Serial_Time_label.TabIndex = 48;
+            this.Serial_Time_label.Text = "Time";
+            // 
+            // Data_Str_label
+            // 
+            this.Data_Str_label.AutoSize = true;
+            this.Data_Str_label.Location = new System.Drawing.Point(1136, 28);
+            this.Data_Str_label.Name = "Data_Str_label";
+            this.Data_Str_label.Size = new System.Drawing.Size(66, 12);
+            this.Data_Str_label.TabIndex = 49;
+            this.Data_Str_label.Text = "Data Bytes";
+            // 
+            // Length_label
+            // 
+            this.Length_label.AutoSize = true;
+            this.Length_label.Location = new System.Drawing.Point(1268, 27);
+            this.Length_label.Name = "Length_label";
+            this.Length_label.Size = new System.Drawing.Size(43, 12);
+            this.Length_label.TabIndex = 50;
+            this.Length_label.Text = "Length";
+            // 
+            // TRx_label
+            // 
+            this.TRx_label.AutoSize = true;
+            this.TRx_label.Location = new System.Drawing.Point(1317, 28);
+            this.TRx_label.Name = "TRx_label";
+            this.TRx_label.Size = new System.Drawing.Size(78, 12);
+            this.TRx_label.TabIndex = 51;
+            this.TRx_label.Text = "Tx/Rx Count";
+            // 
+            // Multi_Stop_button
+            // 
+            this.Multi_Stop_button.Location = new System.Drawing.Point(1110, 492);
+            this.Multi_Stop_button.Name = "Multi_Stop_button";
+            this.Multi_Stop_button.Size = new System.Drawing.Size(84, 30);
+            this.Multi_Stop_button.TabIndex = 52;
+            this.Multi_Stop_button.Text = "정지";
+            this.Multi_Stop_button.UseVisualStyleBackColor = true;
+            this.Multi_Stop_button.Click += new System.EventHandler(this.Multi_Stop_button_Click);
+            // 
             // NTEC_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1405, 650);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.Multi_Stop_button);
+            this.Controls.Add(this.TRx_label);
+            this.Controls.Add(this.Length_label);
+            this.Controls.Add(this.Data_Str_label);
+            this.Controls.Add(this.Serial_Time_label);
+            this.Controls.Add(this.Tx_Multi_button);
             this.Controls.Add(this.listBox2_Clr_Button);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.Tx_One_button);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.Serial_TRX_listBox);
             this.Controls.Add(this.Tx_Str_Delete_Button);
@@ -3498,7 +3565,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.Tx_Single_Button);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Delay_textBox);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.Tx_Single_textBox);
             this.Controls.Add(this.Tx_Str_listBox);
@@ -3580,9 +3647,9 @@
         private System.Windows.Forms.ListBox Tx_Str_listBox;
         private System.Windows.Forms.TextBox Tx_Single_textBox;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button Tx_One_button;
+        private System.Windows.Forms.TextBox Delay_textBox;
+        private System.Windows.Forms.Button Tx_Multi_button;
         private System.Windows.Forms.Button Tx_Single_Button;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabPage3;
@@ -3849,6 +3916,11 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button listBox2_Clr_Button;
+        private System.Windows.Forms.Label Serial_Time_label;
+        private System.Windows.Forms.Label Data_Str_label;
+        private System.Windows.Forms.Label Length_label;
+        private System.Windows.Forms.Label TRx_label;
+        private System.Windows.Forms.Button Multi_Stop_button;
     }
 }
 
