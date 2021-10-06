@@ -18,7 +18,14 @@ namespace NTEC_Firmware_Test_App
         int test_data = 0;
         static int Rx_Str_Cnt;
         static int Tx_Str_Cnt;
+
         bool Multi_flag = false;
+
+        byte NRG_Temp_NOR_1_8Ch_data = 0x00;
+        byte NRG_Temp_NOR_9_16Ch_data = 0x00;
+        byte NRG_Temp_EMR_1_8Ch_data = 0x00;
+        byte NRG_Temp_EMR_9_16Ch_data = 0x00;
+
 
         public NTEC_Form()
         {
@@ -50,7 +57,6 @@ namespace NTEC_Firmware_Test_App
             comboBox_Port_Parity.Text = "None";
             comboBox_Port_StopBits.Text = "1";
             comboBox_Port_FlowControl.Text = "None";
-
             //DomainUpDown.DomainUpDownItemCollection NRT40_domainUpDown_1_collection = this.NRT40_domainUpDown_1.Items;
             //DomainUpDown.DomainUpDownItemCollection NRT40_domainUpDown_10_collection = this.NRT40_domainUpDown_10.Items;
             //DomainUpDown.DomainUpDownItemCollection NRT16_domainUpDown_1_collection  =  this.NRT16_domainUpDown_1.Items;
@@ -120,11 +126,6 @@ namespace NTEC_Firmware_Test_App
         }
 
         private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox29_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -484,6 +485,203 @@ namespace NTEC_Firmware_Test_App
         private void Multi_Stop_button_Click(object sender, EventArgs e)
         {
             Multi_flag = false;
+        }
+
+        private void NRG_Ch1_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch1_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x01;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x01;
+            }
+        }
+
+        private void NRG_Ch2_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch2_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x02;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x02;
+            }
+        }
+
+        private void NRG_Ch3_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch3_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x04;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x04;
+            }
+        }
+
+        private void NRG_Ch4_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch4_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x08;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x08;
+            }
+        }
+
+        private void NRG_Ch5_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch5_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x10;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x10;
+            }
+        }
+
+        private void NRG_Ch6_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch6_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x20;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x20;
+            }
+        }
+
+        private void NRG_Ch7_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch7_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x40;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x40;
+            }
+        }
+
+        private void NRG_Ch8_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch8_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x80;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x80;
+            }
+        }
+
+        private void NRG_Ch9_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch9_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_1_8Ch_data += 0x01;
+            }
+            else
+            {
+                NRG_Temp_NOR_1_8Ch_data -= 0x01;
+            }
+        }
+
+        private void NRG_Ch10_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch10_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_9_16Ch_data += 0x02;
+            }
+            else
+            {
+                NRG_Temp_NOR_9_16Ch_data -= 0x02;
+            }
+        }
+
+        private void NRG_Ch11_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch11_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_9_16Ch_data += 0x04;
+            }
+            else
+            {
+                NRG_Temp_NOR_9_16Ch_data -= 0x04;
+            }
+        }
+
+        private void NRG_Ch12_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch12_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_9_16Ch_data += 0x08;
+            }
+            else
+            {
+                NRG_Temp_NOR_9_16Ch_data -= 0x08;
+            }
+        }
+
+        private void NRG_Ch13_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch13_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_9_16Ch_data += 0x10;
+            }
+            else
+            {
+                NRG_Temp_NOR_9_16Ch_data -= 0x10;
+            }
+        }
+
+        private void NRG_Ch14_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch14_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_9_16Ch_data += 0x20;
+            }
+            else
+            {
+                NRG_Temp_NOR_9_16Ch_data -= 0x20;
+            }
+        }
+
+        private void NRG_Ch15_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch15_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_9_16Ch_data += 0x40;
+            }
+            else
+            {
+                NRG_Temp_NOR_9_16Ch_data -= 0x40;
+            }
+        }
+
+        private void NRG_Ch16_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch16_CheckBox.Checked == true)
+            {
+                NRG_Temp_NOR_9_16Ch_data += 0x80;
+            }
+            else
+            {
+                NRG_Temp_NOR_9_16Ch_data -= 0x80;
+            }
+        }
+
+        private void NRG_Insert_Button_Click(object sender, EventArgs e)
+        {
+            Tx_Str_listBox.Items.Add("&NRGFF"+ "," + "NOR" + "," + NRG_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_NOR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
         }
     }
 }
