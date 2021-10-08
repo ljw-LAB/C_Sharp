@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO.Ports;
 
 namespace NTEC_Firmware_Test_App
 {
@@ -16,15 +10,26 @@ namespace NTEC_Firmware_Test_App
     public partial class NTEC_Form : Form
     {
         int test_data = 0;
-        static int Rx_Str_Cnt;
-        static int Tx_Str_Cnt;
+        static int Rx_Str_Cnt; // 수신데이트(문자열) 갯수 카운트 변수
+        static int Tx_Str_Cnt; // 송신데이터(문자열 갯수 카운트 변수
 
-        bool Multi_flag = false;
+        bool Multi_flag = false; // 연속 전송을 위한 플래그 변수
 
-        byte NRG_Temp_NOR_1_8Ch_data = 0x00;
-        byte NRG_Temp_NOR_9_16Ch_data = 0x00;
-        byte NRG_Temp_EMR_1_8Ch_data = 0x00;
-        byte NRG_Temp_EMR_9_16Ch_data = 0x00;
+        byte NRG_Temp_NOR_1_8Ch_data = 0x00;  // NRG16 NOR1~8Ch 릴레이 채널 데이터
+        byte NRG_Temp_NOR_9_16Ch_data = 0x00; // NRG16 NOR9~16Ch 릴레이 채널 데이터
+        byte NRG_Temp_EMR_1_8Ch_data = 0x00;  // NRG16 EM1~8Ch 릴레이 채널 데이터
+        byte NRG_Temp_EMR_9_16Ch_data = 0x00; // NRG16 EM9~16Ch 릴레이 채널 데이터
+
+        byte NDT_Temp_NOR_1_8Ch_data = 0x00;  // NRT16 NOR1~8Ch 릴레이 채널 데이터
+        byte NDT_Temp_NOR_9_16Ch_data = 0x00; // NRT16 NOR9~16Ch 릴레이 채널 데이터
+        byte NDT_Temp_EMR_1_8Ch_data = 0x00;  // NRT16 EM1~8Ch 릴레이 채널 데이터
+        byte NDT_Temp_EMR_9_16Ch_data = 0x00; // NRT16 EM9~16Ch 릴레이 채널 데이터
+
+        byte NRT_Temp_NOR_1_8Ch_data = 0x00;   // NRT40 1~8Ch 릴레이 채널 데이터
+        byte NRT_Temp_NOR_9_16Ch_data = 0x00;  // NRT40 9~16Ch 릴레이 채널 데이터
+        byte NRT_Temp_NOR_17_24Ch_data = 0x00; // NRT40 17~24Ch 릴레이 채널 데이터
+        byte NRT_Temp_NOR_25_32Ch_data = 0x00; // NRT40 25~32Ch 릴레이 채널 데이터
+        byte NRT_Temp_NOR_33_40Ch_data = 0x00; // NRT40 33~40Ch 릴레이 채널 데이터
 
 
         public NTEC_Form()
@@ -33,16 +38,6 @@ namespace NTEC_Firmware_Test_App
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -121,220 +116,6 @@ namespace NTEC_Firmware_Test_App
         }
 
         private void domainUpDown2_SelectedItemChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox61_CheckedChanged(object sender, EventArgs e)
-        {
-            if(test_data >= 0 && test_data <= 15)
-            { 
-                if (checkBox61.Checked)
-                {
-                    test_data += 1;
-
-                }
-                else
-                {
-                    test_data -= 1;
-                }
-            }
-            textBox3.Text = test_data.ToString("X").ToLower();
-
-        }
-
-        private void checkBox62_CheckedChanged(object sender, EventArgs e)
-        {
-            if (test_data >= 0 && test_data <= 15)
-            {
-                if (checkBox62.Checked)
-                {
-                    test_data += 2;
-
-                }
-                else
-                {
-                    test_data -= 2;
-                }
-            }
-            textBox3.Text = test_data.ToString("X").ToLower();
-        }
-
-        private void checkBox63_CheckedChanged(object sender, EventArgs e)
-        {
-            if (test_data >= 0 && test_data <= 15)
-            {
-                if (checkBox63.Checked)
-                {
-                    test_data += 4;
-
-                }
-                else
-                {
-                    test_data -= 4;
-                }
-            }
-            textBox3.Text = test_data.ToString("X").ToLower();
-        }
-
-        private void checkBox64_CheckedChanged(object sender, EventArgs e)
-        {
-            if (test_data >= 0 && test_data <= 15)
-            {
-                if (checkBox64.Checked)
-                {
-                    test_data += 8;
-
-                }
-                else
-                {
-                    test_data -= 8;
-                }
-            }
-            textBox3.Text = test_data.ToString("X").ToLower();
-        }
-
-        private void checkBox59_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox60_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox57_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox58_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox53_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox54_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox55_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox56_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox51_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox52_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox49_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox50_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox45_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox46_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox47_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox48_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox43_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox44_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox41_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox42_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox37_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox38_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox39_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox40_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox35_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox36_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox33_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox34_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -451,6 +232,7 @@ namespace NTEC_Firmware_Test_App
             /*문자열 없는데 불구하고 삭제되고 추가되는 버그 발견 추후 검토 할 것*/
             Tx_Single_textBox.Text = Tx_Str_listBox.Text;
             Tx_Str_listBox.Items.Remove(Tx_Str_listBox.Text); //복수의 문자열 송신을 위한 리스트 박스에 아이템 삭제
+            Tx_Str_listBox.SelectedIndex = Tx_Str_listBox.Items.Count - 1;
         }
 
         async private void Tx_One_button_Click(object sender, EventArgs e)
@@ -487,201 +269,1290 @@ namespace NTEC_Firmware_Test_App
             Multi_flag = false;
         }
 
-        private void NRG_Ch1_CheckBox_CheckedChanged(object sender, EventArgs e)
+        private void NRG_Ch1_CheckBox_CheckedChanged(object sender, EventArgs e) //NRG16 NOR 1Ch 릴레이 채널 선택 체크박스
         {
-            if (NRG_Ch1_CheckBox.Checked == true)
+            if (NRG_Ch1_CheckBox.Checked == true) // NRG16 NOR 1Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x01;
+                NRG_Temp_NOR_1_8Ch_data += 0x01;  // NRG16 NOR 1Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x01;
+                NRG_Temp_NOR_1_8Ch_data -= 0x01;  // NRG16 NOR 1Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch2_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch2_CheckBox.Checked == true)
+            if (NRG_Ch2_CheckBox.Checked == true) // NRG16 NOR 2Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x02;
+                NRG_Temp_NOR_1_8Ch_data += 0x02;  // NRG16 NOR 2Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x02;
+                NRG_Temp_NOR_1_8Ch_data -= 0x02;  // NRG16 NOR 2Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch3_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch3_CheckBox.Checked == true)
+            if (NRG_Ch3_CheckBox.Checked == true) // NRG16 NOR 3Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x04;
+                NRG_Temp_NOR_1_8Ch_data += 0x04;  // NRG16 NOR 3Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x04;
+                NRG_Temp_NOR_1_8Ch_data -= 0x04;  // NRG16 NOR 3Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch4_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch4_CheckBox.Checked == true)
+            if (NRG_Ch4_CheckBox.Checked == true) // NRG16 NOR 4Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x08;
+                NRG_Temp_NOR_1_8Ch_data += 0x08;  // NRG16 NOR 4Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x08;
+                NRG_Temp_NOR_1_8Ch_data -= 0x08;  // NRG16 NOR 4Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch5_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch5_CheckBox.Checked == true)
+            if (NRG_Ch5_CheckBox.Checked == true) // NRG16 NOR 5Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x10;
+                NRG_Temp_NOR_1_8Ch_data += 0x10;  // NRG16 NOR 5Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x10;
+                NRG_Temp_NOR_1_8Ch_data -= 0x10;  // NRG16 NOR 5Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch6_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch6_CheckBox.Checked == true)
+            if (NRG_Ch6_CheckBox.Checked == true) // NRG16 NOR 6Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x20;
+                NRG_Temp_NOR_1_8Ch_data += 0x20;  // NRG16 NOR 6Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x20;
+                NRG_Temp_NOR_1_8Ch_data -= 0x20;  // NRG16 NOR 6Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch7_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch7_CheckBox.Checked == true)
+            if (NRG_Ch7_CheckBox.Checked == true) // NRG16 NOR 7Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x40;
+                NRG_Temp_NOR_1_8Ch_data += 0x40;  // NRG16 NOR 7Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x40;
+                NRG_Temp_NOR_1_8Ch_data -= 0x40;  // NRG16 NOR 7Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch8_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch8_CheckBox.Checked == true)
+            if (NRG_Ch8_CheckBox.Checked == true) // NRG16 NOR 8Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x80;
+                NRG_Temp_NOR_1_8Ch_data += 0x80;  // NRG16 NOR 8Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x80;
+                NRG_Temp_NOR_1_8Ch_data -= 0x80;  // NRG16 NOR 8Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch9_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch9_CheckBox.Checked == true)
+            if (NRG_Ch9_CheckBox.Checked == true) // NRG16 NOR 9Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_1_8Ch_data += 0x01;
+                NRG_Temp_NOR_9_16Ch_data += 0x01; // NRG16 NOR 9Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_1_8Ch_data -= 0x01;
+                NRG_Temp_NOR_9_16Ch_data -= 0x01; // NRG16 NOR 9Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch10_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch10_CheckBox.Checked == true)
+            if (NRG_Ch10_CheckBox.Checked == true) // NRG16 NOR 10Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_9_16Ch_data += 0x02;
+                NRG_Temp_NOR_9_16Ch_data += 0x02;  // NRG16 NOR 10Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_9_16Ch_data -= 0x02;
+                NRG_Temp_NOR_9_16Ch_data -= 0x02;  // NRG16 NOR 10Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch11_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch11_CheckBox.Checked == true)
+            if (NRG_Ch11_CheckBox.Checked == true) // NRG16 NOR 11Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_9_16Ch_data += 0x04;
+                NRG_Temp_NOR_9_16Ch_data += 0x04;  // NRG16 NOR 11Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_9_16Ch_data -= 0x04;
+                NRG_Temp_NOR_9_16Ch_data -= 0x04;  // NRG16 NOR 11Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch12_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch12_CheckBox.Checked == true)
+            if (NRG_Ch12_CheckBox.Checked == true) // NRG16 NOR 12Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_9_16Ch_data += 0x08;
+                NRG_Temp_NOR_9_16Ch_data += 0x08;  // NRG16 NOR 12Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_9_16Ch_data -= 0x08;
+                NRG_Temp_NOR_9_16Ch_data -= 0x08;  // NRG16 NOR 12Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch13_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch13_CheckBox.Checked == true)
+            if (NRG_Ch13_CheckBox.Checked == true) // NRG16 NOR 13Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_9_16Ch_data += 0x10;
+                NRG_Temp_NOR_9_16Ch_data += 0x10;  // NRG16 NOR 13Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_9_16Ch_data -= 0x10;
+                NRG_Temp_NOR_9_16Ch_data -= 0x10;  // NRG16 NOR 13Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch14_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch14_CheckBox.Checked == true)
+            if (NRG_Ch14_CheckBox.Checked == true) // NRG16 NOR 14Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_9_16Ch_data += 0x20;
+                NRG_Temp_NOR_9_16Ch_data += 0x20;  // NRG16 NOR 14Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_9_16Ch_data -= 0x20;
+                NRG_Temp_NOR_9_16Ch_data -= 0x20;  // NRG16 NOR 14Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch15_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch15_CheckBox.Checked == true)
+            if (NRG_Ch15_CheckBox.Checked == true) // NRG16 NOR 15Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_9_16Ch_data += 0x40;
+                NRG_Temp_NOR_9_16Ch_data += 0x40;  // NRG16 NOR 15Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_9_16Ch_data -= 0x40;
+                NRG_Temp_NOR_9_16Ch_data -= 0x40;  // NRG16 NOR 15Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Ch16_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (NRG_Ch16_CheckBox.Checked == true)
+            if (NRG_Ch16_CheckBox.Checked == true) // NRG16 NOR 16Ch 릴레이 채널 체크박스 체크유무 판별 
             {
-                NRG_Temp_NOR_9_16Ch_data += 0x80;
+                NRG_Temp_NOR_9_16Ch_data += 0x80;  // NRG16 NOR 16Ch 릴레이 채널 데이터 추가
             }
             else
             {
-                NRG_Temp_NOR_9_16Ch_data -= 0x80;
+                NRG_Temp_NOR_9_16Ch_data -= 0x80;  // NRG16 NOR 16Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch17_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch17_CheckBox.Checked == true) // NRG16 EM 1Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x01;   // NRG16 EM 1Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x01;   // NRG16 EM 1Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch18_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch18_CheckBox.Checked == true) // NRG16 EM 2Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x02;   // NRG16 EM 2Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x02;   // NRG16 EM 1Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch19_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch19_CheckBox.Checked == true) // NRG16 EM 3Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x04;   // NRG16 EM 3Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x04;   // NRG16 EM 3Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch20_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch20_CheckBox.Checked == true) // NRG16 EM 4Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x08;   // NRG16 EM 4Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x08;   // NRG16 EM 4Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch21_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch21_CheckBox.Checked == true) // NRG16 EM 5Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x10;   // NRG16 EM 5Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x10;   // NRG16 EM 5Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch22_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch22_CheckBox.Checked == true) // NRG16 EM 6Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x20;   // NRG16 EM 6Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x20;  // NRG16 EM 6Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch23_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch23_CheckBox.Checked == true) // NRG16 EM 7Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x40;   // NRG16 EM 7Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x40;   // NRG16 EM 7Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch24_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch22_CheckBox.Checked == true) // NRG16 EM 8Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_1_8Ch_data += 0x80;   // NRG16 EM 8h 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_1_8Ch_data -= 0x80;   // NRG16 EM 8Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch25_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch25_CheckBox.Checked == true) // NRG16 EM 9Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x01;  // NRG16 EM 9Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x01;  // NRG16 EM 9Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch26_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch26_CheckBox.Checked == true) // NRG16 EM 10Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x02;  // NRG16 EM 10Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x02;  // NRG16 EM 10Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch27_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch27_CheckBox.Checked == true) // NRG16 EM 11Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x04;  // NRG16 EM 11Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x04;  // NRG16 EM 11Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch28_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch28_CheckBox.Checked == true) // NRG16 EM 12Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x08;  // NRG16 EM 12Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x08;  // NRG16 EM 12Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch29_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch29_CheckBox.Checked == true) // NRG16 EM 13Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x10;  // NRG16 EM 13Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x10;  // NRG16 EM 13Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch30_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch30_CheckBox.Checked == true) // NRG16 EM 14Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x20;  // NRG16 EM 14Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x20;  // NRG16 EM 14Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch31_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch31_CheckBox.Checked == true) // NRG16 EM 15Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x40;  // NRG16 EM 15Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x40;  // NRG16 EM 15Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRG_Ch32_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRG_Ch32_CheckBox.Checked == true) // NRG16 EM 16Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NRG_Temp_EMR_9_16Ch_data += 0x80;  // NRG16 EM 16Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRG_Temp_EMR_9_16Ch_data -= 0x80;  // NRG16 EM 16Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch1_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch1_CheckBox.Checked == true) // NRT16 NOR 1Ch 릴레이 채널 체크박스 체크유무 판별 
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x01;  // NRT16 NOR 1Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x01;  // NRT16 NOR 1Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch2_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch2_CheckBox.Checked == true) // NRT16 NOR 2Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x02;  // NRT16 NOR 2Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x02;  // NRT16 NOR 2Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch3_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch3_CheckBox.Checked == true) // NRT16 NOR 3Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x04;  // NRT16 NOR 3Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x04;  // NRT16 NOR 3Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch4_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch4_CheckBox.Checked == true) // NRT16 NOR 4Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x08;  // NRT16 NOR 4Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x08;  // NRT16 NOR 4Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch5_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch5_CheckBox.Checked == true) // NRT16 NOR 5Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x10;  // NRT16 NOR 5Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x10;  // NRT16 NOR 5Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch6_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch6_CheckBox.Checked == true) // NRT16 NOR 6Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x20;  // NRT16 NOR 6Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x20;  // NRT16 NOR 6Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch7_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch7_CheckBox.Checked == true) // NRT16 NOR 7Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x40;  // NRT16 NOR 7Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x40;  // NRT16 NOR 7Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch8_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch8_CheckBox.Checked == true) // NRT16 NOR 8Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_1_8Ch_data += 0x80;  // NRT16 NOR 8Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_1_8Ch_data -= 0x80;  // NRT16 NOR 8Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch9_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch9_CheckBox.Checked == true) // NRT16 NOR 9Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x01;  // NRT16 NOR 9Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x01;  // NRT16 NOR 9Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch10_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch10_CheckBox.Checked == true) // NRT16 NOR 10Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x02;  // NRT16 NOR 10Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x02;  // NRT16 NOR 10Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch11_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch11_CheckBox.Checked == true) // NRT16 NOR 11Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x04;  // NRT16 NOR 11Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x04;  // NRT16 NOR 11Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch12_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch12_CheckBox.Checked == true) // NRT16 NOR 12Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x08;  // NRT16 NOR 12Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x08;  // NRT16 NOR 12Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch13_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch13_CheckBox.Checked == true) // NRT16 NOR 13Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x10;  // NRT16 NOR 13Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x10;  // NRT16 NOR 13Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch14_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch14_CheckBox.Checked == true) // NRT16 NOR 14Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x20;  // NRT16 NOR 14Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x20;  // NRT16 NOR 14Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch15_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch15_CheckBox.Checked == true) // NRT16 NOR 15Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x40;  // NRT16 NOR 15Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x40;  // NRT16 NOR 15Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch16_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch16_CheckBox.Checked == true) // NRT16 NOR 16Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_NOR_9_16Ch_data += 0x80;  // NRT16 NOR 16Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_NOR_9_16Ch_data -= 0x80;  // NRT16 NOR 16Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch17_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch17_CheckBox.Checked == true) // NRT16 EM 1Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x01;   // NRT16 EM 1Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x01;   // NRT16 EM 1Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch18_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch18_CheckBox.Checked == true) // NRT16 EM 2Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x02;   // NRT16 EM 2Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x02;   // NRT16 EM 2Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch19_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch19_CheckBox.Checked == true) // NRT16 EM 3Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x04;   // NRT16 EM 3Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x04;   // NRT16 EM 3Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch20_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch20_CheckBox.Checked == true) // NRT16 EM 4Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x08;   // NRT16 EM 4Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x08;   // NRT16 EM 4Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch21_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch21_CheckBox.Checked == true) // NRT16 EM 5Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x10;   // NRT16 EM 5Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x10;   // NRT16 EM 5Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch22_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch22_CheckBox.Checked == true) // NRT16 EM 6Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x20;   // NRT16 EM 6Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x20;   // NRT16 EM 6Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch23_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch23_CheckBox.Checked == true) // NRT16 EM 7Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x40;   // NRT16 EM 7Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x40;   // NRT16 EM 7Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch24_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch24_CheckBox.Checked == true) // NRT16 EM 8Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_1_8Ch_data += 0x80;   // NRT16 EM 8Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_1_8Ch_data -= 0x80;   // NRT16 EM 8Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch25_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch25_CheckBox.Checked == true) // NRT16 EM 9Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x01;  // NRT16 EM 9Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x01;  // NRT16 EM 9Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch26_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch26_CheckBox.Checked == true) // NRT16 EM 10Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x02;  // NRT16 EM 10Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x02;  // NRT16 EM 10Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch27_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch27_CheckBox.Checked == true) // NRT16 EM 11Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x04;  // NRT16 EM 11Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x04;  // NRT16 EM 11Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch28_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch28_CheckBox.Checked == true) // NRT16 EM 12Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x08;  // NRT16 EM 12Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x08;  // NRT16 EM 12Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch29_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch29_CheckBox.Checked == true) // NRT16 EM 13Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x10;  // NRT16 EM 13Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x10;  // NRT16 EM 13Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch30_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch30_CheckBox.Checked == true) // NRT16 EM 14Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x20;  // NRT16 EM 14Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x20;  // NRT16 EM 14Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch31_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch31_CheckBox.Checked == true) // NRT16 EM 15Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x40;  // NRT16 EM 15Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x40;  // NRT16 EM 15Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NDT_Ch32_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NDT_Ch32_CheckBox.Checked == true) // NRT16 EM 16Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NDT_Temp_EMR_9_16Ch_data += 0x80;  // NRT16 EM 16Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NDT_Temp_EMR_9_16Ch_data -= 0x80;  // NRT16 EM 16Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch1_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch1_CheckBox.Checked == true) // NRT40 1Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x01;  // NRT40 1Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x01;  // NRT40 1Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch2_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch2_CheckBox.Checked == true) // NRT40 2Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x02;  // NRT40 2Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x02;  // NRT40 2Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch3_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch3_CheckBox.Checked == true) // NRT40 3Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x04;  // NRT40 3Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x04;  // NRT40 3Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch4_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch4_CheckBox.Checked == true) // NRT40 4Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x08;  // NRT40 4Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x08;  // NRT40 4Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch5_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch5_CheckBox.Checked == true) // NRT40 5Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x10;  // NRT40 5Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x10;  // NRT40 5Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch6_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch6_CheckBox.Checked == true) // NRT40 6Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x20;  // NRT40 6Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x20;  // NRT40 6Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch7_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch7_CheckBox.Checked == true) // NRT40 7Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x40;  // NRT40 7Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x40;  // NRT40 7Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch8_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch8_CheckBox.Checked == true) // NRT40 8Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_1_8Ch_data += 0x80;  // NRT40 8Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_1_8Ch_data -= 0x80;  // NRT40 8Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch9_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch9_CheckBox.Checked == true) // NRT40 9Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x01; // NRT40 9Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x01;  // NRT40 9Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch10_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch10_CheckBox.Checked == true) // NRT40 10Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x02;  // NRT40 10Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x02;  // NRT40 10Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch11_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch11_CheckBox.Checked == true) // NRT40 11Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x04;  // NRT40 11Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x04;  // NRT40 11Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch12_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch12_CheckBox.Checked == true) // NRT40 12Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x08;  // NRT40 12Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x08;  // NRT40 12Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch13_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch13_CheckBox.Checked == true) // NRT40 13Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x10;  // NRT40 13Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x10;  // NRT40 13Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch14_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch14_CheckBox.Checked == true) // NRT40 14Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x20;  // NRT40 14Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x20;  // NRT40 14Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch15_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch15_CheckBox.Checked == true) // NRT40 15Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x40;  // NRT40 15Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x40;  // NRT40 15Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch16_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch16_CheckBox.Checked == true) // NRT40 16Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_9_16Ch_data += 0x80;  // NRT40 16Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_9_16Ch_data -= 0x80;  // NRT40 16Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch17_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch17_CheckBox.Checked == true) // NRT40 17Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x01; // NRT40 17Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x01; // NRT40 17Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch18_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch18_CheckBox.Checked == true) // NRT40 18Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x02; // NRT40 18Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x02; // NRT40 18Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch19_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch19_CheckBox.Checked == true) // NRT40 19Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x04; // NRT40 19Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x04; // NRT40 19Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch20_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch20_CheckBox.Checked == true) // NRT40 20Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x08; // NRT40 20Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x08; // NRT40 20Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch21_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch21_CheckBox.Checked == true) // NRT40 21Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x10; // NRT40 21Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x10; // NRT40 21Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch22_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch22_CheckBox.Checked == true) // NRT40 22Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x20; // NRT40 22Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x20; // NRT40 22Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch23_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch23_CheckBox.Checked == true) // NRT40 23Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x40; // NRT40 23Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x40; // NRT40 23Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch24_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch24_CheckBox.Checked == true) // NRT40 24Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_17_24Ch_data += 0x80; // NRT40 24Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_17_24Ch_data -= 0x80; // NRT40 24Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch25_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch25_CheckBox.Checked == true) // NRT40 25Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x01; // NRT40 25Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x01; // NRT40 25Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch26_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch26_CheckBox.Checked == true) // NRT40 26Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x02; // NRT40 26Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x02; // NRT40 26Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch27_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch27_CheckBox.Checked == true) // NRT40 27Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x04; // NRT40 27Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x04; // NRT40 27Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch28_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch28_CheckBox.Checked == true) // NRT40 28Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x08; // NRT40 28Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x08; // NRT40 28Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch29_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch29_CheckBox.Checked == true) // NRT40 29Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x10; // NRT40 29Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x10; // NRT40 29Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch30_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch30_CheckBox.Checked == true) // NRT40 30Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x20; // NRT40 30Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x20; // NRT40 30Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch31_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch31_CheckBox.Checked == true) // NRT40 31Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x40; // NRT40 31Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x40; // NRT40 31Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch32_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch32_CheckBox.Checked == true) // NRT40 32Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_25_32Ch_data += 0x80; // NRT40 32Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_25_32Ch_data -= 0x80; // NRT40 32Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch33_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch33_CheckBox.Checked == true) // NRT40 33Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x01; // NRT40 33Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x01; // NRT40 33Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch34_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch34_CheckBox.Checked == true) // NRT40 34Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x02; // NRT40 34Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x02; // NRT40 34Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch35_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch35_CheckBox.Checked == true) // NRT40 35Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x04; // NRT40 35Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x04; // NRT40 35Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch36_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch36_CheckBox.Checked == true) // NRT40 36Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x08; // NRT40 36Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x08; // NRT40 36Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch37_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch37_CheckBox.Checked == true) // NRT40 37Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x10; // NRT40 37Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x10; // NRT40 37Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch38_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch38_CheckBox.Checked == true) // NRT40 38Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x20; // NRT40 38Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x20; // NRT40 38Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch39_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch39_CheckBox.Checked == true) // NRT40 39Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x40; // NRT40 39Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x40; // NRT40 39Ch 릴레이 채널 데이터 삭제
+            }
+        }
+
+        private void NRT_Ch40_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NRT_Ch40_CheckBox.Checked == true) // NRT40 40Ch 릴레이 채널 체크박스 체크유무 판별
+            {
+                NRT_Temp_NOR_33_40Ch_data += 0x80; // NRT40 40Ch 릴레이 채널 데이터 추가
+            }
+            else
+            {
+                NRT_Temp_NOR_33_40Ch_data -= 0x80; // NRT40 40Ch 릴레이 채널 데이터 삭제
             }
         }
 
         private void NRG_Insert_Button_Click(object sender, EventArgs e)
         {
-            Tx_Str_listBox.Items.Add("&NRGFF"+ "," + "NOR" + "," + NRG_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_NOR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+            //if(NRG_Cmd_comboBox.SelectedIndex >= 0)
+            if (NRG_Cmd_comboBox.SelectedItem != null)
+            {
+                Tx_Str_listBox.Items.Add("&NRGFF" + "," + NRG_Cmd_comboBox.SelectedItem + "," + NRG_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_EMR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_EMR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+
+            }
+            else
+            {
+                MessageBox.Show("NRG16 명령어 선택 오류!!!!!");
+            }
+        }
+
+        private void NDT_Insert_Button_Click(object sender, EventArgs e)
+        {
+            if (NDT_Cmd_comboBox.SelectedItem != null)
+            {
+                Tx_Str_listBox.Items.Add("&NDTFF" + "," + NDT_Cmd_comboBox.SelectedItem + "," + NDT_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_EMR_1_8Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_EMR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+            }
+            else
+            {
+                MessageBox.Show("NRT16 명령어 선택 오류!!!!!");
+            }
+        }
+
+        private void NRT_Insert_Button_Click(object sender, EventArgs e)
+        {
+            if (NRT_Cmd_comboBox.SelectedItem != null)
+            {
+                Tx_Str_listBox.Items.Add("&NRTFF" + "," + NRT_Cmd_comboBox.SelectedItem + "," + NRT_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_17_24Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_25_32Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_33_40Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+            }
+            else
+            {
+                MessageBox.Show("NRT40 명령어 선택 오류!!!!!");
+            }
         }
     }
 }
