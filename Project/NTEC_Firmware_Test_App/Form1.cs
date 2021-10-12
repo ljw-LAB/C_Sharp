@@ -31,6 +31,14 @@ namespace NTEC_Firmware_Test_App
         byte NRT_Temp_NOR_25_32Ch_data = 0x00; // NRT40 25~32Ch 릴레이 채널 데이터
         byte NRT_Temp_NOR_33_40Ch_data = 0x00; // NRT40 33~40Ch 릴레이 채널 데이터
 
+        byte NEI_Temp_data_1_8Ch_data = 0x00;
+        byte NEI_Temp_data_9_14Ch_data = 0x00;
+        byte NEI_Temp_data_15_22Ch_data = 0x00;
+        byte NEI_Temp_data_23_28Ch_data = 0x00;
+        byte NEI_Temp_data_29_36Ch_data = 0x00;
+        byte NEI_Temp_data_37_42Ch_data = 0x00;
+
+
 
         public NTEC_Form()
         {
@@ -44,6 +52,18 @@ namespace NTEC_Firmware_Test_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            NRG_Cmd_comboBox.Text = "NOR";
+            NRG16_ID_10_comboBox.Text = "0";
+            NRG16_ID_1_comboBox.Text = "1";
+
+            NDT_Cmd_comboBox.Text = "NOR";
+            NRT16_ID_10_comboBox.Text = "0";
+            NRT16_ID_1_comboBox.Text = "1";
+
+            NRT_Cmd_comboBox.Text = "NOR";
+            NRT40_ID_10_comboBox.Text = "0";
+            NRT40_ID_1_comboBox.Text = "1";
+
             comboBox_Port_Number.DataSource = SerialPort.GetPortNames(); //연결 가능한 시리얼포트 이름을 콤보박스에 가져오기 
 
             comboBox_Port_Number.TabIndex = comboBox_Port_Number.SelectedIndex = 0;
@@ -52,6 +72,7 @@ namespace NTEC_Firmware_Test_App
             comboBox_Port_Parity.Text = "None";
             comboBox_Port_StopBits.Text = "1";
             comboBox_Port_FlowControl.Text = "None";
+
             //DomainUpDown.DomainUpDownItemCollection NRT40_domainUpDown_1_collection = this.NRT40_domainUpDown_1.Items;
             //DomainUpDown.DomainUpDownItemCollection NRT40_domainUpDown_10_collection = this.NRT40_domainUpDown_10.Items;
             //DomainUpDown.DomainUpDownItemCollection NRT16_domainUpDown_1_collection  =  this.NRT16_domainUpDown_1.Items;
@@ -203,21 +224,21 @@ namespace NTEC_Firmware_Test_App
         private void ShowValue(string s)
         {
             string item = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") +"    "+s+"      "+(s.Count()+1)+"      "+"R"+Rx_Str_Cnt++;
-            Serial_TRX_listBox.Items.Add(item);
-            Serial_TRX_listBox.SelectedIndex = Serial_TRX_listBox.Items.Count - 1;  // 계속 스크롤이 되도록 처리
+            Fire10Byte_GroupBox.Items.Add(item);
+            Fire10Byte_GroupBox.SelectedIndex = Fire10Byte_GroupBox.Items.Count - 1;  // 계속 스크롤이 되도록 처리
         }
 
         private void Tx_Single_Button_Click(object sender, EventArgs e)
         {
             //텍스트박스의 텍스트를 시리얼통신으로 송신
             serialPort1.Write(Tx_Single_textBox.Text+"\r\n");
-            Serial_TRX_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " +Tx_Single_textBox.Text + "      " +(Tx_Single_textBox.Text.Count()+2)+ "      " +"T"+Tx_Str_Cnt++);
-            Serial_TRX_listBox.SelectedIndex = Serial_TRX_listBox.Items.Count - 1;  // 계속 스크롤이 되도록 처리
+            Fire10Byte_GroupBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " +Tx_Single_textBox.Text + "      " +(Tx_Single_textBox.Text.Count()+2)+ "      " +"T"+Tx_Str_Cnt++);
+            Fire10Byte_GroupBox.SelectedIndex = Fire10Byte_GroupBox.Items.Count - 1;  // 계속 스크롤이 되도록 처리
         }
 
         private void listBox2_Clr_Button_Click(object sender, EventArgs e)
         {
-            Serial_TRX_listBox.Items.Clear(); // 송, 수신 문자열 관련 리스트박스 화면 클리어(지우기)
+            Fire10Byte_GroupBox.Items.Clear(); // 송, 수신 문자열 관련 리스트박스 화면 클리어(지우기)
             Rx_Str_Cnt = 0;
             Tx_Str_Cnt = 0;
         }
@@ -242,7 +263,7 @@ namespace NTEC_Firmware_Test_App
             foreach ( var item in Tx_Str_listBox.Items)
             {
                 serialPort1.Write(item.ToString() + "\r\n");
-                Serial_TRX_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                Fire10Byte_GroupBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
                 await Task.Delay(msc);
 
             }
@@ -258,7 +279,7 @@ namespace NTEC_Firmware_Test_App
                 foreach (var item in Tx_Str_listBox.Items)
                 {
                     serialPort1.Write(item.ToString() + "\r\n");
-                    Serial_TRX_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                    Fire10Byte_GroupBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
                     await Task.Delay(msc);
                 }
             }
@@ -1519,40 +1540,689 @@ namespace NTEC_Firmware_Test_App
 
         private void NRG_Insert_Button_Click(object sender, EventArgs e)
         {
-            //if(NRG_Cmd_comboBox.SelectedIndex >= 0)
-            if (NRG_Cmd_comboBox.SelectedItem != null)
+            //if (NRG_Cmd_comboBox.SelectedIndex >= 0)
+            // 한 글자만 선택 또는 입력 받는 combobox 구현 시, 속성에서 ComboBox.AutoCompleteMode SuggestAppend 적용해야함. 한 글자 입력시, 문자열(\n, \r)로 키보드 입력 받기 때문에 제대로 입력을 판별하지 못하는 것으로 추정됨.
+            // https://fishpoint.tistory.com/622 참조
+
+            if (NRG_Cmd_comboBox.SelectedItem != null && (NRG16_ID_10_comboBox.SelectedItem != null && NRG16_ID_1_comboBox.SelectedItem != null))
             {
-                Tx_Str_listBox.Items.Add("&NRGFF" + "," + NRG_Cmd_comboBox.SelectedItem + "," + NRG_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_EMR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_EMR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                Tx_Str_listBox.Items.Add("&NRG" + NRG16_ID_10_comboBox.SelectedItem.ToString() + NRG16_ID_1_comboBox.SelectedItem.ToString() + "," + NRG_Cmd_comboBox.SelectedItem + "," + NRG_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_EMR_1_8Ch_data.ToString("X2").ToLower() + "," + NRG_Temp_EMR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
 
             }
-            else
+            else if (NRG_Cmd_comboBox.SelectedItem == null && (NRG16_ID_10_comboBox.SelectedItem != null && NRG16_ID_1_comboBox.SelectedItem != null))
             {
                 MessageBox.Show("NRG16 명령어 선택 오류!!!!!");
             }
+            else if (NRG_Cmd_comboBox.SelectedItem != null && (NRG16_ID_10_comboBox.SelectedItem == null || NRG16_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NRG16 ID 선택 오류!!!!!");
+            }
+            else if (NRG_Cmd_comboBox.SelectedItem == null && (NRG16_ID_10_comboBox.SelectedItem == null || NRG16_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NRG16 명령어, ID 선택 오류!!!!!");
+            }
+
         }
 
         private void NDT_Insert_Button_Click(object sender, EventArgs e)
         {
-            if (NDT_Cmd_comboBox.SelectedItem != null)
+            // 한 글자만 선택 또는 입력 받는 combobox 구현 시, 속성에서 ComboBox.AutoCompleteMode SuggestAppend 적용해야함. 한 글자 입력시, 문자열(\n, \r)로 키보드 입력 받기 때문에 제대로 입력을 판별하지 못하는 것으로 추정됨.
+            // https://fishpoint.tistory.com/622 참조
+
+            if (NDT_Cmd_comboBox.SelectedItem != null && (NRT16_ID_10_comboBox.SelectedItem != null && NRT16_ID_1_comboBox.SelectedItem != null))
             {
-                Tx_Str_listBox.Items.Add("&NDTFF" + "," + NDT_Cmd_comboBox.SelectedItem + "," + NDT_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_EMR_1_8Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_EMR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                Tx_Str_listBox.Items.Add("&NDT" + NRT16_ID_10_comboBox.SelectedItem.ToString() + NRT16_ID_1_comboBox.SelectedItem.ToString() + "," + NDT_Cmd_comboBox.SelectedItem + "," + NDT_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_EMR_1_8Ch_data.ToString("X2").ToLower() + "," + NDT_Temp_EMR_9_16Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
             }
-            else
+            else if (NDT_Cmd_comboBox.SelectedItem == null && (NRT16_ID_10_comboBox.SelectedItem != null && NRT16_ID_1_comboBox.SelectedItem != null))
             {
                 MessageBox.Show("NRT16 명령어 선택 오류!!!!!");
+            }
+            else if (NDT_Cmd_comboBox.SelectedItem != null && (NRT16_ID_10_comboBox.SelectedItem == null || NRT16_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NRT16 ID 선택 오류!!!!!");
+            }
+            else if (NDT_Cmd_comboBox.SelectedItem == null && (NRT16_ID_10_comboBox.SelectedItem == null || NRT16_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NRT16 명령어, ID 선택 오류!!!!!");
             }
         }
 
         private void NRT_Insert_Button_Click(object sender, EventArgs e)
         {
-            if (NRT_Cmd_comboBox.SelectedItem != null)
+            // 한 글자만 선택 또는 입력 받는 combobox 구현 시, 속성에서 ComboBox.AutoCompleteMode SuggestAppend 적용해야함. 한 글자 입력시, 문자열(\n, \r)로 키보드 입력 받기 때문에 제대로 입력을 판별하지 못하는 것으로 추정됨.
+            // https://fishpoint.tistory.com/622 참조
+
+            if (NRT_Cmd_comboBox.SelectedItem != null && (NRT40_ID_10_comboBox.SelectedItem != null && NRT40_ID_1_comboBox.SelectedItem != null))
             {
-                Tx_Str_listBox.Items.Add("&NRTFF" + "," + NRT_Cmd_comboBox.SelectedItem + "," + NRT_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_17_24Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_25_32Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_33_40Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                Tx_Str_listBox.Items.Add("&NRT" + NRT40_ID_10_comboBox.SelectedItem.ToString() + NRT40_ID_1_comboBox.SelectedItem.ToString() + "," + NRT_Cmd_comboBox.SelectedItem + "," + NRT_Temp_NOR_1_8Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_9_16Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_17_24Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_25_32Ch_data.ToString("X2").ToLower() + "," + NRT_Temp_NOR_33_40Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
             }
-            else
+            else if (NRT_Cmd_comboBox.SelectedItem == null && (NRT40_ID_10_comboBox.SelectedItem != null && NRT40_ID_1_comboBox.SelectedItem != null))
             {
                 MessageBox.Show("NRT40 명령어 선택 오류!!!!!");
             }
+            else if (NRT_Cmd_comboBox.SelectedItem != null && (NRT40_ID_10_comboBox.SelectedItem == null || NRT40_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NRT40 ID 선택 오류!!!!!");
+            }
+            else if (NRT_Cmd_comboBox.SelectedItem == null && (NRT40_ID_10_comboBox.SelectedItem == null || NRT40_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NRT40 명령어, ID 선택 오류!!!!!");
+            }
+        }
+
+        private void NEI_Select_RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Select_RadioButton.Checked == true)
+            {
+                Fire10Byte_Total_GroupBox.Enabled = false;
+                Fire12Byte_Total_GroupBox.Enabled = false;
+
+            }
+            else
+            {
+                Fire10Byte_Total_GroupBox.Enabled = true;
+                Fire12Byte_Total_GroupBox.Enabled = true;
+            }
+        }
+
+        private void Fire10Byte_Select_RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Fire10Byte_Select_RadioButton.Checked == true)
+            {
+                NEI42_GPIN_Total_GroupBox.Enabled = false;
+                NEI_ID_CMD_GroupBox.Enabled = false;
+                Fire12Byte_Total_GroupBox.Enabled = false;
+            }
+            else
+            {
+                NEI42_GPIN_Total_GroupBox.Enabled = true;
+                Fire12Byte_Total_GroupBox.Enabled = true;
+                NEI_ID_CMD_GroupBox.Enabled = true;
+
+            }
+        }
+
+        private void Fire12Byte_Select_RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Fire12Byte_Select_RadioButton.Checked == true)
+            {
+                NEI42_GPIN_Total_GroupBox.Enabled = false;
+                NEI_ID_CMD_GroupBox.Enabled = false;
+                Fire10Byte_Total_GroupBox.Enabled = false;
+            }
+            else
+            {
+                NEI42_GPIN_Total_GroupBox.Enabled = true;
+                Fire10Byte_Total_GroupBox.Enabled = true;
+                NEI_ID_CMD_GroupBox.Enabled = true;
+            }
+        }
+
+        private void NEI_Ch1_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(NEI_Ch1_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x01;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x01;
+
+            }
+        }
+
+        private void NEI_Ch2_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch2_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x02;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x02;
+
+            }
+        }
+
+        private void NEI_Ch3_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch3_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x04;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x04;
+
+            }
+        }
+
+        private void NEI_Ch4_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch4_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x08;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x08;
+
+            }
+        }
+
+        private void NEI_Ch5_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch5_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x10;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x10;
+
+            }
+        }
+
+        private void NEI_Ch6_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch6_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x20;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x20;
+
+            }
+        }
+
+        private void NEI_Ch7_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch7_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x40;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x40;
+
+            }
+        }
+
+        private void NEI_Ch8_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch8_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_1_8Ch_data += 0x80;
+            }
+            else
+            {
+                NEI_Temp_data_1_8Ch_data -= 0x80;
+
+            }
+        }
+
+        private void NEI_Ch9_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch9_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_9_14Ch_data += 0x01;
+            }
+            else
+            {
+                NEI_Temp_data_9_14Ch_data -= 0x01;
+            }
+        }
+
+        private void NEI_Ch10_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch10_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_9_14Ch_data += 0x02;
+            }
+            else
+            {
+                NEI_Temp_data_9_14Ch_data -= 0x02;
+            }
+        }
+
+        private void NEI_Ch11_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch11_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_9_14Ch_data += 0x04;
+            }
+            else
+            {
+                NEI_Temp_data_9_14Ch_data -= 0x04;
+            }
+        }
+
+        private void NEI_Ch12_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch12_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_9_14Ch_data += 0x08;
+            }
+            else
+            {
+                NEI_Temp_data_9_14Ch_data -= 0x08;
+            }
+        }
+
+        private void NEI_Ch13_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch13_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_9_14Ch_data += 0x10;
+            }
+            else
+            {
+                NEI_Temp_data_9_14Ch_data -= 0x10;
+            }
+        }
+
+        private void NEI_Ch14_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch14_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_9_14Ch_data += 0x20;
+            }
+            else
+            {
+                NEI_Temp_data_9_14Ch_data -= 0x20;
+            }
+        }
+
+        private void NEI_Ch15_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch15_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x01;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x01;
+            }
+        }
+
+        private void NEI_Ch16_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch16_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x02;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x02;
+            }
+        }
+
+        private void NEI_Ch17_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch17_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x04;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x04;
+            }
+        }
+
+        private void NEI_Ch18_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch18_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x08;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x08;
+            }
+        }
+
+        private void NEI_Ch19_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch19_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x10;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x10;
+            }
+        }
+
+        private void NEI_Ch20_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch20_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x20;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x20;
+            }
+        }
+
+        private void NEI_Ch21_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch21_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x40;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x40;
+            }
+        }
+
+        private void NEI_Ch22_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch22_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_15_22Ch_data += 0x80;
+            }
+            else
+            {
+                NEI_Temp_data_15_22Ch_data -= 0x80;
+            }
+        }
+
+        private void NEI_Ch23_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch23_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_23_28Ch_data += 0x01;
+            }
+            else
+            {
+                NEI_Temp_data_23_28Ch_data -= 0x01;
+            }
+        }
+
+        private void NEI_Ch24_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch24_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_23_28Ch_data += 0x02;
+            }
+            else
+            {
+                NEI_Temp_data_23_28Ch_data -= 0x02;
+            }
+        }
+
+        private void NEI_Ch25_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch25_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_23_28Ch_data += 0x04;
+            }
+            else
+            {
+                NEI_Temp_data_23_28Ch_data -= 0x04;
+            }
+        }
+
+        private void NEI_Ch26_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch26_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_23_28Ch_data += 0x08;
+            }
+            else
+            {
+                NEI_Temp_data_23_28Ch_data -= 0x08;
+            }
+        }
+
+        private void NEI_Ch27_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch27_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_23_28Ch_data += 0x10;
+            }
+            else
+            {
+                NEI_Temp_data_23_28Ch_data -= 0x10;
+            }
+        }
+
+        private void NEI_Ch28_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch28_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_23_28Ch_data += 0x20;
+            }
+            else
+            {
+                NEI_Temp_data_23_28Ch_data -= 0x20;
+            }
+        }
+
+        private void NEI_Ch29_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch29_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x01;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x01;
+            }
+        }
+
+        private void NEI_Ch30_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch30_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x02;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x02;
+            }
+        }
+
+        private void NEI_Ch31_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch31_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x04;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x04;
+            }
+        }
+
+        private void NEI_Ch32_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch32_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x08;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x08;
+            }
+        }
+
+        private void NEI_Ch33_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch33_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x10;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x10;
+            }
+        }
+
+        private void NEI_Ch34_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch34_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x20;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x20;
+            }
+        }
+
+        private void NEI_Ch35_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch35_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x40;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x40;
+            }
+        }
+
+        private void NEI_Ch36_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch36_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_29_36Ch_data += 0x80;
+            }
+            else
+            {
+                NEI_Temp_data_29_36Ch_data -= 0x80;
+            }
+        }
+
+        private void NEI_Ch37_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch37_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_37_42Ch_data += 0x01;
+            }
+            else
+            {
+                NEI_Temp_data_37_42Ch_data -= 0x01;
+            }
+        }
+
+        private void NEI_Ch38_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch38_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_37_42Ch_data += 0x02;
+            }
+            else
+            {
+                NEI_Temp_data_37_42Ch_data -= 0x02;
+            }
+        }
+
+        private void NEI_Ch39_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch39_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_37_42Ch_data += 0x04;
+            }
+            else
+            {
+                NEI_Temp_data_37_42Ch_data -= 0x04;
+            }
+        }
+
+        private void NEI_Ch40_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch40_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_37_42Ch_data += 0x08;
+            }
+            else
+            {
+                NEI_Temp_data_37_42Ch_data -= 0x08;
+            }
+        }
+
+        private void NEI_Ch41_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch41_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_37_42Ch_data += 0x10;
+            }
+            else
+            {
+                NEI_Temp_data_37_42Ch_data -= 0x10;
+            }
+        }
+
+        private void NEI_Ch42_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (NEI_Ch42_CheckBox.Checked == true)
+            {
+                NEI_Temp_data_37_42Ch_data += 0x20;
+            }
+            else
+            {
+                NEI_Temp_data_37_42Ch_data -= 0x20;
+            }
+        }
+
+        private void Fire_Insert_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Start_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Stop_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Audio_Start_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Audio_Stop_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Reset_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire12Byte_Start_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire12Byte_Stop_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire12Byte_Audio_Start_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire12Byte_Audio_Stop_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire12Byte_Reset_Button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
