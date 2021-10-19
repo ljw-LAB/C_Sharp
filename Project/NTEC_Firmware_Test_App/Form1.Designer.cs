@@ -46,9 +46,9 @@
             this.button_DbSave = new System.Windows.Forms.Button();
             this.button_DbLoad = new System.Windows.Forms.Button();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.NTEC_TabControl = new System.Windows.Forms.TabControl();
+            this.NMC44_TabPage = new System.Windows.Forms.TabPage();
+            this.NRG16_TabPage = new System.Windows.Forms.TabPage();
             this.NRG16_CMD_Label = new System.Windows.Forms.Label();
             this.NRG16_ID_1_comboBox = new System.Windows.Forms.ComboBox();
             this.NRG16_ID_10_comboBox = new System.Windows.Forms.ComboBox();
@@ -89,7 +89,7 @@
             this.NRG_Ch4_CheckBox = new System.Windows.Forms.CheckBox();
             this.NRG16_ID_Label = new System.Windows.Forms.Label();
             this.NRG_Insert_Button = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.NRT16_TabPage = new System.Windows.Forms.TabPage();
             this.NRT16_CMD_Label = new System.Windows.Forms.Label();
             this.NRT16_ID_1_comboBox = new System.Windows.Forms.ComboBox();
             this.NRT16_ID_10_comboBox = new System.Windows.Forms.ComboBox();
@@ -130,7 +130,7 @@
             this.NDT_Ch2_CheckBox = new System.Windows.Forms.CheckBox();
             this.NDT_Ch3_CheckBox = new System.Windows.Forms.CheckBox();
             this.NDT_Ch4_CheckBox = new System.Windows.Forms.CheckBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.NRT40_TabPage = new System.Windows.Forms.TabPage();
             this.NRT40_CMD_Label = new System.Windows.Forms.Label();
             this.NRT40_ID_1_comboBox = new System.Windows.Forms.ComboBox();
             this.NRT_Cmd_comboBox = new System.Windows.Forms.ComboBox();
@@ -178,7 +178,7 @@
             this.NRT_Ch2_CheckBox = new System.Windows.Forms.CheckBox();
             this.NRT_Ch3_CheckBox = new System.Windows.Forms.CheckBox();
             this.NRT_Ch4_CheckBox = new System.Windows.Forms.CheckBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.MPR_TabPage = new System.Windows.Forms.TabPage();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
             this.label11 = new System.Windows.Forms.Label();
@@ -223,7 +223,7 @@
             this.checkBox142 = new System.Windows.Forms.CheckBox();
             this.checkBox143 = new System.Windows.Forms.CheckBox();
             this.checkBox144 = new System.Windows.Forms.CheckBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.NCS01_TabPage = new System.Windows.Forms.TabPage();
             this.NCS_Insert_Button = new System.Windows.Forms.Button();
             this.NCS01_CMD_Label = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -271,50 +271,13 @@
             this.NCS01_ID_10_comboBox = new System.Windows.Forms.ComboBox();
             this.NCS01_ID_Label = new System.Windows.Forms.Label();
             this.NCS_Cmd_comboBox = new System.Windows.Forms.ComboBox();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.Fire_Insert_Button = new System.Windows.Forms.Button();
-            this.NEI_ID_CMD_GroupBox = new System.Windows.Forms.GroupBox();
+            this.NEI42_TabPage = new System.Windows.Forms.TabPage();
             this.NEI42_CMD_Label = new System.Windows.Forms.Label();
             this.NEI42_ID_1_comboBox = new System.Windows.Forms.ComboBox();
             this.NEI42_ID_Label = new System.Windows.Forms.Label();
             this.NEI42_ID_10_comboBox = new System.Windows.Forms.ComboBox();
             this.NEI42_Cmd_comboBox = new System.Windows.Forms.ComboBox();
-            this.Fire12Byte_Total_GroupBox = new System.Windows.Forms.GroupBox();
-            this.Fire12Byte_Reset_Button = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.Fire12Byte_Audio_Stop_Button = new System.Windows.Forms.Button();
-            this.FIRE12Byte_Floor_ID_Label = new System.Windows.Forms.Label();
-            this.Fire12Byte_Audio_Start_Button = new System.Windows.Forms.Button();
-            this.FIRE12Byte_Dong_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
-            this.Fire12Byte_Stop_Button = new System.Windows.Forms.Button();
-            this.FIRE12Byte_Gaedan_ID_Label = new System.Windows.Forms.Label();
-            this.Fire12Byte_Start_Button = new System.Windows.Forms.Button();
-            this.FIRE12Byte_Dong_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE12Byte_Dong_ID_Label = new System.Windows.Forms.Label();
-            this.FIRE12Byte_Floor_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.FIRE12Byte_Floor_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE12Byte_Gaedan_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE12Byte_Gaedan_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
-            this.Fire10Byte_Total_GroupBox = new System.Windows.Forms.GroupBox();
-            this.Fire10Byte_Reset_Button = new System.Windows.Forms.Button();
-            this.Fire10Byte_Audio_Stop_Button = new System.Windows.Forms.Button();
-            this.Fire10Byte_Audio_Start_Button = new System.Windows.Forms.Button();
-            this.Fire10Byte_Stop_Button = new System.Windows.Forms.Button();
-            this.FIRE10Byte_Seperate_ID_Label = new System.Windows.Forms.Label();
-            this.Fire10Byte_Start_Button = new System.Windows.Forms.Button();
-            this.FIRE10Byte_Floor_ID_Label = new System.Windows.Forms.Label();
-            this.FIRE10Byte_Gaedan_ID_Label = new System.Windows.Forms.Label();
-            this.FIRE10Byte_Dong_ID_Label = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.FIRE10Byte_Gaedan_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE10Byte_Seperate_ID_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE10Byte_Floor_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE10Byte_Floor_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE10Byte_Dong_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE10Byte_Dong_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
+            this.NEI_Insert_Button = new System.Windows.Forms.Button();
             this.NEI42_GPIN_Total_GroupBox = new System.Windows.Forms.GroupBox();
             this.NEI42_GPIN3_GroupBox = new System.Windows.Forms.GroupBox();
             this.NEI_Ch41_CheckBox = new System.Windows.Forms.CheckBox();
@@ -361,8 +324,52 @@
             this.NEI_Ch4_CheckBox = new System.Windows.Forms.CheckBox();
             this.NEI_Ch3_CheckBox = new System.Windows.Forms.CheckBox();
             this.NEI_Ch12_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Fire_TabPage = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.Auto_RadioButton = new System.Windows.Forms.RadioButton();
+            this.Manual_RadioButton = new System.Windows.Forms.RadioButton();
+            this.Fire_Insert_Button = new System.Windows.Forms.Button();
+            this.Fire12Byte_Total_GroupBox = new System.Windows.Forms.GroupBox();
+            this.FIRE12Byte_Operate_Label = new System.Windows.Forms.Label();
+            this.Fire12Byte_Reset_Button = new System.Windows.Forms.Button();
+            this.FIRE12Byte_Operate_ConboBox = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Fire12Byte_Audio_Stop_Button = new System.Windows.Forms.Button();
+            this.FIRE12Byte_Floor_ID_Label = new System.Windows.Forms.Label();
+            this.Fire12Byte_Audio_Start_Button = new System.Windows.Forms.Button();
+            this.FIRE12Byte_Dong_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
+            this.Fire12Byte_Stop_Button = new System.Windows.Forms.Button();
+            this.FIRE12Byte_Gaedan_ID_Label = new System.Windows.Forms.Label();
+            this.Fire12Byte_Start_Button = new System.Windows.Forms.Button();
+            this.FIRE12Byte_Dong_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE12Byte_Dong_ID_Label = new System.Windows.Forms.Label();
+            this.FIRE12Byte_Floor_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.FIRE12Byte_Floor_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE12Byte_Gaedan_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE12Byte_Gaedan_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
+            this.Fire10Byte_Total_GroupBox = new System.Windows.Forms.GroupBox();
+            this.FIRE10Byte_Operate_Label = new System.Windows.Forms.Label();
+            this.FIRE10Byte_Operate_ConboBox = new System.Windows.Forms.ComboBox();
+            this.Fire10Byte_Reset_Button = new System.Windows.Forms.Button();
+            this.Fire10Byte_Audio_Stop_Button = new System.Windows.Forms.Button();
+            this.Fire10Byte_Audio_Start_Button = new System.Windows.Forms.Button();
+            this.Fire10Byte_Stop_Button = new System.Windows.Forms.Button();
+            this.FIRE10Byte_Seperate_ID_Label = new System.Windows.Forms.Label();
+            this.Fire10Byte_Start_Button = new System.Windows.Forms.Button();
+            this.FIRE10Byte_Floor_ID_Label = new System.Windows.Forms.Label();
+            this.FIRE10Byte_Gaedan_ID_Label = new System.Windows.Forms.Label();
+            this.FIRE10Byte_Dong_ID_Label = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.FIRE10Byte_Gaedan_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE10Byte_Gaedan_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE10Byte_Seperate_ID_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE10Byte_Floor_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE10Byte_Floor_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE10Byte_Dong_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
+            this.FIRE10Byte_Dong_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
             this.Fire_Select_GroupBox = new System.Windows.Forms.GroupBox();
-            this.NEI_Select_RadioButton = new System.Windows.Forms.RadioButton();
             this.Fire12Byte_Select_RadioButton = new System.Windows.Forms.RadioButton();
             this.Fire10Byte_Select_RadioButton = new System.Windows.Forms.RadioButton();
             this.Tx_Str_listBox = new System.Windows.Forms.ListBox();
@@ -374,34 +381,38 @@
             this.label10 = new System.Windows.Forms.Label();
             this.Tx_Str_Insert_Button = new System.Windows.Forms.Button();
             this.Tx_Str_Delete_Button = new System.Windows.Forms.Button();
-            this.Fire10Byte_GroupBox = new System.Windows.Forms.ListBox();
+            this.Monitoring_listBox = new System.Windows.Forms.ListBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.listBox2_Clr_Button = new System.Windows.Forms.Button();
             this.Serial_Time_label = new System.Windows.Forms.Label();
             this.Data_Str_label = new System.Windows.Forms.Label();
             this.Length_label = new System.Windows.Forms.Label();
             this.TRx_label = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.Multi_Stop_button = new System.Windows.Forms.Button();
+            this.Hex_con_Tx_Str_listBox_checkBox = new System.Windows.Forms.CheckBox();
+            this.Hex_con_Monitoring_listBox_checkBox2 = new System.Windows.Forms.CheckBox();
+            this.NTEC_TabControl.SuspendLayout();
+            this.NRG16_TabPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.NRT16_TabPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.NRT40_TabPage.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.MPR_TabPage.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.NCS01_TabPage.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.NEI_ID_CMD_GroupBox.SuspendLayout();
-            this.Fire12Byte_Total_GroupBox.SuspendLayout();
-            this.Fire10Byte_Total_GroupBox.SuspendLayout();
+            this.NEI42_TabPage.SuspendLayout();
             this.NEI42_GPIN_Total_GroupBox.SuspendLayout();
             this.NEI42_GPIN3_GroupBox.SuspendLayout();
             this.NEI42_GPIN2_GroupBox.SuspendLayout();
             this.NEI42_GPIN1_GroupBox.SuspendLayout();
+            this.Fire_TabPage.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.Fire12Byte_Total_GroupBox.SuspendLayout();
+            this.Fire10Byte_Total_GroupBox.SuspendLayout();
             this.Fire_Select_GroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -577,48 +588,49 @@
             this.button_DbLoad.Text = "DB 불러오기";
             this.button_DbLoad.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // NTEC_TabControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Location = new System.Drawing.Point(231, 20);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(492, 644);
-            this.tabControl1.TabIndex = 16;
+            this.NTEC_TabControl.Controls.Add(this.NMC44_TabPage);
+            this.NTEC_TabControl.Controls.Add(this.NRG16_TabPage);
+            this.NTEC_TabControl.Controls.Add(this.NRT16_TabPage);
+            this.NTEC_TabControl.Controls.Add(this.NRT40_TabPage);
+            this.NTEC_TabControl.Controls.Add(this.MPR_TabPage);
+            this.NTEC_TabControl.Controls.Add(this.NCS01_TabPage);
+            this.NTEC_TabControl.Controls.Add(this.NEI42_TabPage);
+            this.NTEC_TabControl.Controls.Add(this.Fire_TabPage);
+            this.NTEC_TabControl.Location = new System.Drawing.Point(231, 20);
+            this.NTEC_TabControl.Name = "NTEC_TabControl";
+            this.NTEC_TabControl.SelectedIndex = 0;
+            this.NTEC_TabControl.Size = new System.Drawing.Size(492, 550);
+            this.NTEC_TabControl.TabIndex = 16;
             // 
-            // tabPage1
+            // NMC44_TabPage
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(484, 618);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "NMC44";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.NMC44_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.NMC44_TabPage.Name = "NMC44_TabPage";
+            this.NMC44_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NMC44_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NMC44_TabPage.TabIndex = 0;
+            this.NMC44_TabPage.Text = "NMC44";
+            this.NMC44_TabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // NRG16_TabPage
             // 
-            this.tabPage3.Controls.Add(this.NRG16_CMD_Label);
-            this.tabPage3.Controls.Add(this.NRG16_ID_1_comboBox);
-            this.tabPage3.Controls.Add(this.NRG16_ID_10_comboBox);
-            this.tabPage3.Controls.Add(this.NRG_Cmd_comboBox);
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Controls.Add(this.groupBox2);
-            this.tabPage3.Controls.Add(this.NRG16_ID_Label);
-            this.tabPage3.Controls.Add(this.NRG_Insert_Button);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(484, 618);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "NRG16";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.NRG16_TabPage.Controls.Add(this.NRG16_CMD_Label);
+            this.NRG16_TabPage.Controls.Add(this.NRG16_ID_1_comboBox);
+            this.NRG16_TabPage.Controls.Add(this.NRG16_ID_10_comboBox);
+            this.NRG16_TabPage.Controls.Add(this.NRG_Cmd_comboBox);
+            this.NRG16_TabPage.Controls.Add(this.groupBox1);
+            this.NRG16_TabPage.Controls.Add(this.groupBox2);
+            this.NRG16_TabPage.Controls.Add(this.NRG16_ID_Label);
+            this.NRG16_TabPage.Controls.Add(this.NRG_Insert_Button);
+            this.NRG16_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.NRG16_TabPage.Name = "NRG16_TabPage";
+            this.NRG16_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NRG16_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NRG16_TabPage.TabIndex = 2;
+            this.NRG16_TabPage.Text = "NRG16";
+            this.NRG16_TabPage.UseVisualStyleBackColor = true;
             // 
             // NRG16_CMD_Label
             // 
@@ -1108,7 +1120,7 @@
             // 
             // NRG_Insert_Button
             // 
-            this.NRG_Insert_Button.Location = new System.Drawing.Point(430, 24);
+            this.NRG_Insert_Button.Location = new System.Drawing.Point(434, 24);
             this.NRG_Insert_Button.Name = "NRG_Insert_Button";
             this.NRG_Insert_Button.Size = new System.Drawing.Size(44, 41);
             this.NRG_Insert_Button.TabIndex = 19;
@@ -1116,24 +1128,24 @@
             this.NRG_Insert_Button.UseVisualStyleBackColor = true;
             this.NRG_Insert_Button.Click += new System.EventHandler(this.NRG_Insert_Button_Click);
             // 
-            // tabPage2
+            // NRT16_TabPage
             // 
-            this.tabPage2.Controls.Add(this.NRT16_CMD_Label);
-            this.tabPage2.Controls.Add(this.NRT16_ID_1_comboBox);
-            this.tabPage2.Controls.Add(this.NRT16_ID_10_comboBox);
-            this.tabPage2.Controls.Add(this.NDT_Cmd_comboBox);
-            this.tabPage2.Controls.Add(this.NDT_Insert_Button);
-            this.tabPage2.Controls.Add(this.NRT16_ID_Label);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(484, 618);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "NRT16";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.NRT16_TabPage.Controls.Add(this.NRT16_CMD_Label);
+            this.NRT16_TabPage.Controls.Add(this.NRT16_ID_1_comboBox);
+            this.NRT16_TabPage.Controls.Add(this.NRT16_ID_10_comboBox);
+            this.NRT16_TabPage.Controls.Add(this.NDT_Cmd_comboBox);
+            this.NRT16_TabPage.Controls.Add(this.NDT_Insert_Button);
+            this.NRT16_TabPage.Controls.Add(this.NRT16_ID_Label);
+            this.NRT16_TabPage.Controls.Add(this.groupBox3);
+            this.NRT16_TabPage.Controls.Add(this.groupBox4);
+            this.NRT16_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.NRT16_TabPage.Name = "NRT16_TabPage";
+            this.NRT16_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NRT16_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NRT16_TabPage.TabIndex = 3;
+            this.NRT16_TabPage.Text = "NRT16";
+            this.NRT16_TabPage.UseVisualStyleBackColor = true;
+            this.NRT16_TabPage.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // NRT16_CMD_Label
             // 
@@ -1212,7 +1224,7 @@
             // 
             // NDT_Insert_Button
             // 
-            this.NDT_Insert_Button.Location = new System.Drawing.Point(430, 24);
+            this.NDT_Insert_Button.Location = new System.Drawing.Point(434, 24);
             this.NDT_Insert_Button.Name = "NDT_Insert_Button";
             this.NDT_Insert_Button.Size = new System.Drawing.Size(44, 41);
             this.NDT_Insert_Button.TabIndex = 48;
@@ -1631,22 +1643,22 @@
             this.NDT_Ch4_CheckBox.UseVisualStyleBackColor = true;
             this.NDT_Ch4_CheckBox.CheckedChanged += new System.EventHandler(this.NDT_Ch4_CheckBox_CheckedChanged);
             // 
-            // tabPage4
+            // NRT40_TabPage
             // 
-            this.tabPage4.Controls.Add(this.NRT40_CMD_Label);
-            this.tabPage4.Controls.Add(this.NRT40_ID_1_comboBox);
-            this.tabPage4.Controls.Add(this.NRT_Cmd_comboBox);
-            this.tabPage4.Controls.Add(this.NRT40_ID_10_comboBox);
-            this.tabPage4.Controls.Add(this.NRT_Insert_Button);
-            this.tabPage4.Controls.Add(this.NRT40_ID_Label);
-            this.tabPage4.Controls.Add(this.groupBox6);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(484, 618);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "NRT40";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.NRT40_TabPage.Controls.Add(this.NRT40_CMD_Label);
+            this.NRT40_TabPage.Controls.Add(this.NRT40_ID_1_comboBox);
+            this.NRT40_TabPage.Controls.Add(this.NRT_Cmd_comboBox);
+            this.NRT40_TabPage.Controls.Add(this.NRT40_ID_10_comboBox);
+            this.NRT40_TabPage.Controls.Add(this.NRT_Insert_Button);
+            this.NRT40_TabPage.Controls.Add(this.NRT40_ID_Label);
+            this.NRT40_TabPage.Controls.Add(this.groupBox6);
+            this.NRT40_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.NRT40_TabPage.Name = "NRT40_TabPage";
+            this.NRT40_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NRT40_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NRT40_TabPage.TabIndex = 4;
+            this.NRT40_TabPage.Text = "NRT40";
+            this.NRT40_TabPage.UseVisualStyleBackColor = true;
             // 
             // NRT40_CMD_Label
             // 
@@ -1725,7 +1737,7 @@
             // 
             // NRT_Insert_Button
             // 
-            this.NRT_Insert_Button.Location = new System.Drawing.Point(430, 24);
+            this.NRT_Insert_Button.Location = new System.Drawing.Point(434, 24);
             this.NRT_Insert_Button.Name = "NRT_Insert_Button";
             this.NRT_Insert_Button.Size = new System.Drawing.Size(44, 41);
             this.NRT_Insert_Button.TabIndex = 51;
@@ -2231,19 +2243,19 @@
             this.NRT_Ch4_CheckBox.UseVisualStyleBackColor = true;
             this.NRT_Ch4_CheckBox.CheckedChanged += new System.EventHandler(this.NRT_Ch4_CheckBox_CheckedChanged);
             // 
-            // tabPage5
+            // MPR_TabPage
             // 
-            this.tabPage5.Controls.Add(this.domainUpDown1);
-            this.tabPage5.Controls.Add(this.domainUpDown2);
-            this.tabPage5.Controls.Add(this.label11);
-            this.tabPage5.Controls.Add(this.groupBox5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(484, 618);
-            this.tabPage5.TabIndex = 5;
-            this.tabPage5.Text = "MPR4000";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.MPR_TabPage.Controls.Add(this.domainUpDown1);
+            this.MPR_TabPage.Controls.Add(this.domainUpDown2);
+            this.MPR_TabPage.Controls.Add(this.label11);
+            this.MPR_TabPage.Controls.Add(this.groupBox5);
+            this.MPR_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.MPR_TabPage.Name = "MPR_TabPage";
+            this.MPR_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.MPR_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.MPR_TabPage.TabIndex = 5;
+            this.MPR_TabPage.Text = "MPR4000";
+            this.MPR_TabPage.UseVisualStyleBackColor = true;
             // 
             // domainUpDown1
             // 
@@ -2719,26 +2731,26 @@
             this.checkBox144.Text = "Ch4";
             this.checkBox144.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // NCS01_TabPage
             // 
-            this.tabPage6.Controls.Add(this.NCS_Insert_Button);
-            this.tabPage6.Controls.Add(this.NCS01_CMD_Label);
-            this.tabPage6.Controls.Add(this.groupBox7);
-            this.tabPage6.Controls.Add(this.NCS01_ID_1_comboBox);
-            this.tabPage6.Controls.Add(this.NCS01_ID_10_comboBox);
-            this.tabPage6.Controls.Add(this.NCS01_ID_Label);
-            this.tabPage6.Controls.Add(this.NCS_Cmd_comboBox);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(484, 618);
-            this.tabPage6.TabIndex = 6;
-            this.tabPage6.Text = "NCS01";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.NCS01_TabPage.Controls.Add(this.NCS_Insert_Button);
+            this.NCS01_TabPage.Controls.Add(this.NCS01_CMD_Label);
+            this.NCS01_TabPage.Controls.Add(this.groupBox7);
+            this.NCS01_TabPage.Controls.Add(this.NCS01_ID_1_comboBox);
+            this.NCS01_TabPage.Controls.Add(this.NCS01_ID_10_comboBox);
+            this.NCS01_TabPage.Controls.Add(this.NCS01_ID_Label);
+            this.NCS01_TabPage.Controls.Add(this.NCS_Cmd_comboBox);
+            this.NCS01_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.NCS01_TabPage.Name = "NCS01_TabPage";
+            this.NCS01_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NCS01_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NCS01_TabPage.TabIndex = 6;
+            this.NCS01_TabPage.Text = "NCS01";
+            this.NCS01_TabPage.UseVisualStyleBackColor = true;
             // 
             // NCS_Insert_Button
             // 
-            this.NCS_Insert_Button.Location = new System.Drawing.Point(430, 24);
+            this.NCS_Insert_Button.Location = new System.Drawing.Point(434, 24);
             this.NCS_Insert_Button.Name = "NCS_Insert_Button";
             this.NCS_Insert_Button.Size = new System.Drawing.Size(44, 41);
             this.NCS_Insert_Button.TabIndex = 53;
@@ -3278,53 +3290,30 @@
             this.NCS_Cmd_comboBox.Size = new System.Drawing.Size(121, 20);
             this.NCS_Cmd_comboBox.TabIndex = 59;
             // 
-            // tabPage7
+            // NEI42_TabPage
             // 
-            this.tabPage7.Controls.Add(this.Fire_Insert_Button);
-            this.tabPage7.Controls.Add(this.NEI_ID_CMD_GroupBox);
-            this.tabPage7.Controls.Add(this.Fire12Byte_Total_GroupBox);
-            this.tabPage7.Controls.Add(this.Fire10Byte_Total_GroupBox);
-            this.tabPage7.Controls.Add(this.NEI42_GPIN_Total_GroupBox);
-            this.tabPage7.Controls.Add(this.Fire_Select_GroupBox);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(484, 618);
-            this.tabPage7.TabIndex = 7;
-            this.tabPage7.Text = "Fire(NEI42, 10, 12)";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // Fire_Insert_Button
-            // 
-            this.Fire_Insert_Button.Location = new System.Drawing.Point(434, 76);
-            this.Fire_Insert_Button.Name = "Fire_Insert_Button";
-            this.Fire_Insert_Button.Size = new System.Drawing.Size(44, 41);
-            this.Fire_Insert_Button.TabIndex = 53;
-            this.Fire_Insert_Button.Text = ">>";
-            this.Fire_Insert_Button.UseVisualStyleBackColor = true;
-            this.Fire_Insert_Button.Click += new System.EventHandler(this.Fire_Insert_Button_Click);
-            // 
-            // NEI_ID_CMD_GroupBox
-            // 
-            this.NEI_ID_CMD_GroupBox.Controls.Add(this.NEI42_CMD_Label);
-            this.NEI_ID_CMD_GroupBox.Controls.Add(this.NEI42_ID_1_comboBox);
-            this.NEI_ID_CMD_GroupBox.Controls.Add(this.NEI42_ID_Label);
-            this.NEI_ID_CMD_GroupBox.Controls.Add(this.NEI42_ID_10_comboBox);
-            this.NEI_ID_CMD_GroupBox.Controls.Add(this.NEI42_Cmd_comboBox);
-            this.NEI_ID_CMD_GroupBox.Location = new System.Drawing.Point(211, 6);
-            this.NEI_ID_CMD_GroupBox.Name = "NEI_ID_CMD_GroupBox";
-            this.NEI_ID_CMD_GroupBox.Size = new System.Drawing.Size(266, 70);
-            this.NEI_ID_CMD_GroupBox.TabIndex = 0;
-            this.NEI_ID_CMD_GroupBox.TabStop = false;
-            this.NEI_ID_CMD_GroupBox.Text = "NEI42";
+            this.NEI42_TabPage.Controls.Add(this.NEI42_CMD_Label);
+            this.NEI42_TabPage.Controls.Add(this.NEI42_ID_1_comboBox);
+            this.NEI42_TabPage.Controls.Add(this.NEI42_ID_Label);
+            this.NEI42_TabPage.Controls.Add(this.NEI42_ID_10_comboBox);
+            this.NEI42_TabPage.Controls.Add(this.NEI42_Cmd_comboBox);
+            this.NEI42_TabPage.Controls.Add(this.NEI_Insert_Button);
+            this.NEI42_TabPage.Controls.Add(this.NEI42_GPIN_Total_GroupBox);
+            this.NEI42_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.NEI42_TabPage.Name = "NEI42_TabPage";
+            this.NEI42_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NEI42_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NEI42_TabPage.TabIndex = 7;
+            this.NEI42_TabPage.Text = "NEI42";
+            this.NEI42_TabPage.UseVisualStyleBackColor = true;
             // 
             // NEI42_CMD_Label
             // 
             this.NEI42_CMD_Label.AutoSize = true;
-            this.NEI42_CMD_Label.Location = new System.Drawing.Point(132, 22);
+            this.NEI42_CMD_Label.Location = new System.Drawing.Point(133, 15);
             this.NEI42_CMD_Label.Name = "NEI42_CMD_Label";
             this.NEI42_CMD_Label.Size = new System.Drawing.Size(41, 12);
-            this.NEI42_CMD_Label.TabIndex = 62;
+            this.NEI42_CMD_Label.TabIndex = 67;
             this.NEI42_CMD_Label.Text = "명령어";
             // 
             // NEI42_ID_1_comboBox
@@ -3348,18 +3337,18 @@
             "D",
             "E",
             "F"});
-            this.NEI42_ID_1_comboBox.Location = new System.Drawing.Point(71, 37);
+            this.NEI42_ID_1_comboBox.Location = new System.Drawing.Point(70, 30);
             this.NEI42_ID_1_comboBox.Name = "NEI42_ID_1_comboBox";
             this.NEI42_ID_1_comboBox.Size = new System.Drawing.Size(57, 20);
-            this.NEI42_ID_1_comboBox.TabIndex = 61;
+            this.NEI42_ID_1_comboBox.TabIndex = 66;
             // 
             // NEI42_ID_Label
             // 
             this.NEI42_ID_Label.AutoSize = true;
-            this.NEI42_ID_Label.Location = new System.Drawing.Point(5, 22);
+            this.NEI42_ID_Label.Location = new System.Drawing.Point(4, 15);
             this.NEI42_ID_Label.Name = "NEI42_ID_Label";
             this.NEI42_ID_Label.Size = new System.Drawing.Size(16, 12);
-            this.NEI42_ID_Label.TabIndex = 58;
+            this.NEI42_ID_Label.TabIndex = 63;
             this.NEI42_ID_Label.Text = "ID";
             // 
             // NEI42_ID_10_comboBox
@@ -3383,28 +3372,641 @@
             "D",
             "E",
             "F"});
-            this.NEI42_ID_10_comboBox.Location = new System.Drawing.Point(7, 37);
+            this.NEI42_ID_10_comboBox.Location = new System.Drawing.Point(6, 30);
             this.NEI42_ID_10_comboBox.Name = "NEI42_ID_10_comboBox";
             this.NEI42_ID_10_comboBox.Size = new System.Drawing.Size(57, 20);
-            this.NEI42_ID_10_comboBox.TabIndex = 60;
+            this.NEI42_ID_10_comboBox.TabIndex = 65;
             // 
             // NEI42_Cmd_comboBox
             // 
             this.NEI42_Cmd_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.NEI42_Cmd_comboBox.FormattingEnabled = true;
             this.NEI42_Cmd_comboBox.Items.AddRange(new object[] {
-            "NOR",
             "DMY",
             "VER",
             "INIT"});
-            this.NEI42_Cmd_comboBox.Location = new System.Drawing.Point(134, 37);
+            this.NEI42_Cmd_comboBox.Location = new System.Drawing.Point(133, 30);
             this.NEI42_Cmd_comboBox.Name = "NEI42_Cmd_comboBox";
             this.NEI42_Cmd_comboBox.Size = new System.Drawing.Size(121, 20);
-            this.NEI42_Cmd_comboBox.TabIndex = 59;
+            this.NEI42_Cmd_comboBox.TabIndex = 64;
+            // 
+            // NEI_Insert_Button
+            // 
+            this.NEI_Insert_Button.Location = new System.Drawing.Point(434, 24);
+            this.NEI_Insert_Button.Name = "NEI_Insert_Button";
+            this.NEI_Insert_Button.Size = new System.Drawing.Size(44, 41);
+            this.NEI_Insert_Button.TabIndex = 53;
+            this.NEI_Insert_Button.Text = ">>";
+            this.NEI_Insert_Button.UseVisualStyleBackColor = true;
+            this.NEI_Insert_Button.Click += new System.EventHandler(this.NEI_Insert_Button_Click);
+            // 
+            // NEI42_GPIN_Total_GroupBox
+            // 
+            this.NEI42_GPIN_Total_GroupBox.Controls.Add(this.NEI42_GPIN3_GroupBox);
+            this.NEI42_GPIN_Total_GroupBox.Controls.Add(this.NEI42_GPIN2_GroupBox);
+            this.NEI42_GPIN_Total_GroupBox.Controls.Add(this.NEI42_GPIN1_GroupBox);
+            this.NEI42_GPIN_Total_GroupBox.Location = new System.Drawing.Point(6, 71);
+            this.NEI42_GPIN_Total_GroupBox.Name = "NEI42_GPIN_Total_GroupBox";
+            this.NEI42_GPIN_Total_GroupBox.Size = new System.Drawing.Size(471, 247);
+            this.NEI42_GPIN_Total_GroupBox.TabIndex = 4;
+            this.NEI42_GPIN_Total_GroupBox.TabStop = false;
+            this.NEI42_GPIN_Total_GroupBox.Text = "NEI42";
+            // 
+            // NEI42_GPIN3_GroupBox
+            // 
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch41_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch29_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch42_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch33_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch37_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch34_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch38_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch36_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch30_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch39_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch35_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch32_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch31_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch40_CheckBox);
+            this.NEI42_GPIN3_GroupBox.Location = new System.Drawing.Point(6, 164);
+            this.NEI42_GPIN3_GroupBox.Name = "NEI42_GPIN3_GroupBox";
+            this.NEI42_GPIN3_GroupBox.Size = new System.Drawing.Size(459, 67);
+            this.NEI42_GPIN3_GroupBox.TabIndex = 98;
+            this.NEI42_GPIN3_GroupBox.TabStop = false;
+            this.NEI42_GPIN3_GroupBox.Text = "GPIN3";
+            // 
+            // NEI_Ch41_CheckBox
+            // 
+            this.NEI_Ch41_CheckBox.AutoSize = true;
+            this.NEI_Ch41_CheckBox.Location = new System.Drawing.Point(290, 42);
+            this.NEI_Ch41_CheckBox.Name = "NEI_Ch41_CheckBox";
+            this.NEI_Ch41_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch41_CheckBox.TabIndex = 95;
+            this.NEI_Ch41_CheckBox.Text = "Ch41";
+            this.NEI_Ch41_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch41_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch41_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch29_CheckBox
+            // 
+            this.NEI_Ch29_CheckBox.AutoSize = true;
+            this.NEI_Ch29_CheckBox.Location = new System.Drawing.Point(6, 20);
+            this.NEI_Ch29_CheckBox.Name = "NEI_Ch29_CheckBox";
+            this.NEI_Ch29_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch29_CheckBox.TabIndex = 83;
+            this.NEI_Ch29_CheckBox.Text = "Ch29";
+            this.NEI_Ch29_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch29_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch29_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch42_CheckBox
+            // 
+            this.NEI_Ch42_CheckBox.AutoSize = true;
+            this.NEI_Ch42_CheckBox.Location = new System.Drawing.Point(348, 42);
+            this.NEI_Ch42_CheckBox.Name = "NEI_Ch42_CheckBox";
+            this.NEI_Ch42_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch42_CheckBox.TabIndex = 96;
+            this.NEI_Ch42_CheckBox.Text = "Ch42";
+            this.NEI_Ch42_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch42_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch42_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch33_CheckBox
+            // 
+            this.NEI_Ch33_CheckBox.AutoSize = true;
+            this.NEI_Ch33_CheckBox.Location = new System.Drawing.Point(232, 20);
+            this.NEI_Ch33_CheckBox.Name = "NEI_Ch33_CheckBox";
+            this.NEI_Ch33_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch33_CheckBox.TabIndex = 87;
+            this.NEI_Ch33_CheckBox.Text = "Ch33";
+            this.NEI_Ch33_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch33_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch33_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch37_CheckBox
+            // 
+            this.NEI_Ch37_CheckBox.AutoSize = true;
+            this.NEI_Ch37_CheckBox.Location = new System.Drawing.Point(58, 42);
+            this.NEI_Ch37_CheckBox.Name = "NEI_Ch37_CheckBox";
+            this.NEI_Ch37_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch37_CheckBox.TabIndex = 91;
+            this.NEI_Ch37_CheckBox.Text = "Ch37";
+            this.NEI_Ch37_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch37_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch37_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch34_CheckBox
+            // 
+            this.NEI_Ch34_CheckBox.AutoSize = true;
+            this.NEI_Ch34_CheckBox.Location = new System.Drawing.Point(290, 20);
+            this.NEI_Ch34_CheckBox.Name = "NEI_Ch34_CheckBox";
+            this.NEI_Ch34_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch34_CheckBox.TabIndex = 88;
+            this.NEI_Ch34_CheckBox.Text = "Ch34";
+            this.NEI_Ch34_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch34_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch34_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch38_CheckBox
+            // 
+            this.NEI_Ch38_CheckBox.AutoSize = true;
+            this.NEI_Ch38_CheckBox.Location = new System.Drawing.Point(116, 42);
+            this.NEI_Ch38_CheckBox.Name = "NEI_Ch38_CheckBox";
+            this.NEI_Ch38_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch38_CheckBox.TabIndex = 92;
+            this.NEI_Ch38_CheckBox.Text = "Ch38";
+            this.NEI_Ch38_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch38_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch38_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch36_CheckBox
+            // 
+            this.NEI_Ch36_CheckBox.AutoSize = true;
+            this.NEI_Ch36_CheckBox.Location = new System.Drawing.Point(6, 42);
+            this.NEI_Ch36_CheckBox.Name = "NEI_Ch36_CheckBox";
+            this.NEI_Ch36_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch36_CheckBox.TabIndex = 90;
+            this.NEI_Ch36_CheckBox.Text = "Ch36";
+            this.NEI_Ch36_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch36_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch36_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch30_CheckBox
+            // 
+            this.NEI_Ch30_CheckBox.AutoSize = true;
+            this.NEI_Ch30_CheckBox.Location = new System.Drawing.Point(58, 20);
+            this.NEI_Ch30_CheckBox.Name = "NEI_Ch30_CheckBox";
+            this.NEI_Ch30_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch30_CheckBox.TabIndex = 84;
+            this.NEI_Ch30_CheckBox.Text = "Ch30";
+            this.NEI_Ch30_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch30_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch30_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch39_CheckBox
+            // 
+            this.NEI_Ch39_CheckBox.AutoSize = true;
+            this.NEI_Ch39_CheckBox.Location = new System.Drawing.Point(174, 42);
+            this.NEI_Ch39_CheckBox.Name = "NEI_Ch39_CheckBox";
+            this.NEI_Ch39_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch39_CheckBox.TabIndex = 93;
+            this.NEI_Ch39_CheckBox.Text = "Ch39";
+            this.NEI_Ch39_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch39_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch39_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch35_CheckBox
+            // 
+            this.NEI_Ch35_CheckBox.AutoSize = true;
+            this.NEI_Ch35_CheckBox.Location = new System.Drawing.Point(348, 20);
+            this.NEI_Ch35_CheckBox.Name = "NEI_Ch35_CheckBox";
+            this.NEI_Ch35_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch35_CheckBox.TabIndex = 89;
+            this.NEI_Ch35_CheckBox.Text = "Ch35";
+            this.NEI_Ch35_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch35_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch35_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch32_CheckBox
+            // 
+            this.NEI_Ch32_CheckBox.AutoSize = true;
+            this.NEI_Ch32_CheckBox.Location = new System.Drawing.Point(174, 20);
+            this.NEI_Ch32_CheckBox.Name = "NEI_Ch32_CheckBox";
+            this.NEI_Ch32_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch32_CheckBox.TabIndex = 86;
+            this.NEI_Ch32_CheckBox.Text = "Ch32";
+            this.NEI_Ch32_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch32_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch32_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch31_CheckBox
+            // 
+            this.NEI_Ch31_CheckBox.AutoSize = true;
+            this.NEI_Ch31_CheckBox.Location = new System.Drawing.Point(116, 20);
+            this.NEI_Ch31_CheckBox.Name = "NEI_Ch31_CheckBox";
+            this.NEI_Ch31_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch31_CheckBox.TabIndex = 85;
+            this.NEI_Ch31_CheckBox.Text = "Ch31";
+            this.NEI_Ch31_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch31_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch31_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch40_CheckBox
+            // 
+            this.NEI_Ch40_CheckBox.AutoSize = true;
+            this.NEI_Ch40_CheckBox.Location = new System.Drawing.Point(232, 42);
+            this.NEI_Ch40_CheckBox.Name = "NEI_Ch40_CheckBox";
+            this.NEI_Ch40_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch40_CheckBox.TabIndex = 94;
+            this.NEI_Ch40_CheckBox.Text = "Ch40";
+            this.NEI_Ch40_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch40_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch40_CheckBox_CheckedChanged);
+            // 
+            // NEI42_GPIN2_GroupBox
+            // 
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch27_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch15_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch28_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch19_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch23_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch20_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch24_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch22_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch16_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch25_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch21_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch18_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch17_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch26_CheckBox);
+            this.NEI42_GPIN2_GroupBox.Location = new System.Drawing.Point(6, 91);
+            this.NEI42_GPIN2_GroupBox.Name = "NEI42_GPIN2_GroupBox";
+            this.NEI42_GPIN2_GroupBox.Size = new System.Drawing.Size(459, 67);
+            this.NEI42_GPIN2_GroupBox.TabIndex = 97;
+            this.NEI42_GPIN2_GroupBox.TabStop = false;
+            this.NEI42_GPIN2_GroupBox.Text = "GPIN2";
+            // 
+            // NEI_Ch27_CheckBox
+            // 
+            this.NEI_Ch27_CheckBox.AutoSize = true;
+            this.NEI_Ch27_CheckBox.Location = new System.Drawing.Point(290, 42);
+            this.NEI_Ch27_CheckBox.Name = "NEI_Ch27_CheckBox";
+            this.NEI_Ch27_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch27_CheckBox.TabIndex = 95;
+            this.NEI_Ch27_CheckBox.Text = "Ch27";
+            this.NEI_Ch27_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch27_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch27_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch15_CheckBox
+            // 
+            this.NEI_Ch15_CheckBox.AutoSize = true;
+            this.NEI_Ch15_CheckBox.Location = new System.Drawing.Point(6, 20);
+            this.NEI_Ch15_CheckBox.Name = "NEI_Ch15_CheckBox";
+            this.NEI_Ch15_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch15_CheckBox.TabIndex = 83;
+            this.NEI_Ch15_CheckBox.Text = "Ch15";
+            this.NEI_Ch15_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch15_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch15_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch28_CheckBox
+            // 
+            this.NEI_Ch28_CheckBox.AutoSize = true;
+            this.NEI_Ch28_CheckBox.Location = new System.Drawing.Point(348, 42);
+            this.NEI_Ch28_CheckBox.Name = "NEI_Ch28_CheckBox";
+            this.NEI_Ch28_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch28_CheckBox.TabIndex = 96;
+            this.NEI_Ch28_CheckBox.Text = "Ch28";
+            this.NEI_Ch28_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch28_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch28_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch19_CheckBox
+            // 
+            this.NEI_Ch19_CheckBox.AutoSize = true;
+            this.NEI_Ch19_CheckBox.Location = new System.Drawing.Point(232, 20);
+            this.NEI_Ch19_CheckBox.Name = "NEI_Ch19_CheckBox";
+            this.NEI_Ch19_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch19_CheckBox.TabIndex = 87;
+            this.NEI_Ch19_CheckBox.Text = "Ch19";
+            this.NEI_Ch19_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch19_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch19_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch23_CheckBox
+            // 
+            this.NEI_Ch23_CheckBox.AutoSize = true;
+            this.NEI_Ch23_CheckBox.Location = new System.Drawing.Point(58, 42);
+            this.NEI_Ch23_CheckBox.Name = "NEI_Ch23_CheckBox";
+            this.NEI_Ch23_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch23_CheckBox.TabIndex = 91;
+            this.NEI_Ch23_CheckBox.Text = "Ch23";
+            this.NEI_Ch23_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch23_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch23_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch20_CheckBox
+            // 
+            this.NEI_Ch20_CheckBox.AutoSize = true;
+            this.NEI_Ch20_CheckBox.Location = new System.Drawing.Point(290, 20);
+            this.NEI_Ch20_CheckBox.Name = "NEI_Ch20_CheckBox";
+            this.NEI_Ch20_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch20_CheckBox.TabIndex = 88;
+            this.NEI_Ch20_CheckBox.Text = "Ch20";
+            this.NEI_Ch20_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch20_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch20_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch24_CheckBox
+            // 
+            this.NEI_Ch24_CheckBox.AutoSize = true;
+            this.NEI_Ch24_CheckBox.Location = new System.Drawing.Point(116, 42);
+            this.NEI_Ch24_CheckBox.Name = "NEI_Ch24_CheckBox";
+            this.NEI_Ch24_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch24_CheckBox.TabIndex = 92;
+            this.NEI_Ch24_CheckBox.Text = "Ch24";
+            this.NEI_Ch24_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch24_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch24_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch22_CheckBox
+            // 
+            this.NEI_Ch22_CheckBox.AutoSize = true;
+            this.NEI_Ch22_CheckBox.Location = new System.Drawing.Point(6, 42);
+            this.NEI_Ch22_CheckBox.Name = "NEI_Ch22_CheckBox";
+            this.NEI_Ch22_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch22_CheckBox.TabIndex = 90;
+            this.NEI_Ch22_CheckBox.Text = "Ch22";
+            this.NEI_Ch22_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch22_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch22_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch16_CheckBox
+            // 
+            this.NEI_Ch16_CheckBox.AutoSize = true;
+            this.NEI_Ch16_CheckBox.Location = new System.Drawing.Point(58, 20);
+            this.NEI_Ch16_CheckBox.Name = "NEI_Ch16_CheckBox";
+            this.NEI_Ch16_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch16_CheckBox.TabIndex = 84;
+            this.NEI_Ch16_CheckBox.Text = "Ch16";
+            this.NEI_Ch16_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch16_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch16_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch25_CheckBox
+            // 
+            this.NEI_Ch25_CheckBox.AutoSize = true;
+            this.NEI_Ch25_CheckBox.Location = new System.Drawing.Point(174, 42);
+            this.NEI_Ch25_CheckBox.Name = "NEI_Ch25_CheckBox";
+            this.NEI_Ch25_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch25_CheckBox.TabIndex = 93;
+            this.NEI_Ch25_CheckBox.Text = "Ch25";
+            this.NEI_Ch25_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch25_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch25_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch21_CheckBox
+            // 
+            this.NEI_Ch21_CheckBox.AutoSize = true;
+            this.NEI_Ch21_CheckBox.Location = new System.Drawing.Point(348, 20);
+            this.NEI_Ch21_CheckBox.Name = "NEI_Ch21_CheckBox";
+            this.NEI_Ch21_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch21_CheckBox.TabIndex = 89;
+            this.NEI_Ch21_CheckBox.Text = "Ch21";
+            this.NEI_Ch21_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch21_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch21_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch18_CheckBox
+            // 
+            this.NEI_Ch18_CheckBox.AutoSize = true;
+            this.NEI_Ch18_CheckBox.Location = new System.Drawing.Point(174, 20);
+            this.NEI_Ch18_CheckBox.Name = "NEI_Ch18_CheckBox";
+            this.NEI_Ch18_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch18_CheckBox.TabIndex = 86;
+            this.NEI_Ch18_CheckBox.Text = "Ch18";
+            this.NEI_Ch18_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch18_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch18_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch17_CheckBox
+            // 
+            this.NEI_Ch17_CheckBox.AutoSize = true;
+            this.NEI_Ch17_CheckBox.Location = new System.Drawing.Point(116, 20);
+            this.NEI_Ch17_CheckBox.Name = "NEI_Ch17_CheckBox";
+            this.NEI_Ch17_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch17_CheckBox.TabIndex = 85;
+            this.NEI_Ch17_CheckBox.Text = "Ch17";
+            this.NEI_Ch17_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch17_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch17_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch26_CheckBox
+            // 
+            this.NEI_Ch26_CheckBox.AutoSize = true;
+            this.NEI_Ch26_CheckBox.Location = new System.Drawing.Point(232, 42);
+            this.NEI_Ch26_CheckBox.Name = "NEI_Ch26_CheckBox";
+            this.NEI_Ch26_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch26_CheckBox.TabIndex = 94;
+            this.NEI_Ch26_CheckBox.Text = "Ch26";
+            this.NEI_Ch26_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch26_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch26_CheckBox_CheckedChanged);
+            // 
+            // NEI42_GPIN1_GroupBox
+            // 
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch13_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch1_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch14_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch5_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch9_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch6_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch10_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch8_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch2_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch11_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch7_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch4_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch3_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch12_CheckBox);
+            this.NEI42_GPIN1_GroupBox.Location = new System.Drawing.Point(6, 18);
+            this.NEI42_GPIN1_GroupBox.Name = "NEI42_GPIN1_GroupBox";
+            this.NEI42_GPIN1_GroupBox.Size = new System.Drawing.Size(459, 67);
+            this.NEI42_GPIN1_GroupBox.TabIndex = 58;
+            this.NEI42_GPIN1_GroupBox.TabStop = false;
+            this.NEI42_GPIN1_GroupBox.Text = "GPIN1";
+            // 
+            // NEI_Ch13_CheckBox
+            // 
+            this.NEI_Ch13_CheckBox.AutoSize = true;
+            this.NEI_Ch13_CheckBox.Location = new System.Drawing.Point(290, 42);
+            this.NEI_Ch13_CheckBox.Name = "NEI_Ch13_CheckBox";
+            this.NEI_Ch13_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch13_CheckBox.TabIndex = 95;
+            this.NEI_Ch13_CheckBox.Text = "Ch13";
+            this.NEI_Ch13_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch13_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch13_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch1_CheckBox
+            // 
+            this.NEI_Ch1_CheckBox.AutoSize = true;
+            this.NEI_Ch1_CheckBox.Location = new System.Drawing.Point(6, 20);
+            this.NEI_Ch1_CheckBox.Name = "NEI_Ch1_CheckBox";
+            this.NEI_Ch1_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch1_CheckBox.TabIndex = 83;
+            this.NEI_Ch1_CheckBox.Text = "Ch1";
+            this.NEI_Ch1_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch1_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch1_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch14_CheckBox
+            // 
+            this.NEI_Ch14_CheckBox.AutoSize = true;
+            this.NEI_Ch14_CheckBox.Location = new System.Drawing.Point(348, 42);
+            this.NEI_Ch14_CheckBox.Name = "NEI_Ch14_CheckBox";
+            this.NEI_Ch14_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch14_CheckBox.TabIndex = 96;
+            this.NEI_Ch14_CheckBox.Text = "Ch14";
+            this.NEI_Ch14_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch14_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch14_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch5_CheckBox
+            // 
+            this.NEI_Ch5_CheckBox.AutoSize = true;
+            this.NEI_Ch5_CheckBox.Location = new System.Drawing.Point(232, 20);
+            this.NEI_Ch5_CheckBox.Name = "NEI_Ch5_CheckBox";
+            this.NEI_Ch5_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch5_CheckBox.TabIndex = 87;
+            this.NEI_Ch5_CheckBox.Text = "Ch5";
+            this.NEI_Ch5_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch5_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch5_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch9_CheckBox
+            // 
+            this.NEI_Ch9_CheckBox.AutoSize = true;
+            this.NEI_Ch9_CheckBox.Location = new System.Drawing.Point(58, 42);
+            this.NEI_Ch9_CheckBox.Name = "NEI_Ch9_CheckBox";
+            this.NEI_Ch9_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch9_CheckBox.TabIndex = 91;
+            this.NEI_Ch9_CheckBox.Text = "Ch9";
+            this.NEI_Ch9_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch9_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch9_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch6_CheckBox
+            // 
+            this.NEI_Ch6_CheckBox.AutoSize = true;
+            this.NEI_Ch6_CheckBox.Location = new System.Drawing.Point(290, 20);
+            this.NEI_Ch6_CheckBox.Name = "NEI_Ch6_CheckBox";
+            this.NEI_Ch6_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch6_CheckBox.TabIndex = 88;
+            this.NEI_Ch6_CheckBox.Text = "Ch6";
+            this.NEI_Ch6_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch6_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch6_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch10_CheckBox
+            // 
+            this.NEI_Ch10_CheckBox.AutoSize = true;
+            this.NEI_Ch10_CheckBox.Location = new System.Drawing.Point(116, 42);
+            this.NEI_Ch10_CheckBox.Name = "NEI_Ch10_CheckBox";
+            this.NEI_Ch10_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch10_CheckBox.TabIndex = 92;
+            this.NEI_Ch10_CheckBox.Text = "Ch10";
+            this.NEI_Ch10_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch10_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch10_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch8_CheckBox
+            // 
+            this.NEI_Ch8_CheckBox.AutoSize = true;
+            this.NEI_Ch8_CheckBox.Location = new System.Drawing.Point(6, 42);
+            this.NEI_Ch8_CheckBox.Name = "NEI_Ch8_CheckBox";
+            this.NEI_Ch8_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch8_CheckBox.TabIndex = 90;
+            this.NEI_Ch8_CheckBox.Text = "Ch8";
+            this.NEI_Ch8_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch8_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch8_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch2_CheckBox
+            // 
+            this.NEI_Ch2_CheckBox.AutoSize = true;
+            this.NEI_Ch2_CheckBox.Location = new System.Drawing.Point(58, 20);
+            this.NEI_Ch2_CheckBox.Name = "NEI_Ch2_CheckBox";
+            this.NEI_Ch2_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch2_CheckBox.TabIndex = 84;
+            this.NEI_Ch2_CheckBox.Text = "Ch2";
+            this.NEI_Ch2_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch2_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch2_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch11_CheckBox
+            // 
+            this.NEI_Ch11_CheckBox.AutoSize = true;
+            this.NEI_Ch11_CheckBox.Location = new System.Drawing.Point(174, 42);
+            this.NEI_Ch11_CheckBox.Name = "NEI_Ch11_CheckBox";
+            this.NEI_Ch11_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch11_CheckBox.TabIndex = 93;
+            this.NEI_Ch11_CheckBox.Text = "Ch11";
+            this.NEI_Ch11_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch11_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch11_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch7_CheckBox
+            // 
+            this.NEI_Ch7_CheckBox.AutoSize = true;
+            this.NEI_Ch7_CheckBox.Location = new System.Drawing.Point(348, 20);
+            this.NEI_Ch7_CheckBox.Name = "NEI_Ch7_CheckBox";
+            this.NEI_Ch7_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch7_CheckBox.TabIndex = 89;
+            this.NEI_Ch7_CheckBox.Text = "Ch7";
+            this.NEI_Ch7_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch7_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch7_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch4_CheckBox
+            // 
+            this.NEI_Ch4_CheckBox.AutoSize = true;
+            this.NEI_Ch4_CheckBox.Location = new System.Drawing.Point(174, 20);
+            this.NEI_Ch4_CheckBox.Name = "NEI_Ch4_CheckBox";
+            this.NEI_Ch4_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch4_CheckBox.TabIndex = 86;
+            this.NEI_Ch4_CheckBox.Text = "Ch4";
+            this.NEI_Ch4_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch4_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch4_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch3_CheckBox
+            // 
+            this.NEI_Ch3_CheckBox.AutoSize = true;
+            this.NEI_Ch3_CheckBox.Location = new System.Drawing.Point(116, 20);
+            this.NEI_Ch3_CheckBox.Name = "NEI_Ch3_CheckBox";
+            this.NEI_Ch3_CheckBox.Size = new System.Drawing.Size(46, 16);
+            this.NEI_Ch3_CheckBox.TabIndex = 85;
+            this.NEI_Ch3_CheckBox.Text = "Ch3";
+            this.NEI_Ch3_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch3_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch3_CheckBox_CheckedChanged);
+            // 
+            // NEI_Ch12_CheckBox
+            // 
+            this.NEI_Ch12_CheckBox.AutoSize = true;
+            this.NEI_Ch12_CheckBox.Location = new System.Drawing.Point(232, 42);
+            this.NEI_Ch12_CheckBox.Name = "NEI_Ch12_CheckBox";
+            this.NEI_Ch12_CheckBox.Size = new System.Drawing.Size(52, 16);
+            this.NEI_Ch12_CheckBox.TabIndex = 94;
+            this.NEI_Ch12_CheckBox.Text = "Ch12";
+            this.NEI_Ch12_CheckBox.UseVisualStyleBackColor = true;
+            this.NEI_Ch12_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch12_CheckBox_CheckedChanged);
+            // 
+            // Fire_TabPage
+            // 
+            this.Fire_TabPage.Controls.Add(this.groupBox8);
+            this.Fire_TabPage.Controls.Add(this.Fire_Insert_Button);
+            this.Fire_TabPage.Controls.Add(this.Fire12Byte_Total_GroupBox);
+            this.Fire_TabPage.Controls.Add(this.Fire10Byte_Total_GroupBox);
+            this.Fire_TabPage.Controls.Add(this.Fire_Select_GroupBox);
+            this.Fire_TabPage.Location = new System.Drawing.Point(4, 22);
+            this.Fire_TabPage.Name = "Fire_TabPage";
+            this.Fire_TabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.Fire_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.Fire_TabPage.TabIndex = 8;
+            this.Fire_TabPage.Text = "Fire(10, 12Byte)";
+            this.Fire_TabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.Auto_RadioButton);
+            this.groupBox8.Controls.Add(this.Manual_RadioButton);
+            this.groupBox8.Location = new System.Drawing.Point(159, 6);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(147, 70);
+            this.groupBox8.TabIndex = 8;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "수동/자동";
+            // 
+            // Auto_RadioButton
+            // 
+            this.Auto_RadioButton.AutoSize = true;
+            this.Auto_RadioButton.Location = new System.Drawing.Point(74, 32);
+            this.Auto_RadioButton.Name = "Auto_RadioButton";
+            this.Auto_RadioButton.Size = new System.Drawing.Size(47, 16);
+            this.Auto_RadioButton.TabIndex = 2;
+            this.Auto_RadioButton.TabStop = true;
+            this.Auto_RadioButton.Text = "자동";
+            this.Auto_RadioButton.UseVisualStyleBackColor = true;
+            this.Auto_RadioButton.CheckedChanged += new System.EventHandler(this.Auto_RadioButton_CheckedChanged);
+            // 
+            // Manual_RadioButton
+            // 
+            this.Manual_RadioButton.AutoSize = true;
+            this.Manual_RadioButton.Location = new System.Drawing.Point(8, 32);
+            this.Manual_RadioButton.Name = "Manual_RadioButton";
+            this.Manual_RadioButton.Size = new System.Drawing.Size(47, 16);
+            this.Manual_RadioButton.TabIndex = 1;
+            this.Manual_RadioButton.TabStop = true;
+            this.Manual_RadioButton.Text = "수동";
+            this.Manual_RadioButton.UseVisualStyleBackColor = true;
+            this.Manual_RadioButton.CheckedChanged += new System.EventHandler(this.Manual_RadioButton_CheckedChanged);
+            // 
+            // Fire_Insert_Button
+            // 
+            this.Fire_Insert_Button.Location = new System.Drawing.Point(434, 24);
+            this.Fire_Insert_Button.Name = "Fire_Insert_Button";
+            this.Fire_Insert_Button.Size = new System.Drawing.Size(44, 41);
+            this.Fire_Insert_Button.TabIndex = 54;
+            this.Fire_Insert_Button.Text = ">>";
+            this.Fire_Insert_Button.UseVisualStyleBackColor = true;
             // 
             // Fire12Byte_Total_GroupBox
             // 
+            this.Fire12Byte_Total_GroupBox.Controls.Add(this.FIRE12Byte_Operate_Label);
             this.Fire12Byte_Total_GroupBox.Controls.Add(this.Fire12Byte_Reset_Button);
+            this.Fire12Byte_Total_GroupBox.Controls.Add(this.FIRE12Byte_Operate_ConboBox);
             this.Fire12Byte_Total_GroupBox.Controls.Add(this.label22);
             this.Fire12Byte_Total_GroupBox.Controls.Add(this.Fire12Byte_Audio_Stop_Button);
             this.Fire12Byte_Total_GroupBox.Controls.Add(this.FIRE12Byte_Floor_ID_Label);
@@ -3420,22 +4022,45 @@
             this.Fire12Byte_Total_GroupBox.Controls.Add(this.FIRE12Byte_Floor_ID_1_ConboBox);
             this.Fire12Byte_Total_GroupBox.Controls.Add(this.FIRE12Byte_Gaedan_ID_1_ConboBox);
             this.Fire12Byte_Total_GroupBox.Controls.Add(this.FIRE12Byte_Gaedan_ID_10_ConboBox);
-            this.Fire12Byte_Total_GroupBox.Location = new System.Drawing.Point(244, 365);
+            this.Fire12Byte_Total_GroupBox.Location = new System.Drawing.Point(6, 248);
             this.Fire12Byte_Total_GroupBox.Name = "Fire12Byte_Total_GroupBox";
-            this.Fire12Byte_Total_GroupBox.Size = new System.Drawing.Size(234, 247);
-            this.Fire12Byte_Total_GroupBox.TabIndex = 6;
+            this.Fire12Byte_Total_GroupBox.Size = new System.Drawing.Size(469, 161);
+            this.Fire12Byte_Total_GroupBox.TabIndex = 9;
             this.Fire12Byte_Total_GroupBox.TabStop = false;
             this.Fire12Byte_Total_GroupBox.Text = "12Byte";
             // 
+            // FIRE12Byte_Operate_Label
+            // 
+            this.FIRE12Byte_Operate_Label.AutoSize = true;
+            this.FIRE12Byte_Operate_Label.Location = new System.Drawing.Point(24, 110);
+            this.FIRE12Byte_Operate_Label.Name = "FIRE12Byte_Operate_Label";
+            this.FIRE12Byte_Operate_Label.Size = new System.Drawing.Size(49, 12);
+            this.FIRE12Byte_Operate_Label.TabIndex = 82;
+            this.FIRE12Byte_Operate_Label.Text = "동     작";
+            // 
             // Fire12Byte_Reset_Button
             // 
-            this.Fire12Byte_Reset_Button.Location = new System.Drawing.Point(2, 204);
+            this.Fire12Byte_Reset_Button.Location = new System.Drawing.Point(234, 99);
             this.Fire12Byte_Reset_Button.Name = "Fire12Byte_Reset_Button";
             this.Fire12Byte_Reset_Button.Size = new System.Drawing.Size(229, 35);
             this.Fire12Byte_Reset_Button.TabIndex = 83;
             this.Fire12Byte_Reset_Button.Text = "전체 복구 신호";
             this.Fire12Byte_Reset_Button.UseVisualStyleBackColor = true;
-            this.Fire12Byte_Reset_Button.Click += new System.EventHandler(this.Fire12Byte_Reset_Button_Click);
+            // 
+            // FIRE12Byte_Operate_ConboBox
+            // 
+            this.FIRE12Byte_Operate_ConboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.FIRE12Byte_Operate_ConboBox.FormattingEnabled = true;
+            this.FIRE12Byte_Operate_ConboBox.Items.AddRange(new object[] {
+            "화재발생",
+            "화재정지",
+            "연동정상",
+            "연동정지",
+            "전체 복구 신호"});
+            this.FIRE12Byte_Operate_ConboBox.Location = new System.Drawing.Point(102, 107);
+            this.FIRE12Byte_Operate_ConboBox.Name = "FIRE12Byte_Operate_ConboBox";
+            this.FIRE12Byte_Operate_ConboBox.Size = new System.Drawing.Size(121, 20);
+            this.FIRE12Byte_Operate_ConboBox.TabIndex = 81;
             // 
             // label22
             // 
@@ -3448,13 +4073,12 @@
             // 
             // Fire12Byte_Audio_Stop_Button
             // 
-            this.Fire12Byte_Audio_Stop_Button.Location = new System.Drawing.Point(122, 169);
+            this.Fire12Byte_Audio_Stop_Button.Location = new System.Drawing.Point(356, 64);
             this.Fire12Byte_Audio_Stop_Button.Name = "Fire12Byte_Audio_Stop_Button";
             this.Fire12Byte_Audio_Stop_Button.Size = new System.Drawing.Size(109, 29);
             this.Fire12Byte_Audio_Stop_Button.TabIndex = 82;
             this.Fire12Byte_Audio_Stop_Button.Text = "연동정지";
             this.Fire12Byte_Audio_Stop_Button.UseVisualStyleBackColor = true;
-            this.Fire12Byte_Audio_Stop_Button.Click += new System.EventHandler(this.Fire12Byte_Audio_Stop_Button_Click);
             // 
             // FIRE12Byte_Floor_ID_Label
             // 
@@ -3467,13 +4091,12 @@
             // 
             // Fire12Byte_Audio_Start_Button
             // 
-            this.Fire12Byte_Audio_Start_Button.Location = new System.Drawing.Point(2, 169);
+            this.Fire12Byte_Audio_Start_Button.Location = new System.Drawing.Point(236, 64);
             this.Fire12Byte_Audio_Start_Button.Name = "Fire12Byte_Audio_Start_Button";
             this.Fire12Byte_Audio_Start_Button.Size = new System.Drawing.Size(114, 29);
             this.Fire12Byte_Audio_Start_Button.TabIndex = 81;
             this.Fire12Byte_Audio_Start_Button.Text = "연동정상";
             this.Fire12Byte_Audio_Start_Button.UseVisualStyleBackColor = true;
-            this.Fire12Byte_Audio_Start_Button.Click += new System.EventHandler(this.Fire12Byte_Audio_Start_Button_Click);
             // 
             // FIRE12Byte_Dong_ID_10_ConboBox
             // 
@@ -3490,20 +4113,19 @@
             "7",
             "8",
             "9"});
-            this.FIRE12Byte_Dong_ID_10_ConboBox.Location = new System.Drawing.Point(110, 29);
+            this.FIRE12Byte_Dong_ID_10_ConboBox.Location = new System.Drawing.Point(102, 29);
             this.FIRE12Byte_Dong_ID_10_ConboBox.Name = "FIRE12Byte_Dong_ID_10_ConboBox";
             this.FIRE12Byte_Dong_ID_10_ConboBox.Size = new System.Drawing.Size(57, 20);
             this.FIRE12Byte_Dong_ID_10_ConboBox.TabIndex = 76;
             // 
             // Fire12Byte_Stop_Button
             // 
-            this.Fire12Byte_Stop_Button.Location = new System.Drawing.Point(122, 134);
+            this.Fire12Byte_Stop_Button.Location = new System.Drawing.Point(356, 29);
             this.Fire12Byte_Stop_Button.Name = "Fire12Byte_Stop_Button";
             this.Fire12Byte_Stop_Button.Size = new System.Drawing.Size(109, 29);
             this.Fire12Byte_Stop_Button.TabIndex = 80;
             this.Fire12Byte_Stop_Button.Text = "화재정지";
             this.Fire12Byte_Stop_Button.UseVisualStyleBackColor = true;
-            this.Fire12Byte_Stop_Button.Click += new System.EventHandler(this.Fire12Byte_Stop_Button_Click);
             // 
             // FIRE12Byte_Gaedan_ID_Label
             // 
@@ -3516,13 +4138,12 @@
             // 
             // Fire12Byte_Start_Button
             // 
-            this.Fire12Byte_Start_Button.Location = new System.Drawing.Point(2, 134);
+            this.Fire12Byte_Start_Button.Location = new System.Drawing.Point(236, 29);
             this.Fire12Byte_Start_Button.Name = "Fire12Byte_Start_Button";
             this.Fire12Byte_Start_Button.Size = new System.Drawing.Size(114, 29);
             this.Fire12Byte_Start_Button.TabIndex = 79;
             this.Fire12Byte_Start_Button.Text = "화재발생";
             this.Fire12Byte_Start_Button.UseVisualStyleBackColor = true;
-            this.Fire12Byte_Start_Button.Click += new System.EventHandler(this.Fire12Byte_Start_Button_Click);
             // 
             // FIRE12Byte_Dong_ID_1_ConboBox
             // 
@@ -3539,7 +4160,7 @@
             "7",
             "8",
             "9"});
-            this.FIRE12Byte_Dong_ID_1_ConboBox.Location = new System.Drawing.Point(174, 29);
+            this.FIRE12Byte_Dong_ID_1_ConboBox.Location = new System.Drawing.Point(165, 29);
             this.FIRE12Byte_Dong_ID_1_ConboBox.Name = "FIRE12Byte_Dong_ID_1_ConboBox";
             this.FIRE12Byte_Dong_ID_1_ConboBox.Size = new System.Drawing.Size(57, 20);
             this.FIRE12Byte_Dong_ID_1_ConboBox.TabIndex = 77;
@@ -3568,7 +4189,7 @@
             "7",
             "8",
             "9"});
-            this.FIRE12Byte_Floor_ID_10_ConboBox.Location = new System.Drawing.Point(110, 81);
+            this.FIRE12Byte_Floor_ID_10_ConboBox.Location = new System.Drawing.Point(102, 81);
             this.FIRE12Byte_Floor_ID_10_ConboBox.Name = "FIRE12Byte_Floor_ID_10_ConboBox";
             this.FIRE12Byte_Floor_ID_10_ConboBox.Size = new System.Drawing.Size(57, 20);
             this.FIRE12Byte_Floor_ID_10_ConboBox.TabIndex = 78;
@@ -3597,7 +4218,7 @@
             "7",
             "8",
             "9"});
-            this.FIRE12Byte_Floor_ID_1_ConboBox.Location = new System.Drawing.Point(174, 81);
+            this.FIRE12Byte_Floor_ID_1_ConboBox.Location = new System.Drawing.Point(166, 81);
             this.FIRE12Byte_Floor_ID_1_ConboBox.Name = "FIRE12Byte_Floor_ID_1_ConboBox";
             this.FIRE12Byte_Floor_ID_1_ConboBox.Size = new System.Drawing.Size(57, 20);
             this.FIRE12Byte_Floor_ID_1_ConboBox.TabIndex = 79;
@@ -3617,7 +4238,7 @@
             "7",
             "8",
             "9"});
-            this.FIRE12Byte_Gaedan_ID_1_ConboBox.Location = new System.Drawing.Point(174, 55);
+            this.FIRE12Byte_Gaedan_ID_1_ConboBox.Location = new System.Drawing.Point(166, 55);
             this.FIRE12Byte_Gaedan_ID_1_ConboBox.Name = "FIRE12Byte_Gaedan_ID_1_ConboBox";
             this.FIRE12Byte_Gaedan_ID_1_ConboBox.Size = new System.Drawing.Size(57, 20);
             this.FIRE12Byte_Gaedan_ID_1_ConboBox.TabIndex = 82;
@@ -3637,13 +4258,15 @@
             "7",
             "8",
             "9"});
-            this.FIRE12Byte_Gaedan_ID_10_ConboBox.Location = new System.Drawing.Point(110, 55);
+            this.FIRE12Byte_Gaedan_ID_10_ConboBox.Location = new System.Drawing.Point(102, 55);
             this.FIRE12Byte_Gaedan_ID_10_ConboBox.Name = "FIRE12Byte_Gaedan_ID_10_ConboBox";
             this.FIRE12Byte_Gaedan_ID_10_ConboBox.Size = new System.Drawing.Size(57, 20);
             this.FIRE12Byte_Gaedan_ID_10_ConboBox.TabIndex = 81;
             // 
             // Fire10Byte_Total_GroupBox
             // 
+            this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Operate_Label);
+            this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Operate_ConboBox);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.Fire10Byte_Reset_Button);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.Fire10Byte_Audio_Stop_Button);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.Fire10Byte_Audio_Start_Button);
@@ -3662,52 +4285,72 @@
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Floor_ID_10_ConboBox);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Dong_ID_1_ConboBox);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Dong_ID_10_ConboBox);
-            this.Fire10Byte_Total_GroupBox.Location = new System.Drawing.Point(6, 365);
+            this.Fire10Byte_Total_GroupBox.Location = new System.Drawing.Point(6, 82);
             this.Fire10Byte_Total_GroupBox.Name = "Fire10Byte_Total_GroupBox";
-            this.Fire10Byte_Total_GroupBox.Size = new System.Drawing.Size(232, 247);
-            this.Fire10Byte_Total_GroupBox.TabIndex = 5;
+            this.Fire10Byte_Total_GroupBox.Size = new System.Drawing.Size(469, 160);
+            this.Fire10Byte_Total_GroupBox.TabIndex = 8;
             this.Fire10Byte_Total_GroupBox.TabStop = false;
             this.Fire10Byte_Total_GroupBox.Text = "10Byte";
             // 
+            // FIRE10Byte_Operate_Label
+            // 
+            this.FIRE10Byte_Operate_Label.AutoSize = true;
+            this.FIRE10Byte_Operate_Label.Location = new System.Drawing.Point(24, 137);
+            this.FIRE10Byte_Operate_Label.Name = "FIRE10Byte_Operate_Label";
+            this.FIRE10Byte_Operate_Label.Size = new System.Drawing.Size(49, 12);
+            this.FIRE10Byte_Operate_Label.TabIndex = 80;
+            this.FIRE10Byte_Operate_Label.Text = "동     작";
+            // 
+            // FIRE10Byte_Operate_ConboBox
+            // 
+            this.FIRE10Byte_Operate_ConboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.FIRE10Byte_Operate_ConboBox.FormattingEnabled = true;
+            this.FIRE10Byte_Operate_ConboBox.Items.AddRange(new object[] {
+            "화재발생",
+            "화재정지",
+            "연동정상",
+            "연동정지",
+            "전체 복구 신호"});
+            this.FIRE10Byte_Operate_ConboBox.Location = new System.Drawing.Point(102, 134);
+            this.FIRE10Byte_Operate_ConboBox.Name = "FIRE10Byte_Operate_ConboBox";
+            this.FIRE10Byte_Operate_ConboBox.Size = new System.Drawing.Size(121, 20);
+            this.FIRE10Byte_Operate_ConboBox.TabIndex = 79;
+            // 
             // Fire10Byte_Reset_Button
             // 
-            this.Fire10Byte_Reset_Button.Location = new System.Drawing.Point(6, 204);
+            this.Fire10Byte_Reset_Button.Location = new System.Drawing.Point(236, 99);
             this.Fire10Byte_Reset_Button.Name = "Fire10Byte_Reset_Button";
-            this.Fire10Byte_Reset_Button.Size = new System.Drawing.Size(217, 35);
+            this.Fire10Byte_Reset_Button.Size = new System.Drawing.Size(227, 35);
             this.Fire10Byte_Reset_Button.TabIndex = 78;
             this.Fire10Byte_Reset_Button.Text = "전체 복구 신호";
             this.Fire10Byte_Reset_Button.UseVisualStyleBackColor = true;
-            this.Fire10Byte_Reset_Button.Click += new System.EventHandler(this.Fire10Byte_Reset_Button_Click);
             // 
             // Fire10Byte_Audio_Stop_Button
             // 
-            this.Fire10Byte_Audio_Stop_Button.Location = new System.Drawing.Point(122, 169);
+            this.Fire10Byte_Audio_Stop_Button.Location = new System.Drawing.Point(356, 64);
             this.Fire10Byte_Audio_Stop_Button.Name = "Fire10Byte_Audio_Stop_Button";
-            this.Fire10Byte_Audio_Stop_Button.Size = new System.Drawing.Size(101, 29);
+            this.Fire10Byte_Audio_Stop_Button.Size = new System.Drawing.Size(109, 29);
             this.Fire10Byte_Audio_Stop_Button.TabIndex = 77;
             this.Fire10Byte_Audio_Stop_Button.Text = "연동정지";
             this.Fire10Byte_Audio_Stop_Button.UseVisualStyleBackColor = true;
-            this.Fire10Byte_Audio_Stop_Button.Click += new System.EventHandler(this.Fire10Byte_Audio_Stop_Button_Click);
             // 
             // Fire10Byte_Audio_Start_Button
             // 
-            this.Fire10Byte_Audio_Start_Button.Location = new System.Drawing.Point(6, 169);
+            this.Fire10Byte_Audio_Start_Button.Location = new System.Drawing.Point(236, 64);
             this.Fire10Byte_Audio_Start_Button.Name = "Fire10Byte_Audio_Start_Button";
-            this.Fire10Byte_Audio_Start_Button.Size = new System.Drawing.Size(110, 29);
+            this.Fire10Byte_Audio_Start_Button.Size = new System.Drawing.Size(114, 29);
             this.Fire10Byte_Audio_Start_Button.TabIndex = 76;
             this.Fire10Byte_Audio_Start_Button.Text = "연동정상";
             this.Fire10Byte_Audio_Start_Button.UseVisualStyleBackColor = true;
-            this.Fire10Byte_Audio_Start_Button.Click += new System.EventHandler(this.Fire10Byte_Audio_Start_Button_Click);
             // 
             // Fire10Byte_Stop_Button
             // 
-            this.Fire10Byte_Stop_Button.Location = new System.Drawing.Point(122, 134);
+            this.Fire10Byte_Stop_Button.Location = new System.Drawing.Point(356, 29);
             this.Fire10Byte_Stop_Button.Name = "Fire10Byte_Stop_Button";
-            this.Fire10Byte_Stop_Button.Size = new System.Drawing.Size(101, 29);
+            this.Fire10Byte_Stop_Button.Size = new System.Drawing.Size(109, 29);
             this.Fire10Byte_Stop_Button.TabIndex = 75;
             this.Fire10Byte_Stop_Button.Text = "화재정지";
             this.Fire10Byte_Stop_Button.UseVisualStyleBackColor = true;
-            this.Fire10Byte_Stop_Button.Click += new System.EventHandler(this.Fire10Byte_Stop_Button_Click);
             // 
             // FIRE10Byte_Seperate_ID_Label
             // 
@@ -3720,13 +4363,12 @@
             // 
             // Fire10Byte_Start_Button
             // 
-            this.Fire10Byte_Start_Button.Location = new System.Drawing.Point(6, 134);
+            this.Fire10Byte_Start_Button.Location = new System.Drawing.Point(236, 29);
             this.Fire10Byte_Start_Button.Name = "Fire10Byte_Start_Button";
-            this.Fire10Byte_Start_Button.Size = new System.Drawing.Size(110, 29);
+            this.Fire10Byte_Start_Button.Size = new System.Drawing.Size(114, 29);
             this.Fire10Byte_Start_Button.TabIndex = 53;
             this.Fire10Byte_Start_Button.Text = "화재발생";
             this.Fire10Byte_Start_Button.UseVisualStyleBackColor = true;
-            this.Fire10Byte_Start_Button.Click += new System.EventHandler(this.Fire10Byte_Start_Button_Click);
             // 
             // FIRE10Byte_Floor_ID_Label
             // 
@@ -3907,576 +4549,21 @@
             this.FIRE10Byte_Dong_ID_10_ConboBox.Size = new System.Drawing.Size(57, 20);
             this.FIRE10Byte_Dong_ID_10_ConboBox.TabIndex = 63;
             // 
-            // NEI42_GPIN_Total_GroupBox
-            // 
-            this.NEI42_GPIN_Total_GroupBox.Controls.Add(this.NEI42_GPIN3_GroupBox);
-            this.NEI42_GPIN_Total_GroupBox.Controls.Add(this.NEI42_GPIN2_GroupBox);
-            this.NEI42_GPIN_Total_GroupBox.Controls.Add(this.NEI42_GPIN1_GroupBox);
-            this.NEI42_GPIN_Total_GroupBox.Location = new System.Drawing.Point(6, 116);
-            this.NEI42_GPIN_Total_GroupBox.Name = "NEI42_GPIN_Total_GroupBox";
-            this.NEI42_GPIN_Total_GroupBox.Size = new System.Drawing.Size(471, 247);
-            this.NEI42_GPIN_Total_GroupBox.TabIndex = 4;
-            this.NEI42_GPIN_Total_GroupBox.TabStop = false;
-            this.NEI42_GPIN_Total_GroupBox.Text = "NEI42";
-            // 
-            // NEI42_GPIN3_GroupBox
-            // 
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch41_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch29_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch42_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch33_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch37_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch34_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch38_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch36_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch30_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch39_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch35_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch32_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch31_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Controls.Add(this.NEI_Ch40_CheckBox);
-            this.NEI42_GPIN3_GroupBox.Location = new System.Drawing.Point(6, 164);
-            this.NEI42_GPIN3_GroupBox.Name = "NEI42_GPIN3_GroupBox";
-            this.NEI42_GPIN3_GroupBox.Size = new System.Drawing.Size(459, 67);
-            this.NEI42_GPIN3_GroupBox.TabIndex = 98;
-            this.NEI42_GPIN3_GroupBox.TabStop = false;
-            this.NEI42_GPIN3_GroupBox.Text = "GPIN3";
-            // 
-            // NEI_Ch41_CheckBox
-            // 
-            this.NEI_Ch41_CheckBox.AutoSize = true;
-            this.NEI_Ch41_CheckBox.Location = new System.Drawing.Point(232, 42);
-            this.NEI_Ch41_CheckBox.Name = "NEI_Ch41_CheckBox";
-            this.NEI_Ch41_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch41_CheckBox.TabIndex = 95;
-            this.NEI_Ch41_CheckBox.Text = "Ch41";
-            this.NEI_Ch41_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch41_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch41_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch29_CheckBox
-            // 
-            this.NEI_Ch29_CheckBox.AutoSize = true;
-            this.NEI_Ch29_CheckBox.Location = new System.Drawing.Point(6, 20);
-            this.NEI_Ch29_CheckBox.Name = "NEI_Ch29_CheckBox";
-            this.NEI_Ch29_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch29_CheckBox.TabIndex = 83;
-            this.NEI_Ch29_CheckBox.Text = "Ch29";
-            this.NEI_Ch29_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch29_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch29_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch42_CheckBox
-            // 
-            this.NEI_Ch42_CheckBox.AutoSize = true;
-            this.NEI_Ch42_CheckBox.Location = new System.Drawing.Point(290, 42);
-            this.NEI_Ch42_CheckBox.Name = "NEI_Ch42_CheckBox";
-            this.NEI_Ch42_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch42_CheckBox.TabIndex = 96;
-            this.NEI_Ch42_CheckBox.Text = "Ch42";
-            this.NEI_Ch42_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch42_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch42_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch33_CheckBox
-            // 
-            this.NEI_Ch33_CheckBox.AutoSize = true;
-            this.NEI_Ch33_CheckBox.Location = new System.Drawing.Point(232, 20);
-            this.NEI_Ch33_CheckBox.Name = "NEI_Ch33_CheckBox";
-            this.NEI_Ch33_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch33_CheckBox.TabIndex = 87;
-            this.NEI_Ch33_CheckBox.Text = "Ch33";
-            this.NEI_Ch33_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch33_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch33_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch37_CheckBox
-            // 
-            this.NEI_Ch37_CheckBox.AutoSize = true;
-            this.NEI_Ch37_CheckBox.Location = new System.Drawing.Point(6, 42);
-            this.NEI_Ch37_CheckBox.Name = "NEI_Ch37_CheckBox";
-            this.NEI_Ch37_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch37_CheckBox.TabIndex = 91;
-            this.NEI_Ch37_CheckBox.Text = "Ch37";
-            this.NEI_Ch37_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch37_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch37_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch34_CheckBox
-            // 
-            this.NEI_Ch34_CheckBox.AutoSize = true;
-            this.NEI_Ch34_CheckBox.Location = new System.Drawing.Point(290, 20);
-            this.NEI_Ch34_CheckBox.Name = "NEI_Ch34_CheckBox";
-            this.NEI_Ch34_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch34_CheckBox.TabIndex = 88;
-            this.NEI_Ch34_CheckBox.Text = "Ch34";
-            this.NEI_Ch34_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch34_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch34_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch38_CheckBox
-            // 
-            this.NEI_Ch38_CheckBox.AutoSize = true;
-            this.NEI_Ch38_CheckBox.Location = new System.Drawing.Point(58, 42);
-            this.NEI_Ch38_CheckBox.Name = "NEI_Ch38_CheckBox";
-            this.NEI_Ch38_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch38_CheckBox.TabIndex = 92;
-            this.NEI_Ch38_CheckBox.Text = "Ch38";
-            this.NEI_Ch38_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch38_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch38_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch36_CheckBox
-            // 
-            this.NEI_Ch36_CheckBox.AutoSize = true;
-            this.NEI_Ch36_CheckBox.Location = new System.Drawing.Point(406, 20);
-            this.NEI_Ch36_CheckBox.Name = "NEI_Ch36_CheckBox";
-            this.NEI_Ch36_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch36_CheckBox.TabIndex = 90;
-            this.NEI_Ch36_CheckBox.Text = "Ch36";
-            this.NEI_Ch36_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch36_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch36_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch30_CheckBox
-            // 
-            this.NEI_Ch30_CheckBox.AutoSize = true;
-            this.NEI_Ch30_CheckBox.Location = new System.Drawing.Point(58, 20);
-            this.NEI_Ch30_CheckBox.Name = "NEI_Ch30_CheckBox";
-            this.NEI_Ch30_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch30_CheckBox.TabIndex = 84;
-            this.NEI_Ch30_CheckBox.Text = "Ch30";
-            this.NEI_Ch30_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch30_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch30_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch39_CheckBox
-            // 
-            this.NEI_Ch39_CheckBox.AutoSize = true;
-            this.NEI_Ch39_CheckBox.Location = new System.Drawing.Point(116, 42);
-            this.NEI_Ch39_CheckBox.Name = "NEI_Ch39_CheckBox";
-            this.NEI_Ch39_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch39_CheckBox.TabIndex = 93;
-            this.NEI_Ch39_CheckBox.Text = "Ch39";
-            this.NEI_Ch39_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch39_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch39_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch35_CheckBox
-            // 
-            this.NEI_Ch35_CheckBox.AutoSize = true;
-            this.NEI_Ch35_CheckBox.Location = new System.Drawing.Point(348, 20);
-            this.NEI_Ch35_CheckBox.Name = "NEI_Ch35_CheckBox";
-            this.NEI_Ch35_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch35_CheckBox.TabIndex = 89;
-            this.NEI_Ch35_CheckBox.Text = "Ch35";
-            this.NEI_Ch35_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch35_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch35_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch32_CheckBox
-            // 
-            this.NEI_Ch32_CheckBox.AutoSize = true;
-            this.NEI_Ch32_CheckBox.Location = new System.Drawing.Point(174, 20);
-            this.NEI_Ch32_CheckBox.Name = "NEI_Ch32_CheckBox";
-            this.NEI_Ch32_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch32_CheckBox.TabIndex = 86;
-            this.NEI_Ch32_CheckBox.Text = "Ch32";
-            this.NEI_Ch32_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch32_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch32_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch31_CheckBox
-            // 
-            this.NEI_Ch31_CheckBox.AutoSize = true;
-            this.NEI_Ch31_CheckBox.Location = new System.Drawing.Point(116, 20);
-            this.NEI_Ch31_CheckBox.Name = "NEI_Ch31_CheckBox";
-            this.NEI_Ch31_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch31_CheckBox.TabIndex = 85;
-            this.NEI_Ch31_CheckBox.Text = "Ch31";
-            this.NEI_Ch31_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch31_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch31_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch40_CheckBox
-            // 
-            this.NEI_Ch40_CheckBox.AutoSize = true;
-            this.NEI_Ch40_CheckBox.Location = new System.Drawing.Point(174, 42);
-            this.NEI_Ch40_CheckBox.Name = "NEI_Ch40_CheckBox";
-            this.NEI_Ch40_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch40_CheckBox.TabIndex = 94;
-            this.NEI_Ch40_CheckBox.Text = "Ch40";
-            this.NEI_Ch40_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch40_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch40_CheckBox_CheckedChanged);
-            // 
-            // NEI42_GPIN2_GroupBox
-            // 
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch27_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch15_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch28_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch19_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch23_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch20_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch24_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch22_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch16_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch25_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch21_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch18_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch17_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Controls.Add(this.NEI_Ch26_CheckBox);
-            this.NEI42_GPIN2_GroupBox.Location = new System.Drawing.Point(6, 91);
-            this.NEI42_GPIN2_GroupBox.Name = "NEI42_GPIN2_GroupBox";
-            this.NEI42_GPIN2_GroupBox.Size = new System.Drawing.Size(459, 67);
-            this.NEI42_GPIN2_GroupBox.TabIndex = 97;
-            this.NEI42_GPIN2_GroupBox.TabStop = false;
-            this.NEI42_GPIN2_GroupBox.Text = "GPIN2";
-            // 
-            // NEI_Ch27_CheckBox
-            // 
-            this.NEI_Ch27_CheckBox.AutoSize = true;
-            this.NEI_Ch27_CheckBox.Location = new System.Drawing.Point(232, 42);
-            this.NEI_Ch27_CheckBox.Name = "NEI_Ch27_CheckBox";
-            this.NEI_Ch27_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch27_CheckBox.TabIndex = 95;
-            this.NEI_Ch27_CheckBox.Text = "Ch27";
-            this.NEI_Ch27_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch27_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch27_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch15_CheckBox
-            // 
-            this.NEI_Ch15_CheckBox.AutoSize = true;
-            this.NEI_Ch15_CheckBox.Location = new System.Drawing.Point(6, 20);
-            this.NEI_Ch15_CheckBox.Name = "NEI_Ch15_CheckBox";
-            this.NEI_Ch15_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch15_CheckBox.TabIndex = 83;
-            this.NEI_Ch15_CheckBox.Text = "Ch15";
-            this.NEI_Ch15_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch15_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch15_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch28_CheckBox
-            // 
-            this.NEI_Ch28_CheckBox.AutoSize = true;
-            this.NEI_Ch28_CheckBox.Location = new System.Drawing.Point(290, 42);
-            this.NEI_Ch28_CheckBox.Name = "NEI_Ch28_CheckBox";
-            this.NEI_Ch28_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch28_CheckBox.TabIndex = 96;
-            this.NEI_Ch28_CheckBox.Text = "Ch28";
-            this.NEI_Ch28_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch28_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch28_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch19_CheckBox
-            // 
-            this.NEI_Ch19_CheckBox.AutoSize = true;
-            this.NEI_Ch19_CheckBox.Location = new System.Drawing.Point(232, 20);
-            this.NEI_Ch19_CheckBox.Name = "NEI_Ch19_CheckBox";
-            this.NEI_Ch19_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch19_CheckBox.TabIndex = 87;
-            this.NEI_Ch19_CheckBox.Text = "Ch19";
-            this.NEI_Ch19_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch19_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch19_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch23_CheckBox
-            // 
-            this.NEI_Ch23_CheckBox.AutoSize = true;
-            this.NEI_Ch23_CheckBox.Location = new System.Drawing.Point(6, 42);
-            this.NEI_Ch23_CheckBox.Name = "NEI_Ch23_CheckBox";
-            this.NEI_Ch23_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch23_CheckBox.TabIndex = 91;
-            this.NEI_Ch23_CheckBox.Text = "Ch23";
-            this.NEI_Ch23_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch23_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch23_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch20_CheckBox
-            // 
-            this.NEI_Ch20_CheckBox.AutoSize = true;
-            this.NEI_Ch20_CheckBox.Location = new System.Drawing.Point(290, 20);
-            this.NEI_Ch20_CheckBox.Name = "NEI_Ch20_CheckBox";
-            this.NEI_Ch20_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch20_CheckBox.TabIndex = 88;
-            this.NEI_Ch20_CheckBox.Text = "Ch20";
-            this.NEI_Ch20_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch20_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch20_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch24_CheckBox
-            // 
-            this.NEI_Ch24_CheckBox.AutoSize = true;
-            this.NEI_Ch24_CheckBox.Location = new System.Drawing.Point(58, 42);
-            this.NEI_Ch24_CheckBox.Name = "NEI_Ch24_CheckBox";
-            this.NEI_Ch24_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch24_CheckBox.TabIndex = 92;
-            this.NEI_Ch24_CheckBox.Text = "Ch24";
-            this.NEI_Ch24_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch24_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch24_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch22_CheckBox
-            // 
-            this.NEI_Ch22_CheckBox.AutoSize = true;
-            this.NEI_Ch22_CheckBox.Location = new System.Drawing.Point(406, 20);
-            this.NEI_Ch22_CheckBox.Name = "NEI_Ch22_CheckBox";
-            this.NEI_Ch22_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch22_CheckBox.TabIndex = 90;
-            this.NEI_Ch22_CheckBox.Text = "Ch22";
-            this.NEI_Ch22_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch22_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch22_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch16_CheckBox
-            // 
-            this.NEI_Ch16_CheckBox.AutoSize = true;
-            this.NEI_Ch16_CheckBox.Location = new System.Drawing.Point(58, 20);
-            this.NEI_Ch16_CheckBox.Name = "NEI_Ch16_CheckBox";
-            this.NEI_Ch16_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch16_CheckBox.TabIndex = 84;
-            this.NEI_Ch16_CheckBox.Text = "Ch16";
-            this.NEI_Ch16_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch16_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch16_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch25_CheckBox
-            // 
-            this.NEI_Ch25_CheckBox.AutoSize = true;
-            this.NEI_Ch25_CheckBox.Location = new System.Drawing.Point(116, 42);
-            this.NEI_Ch25_CheckBox.Name = "NEI_Ch25_CheckBox";
-            this.NEI_Ch25_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch25_CheckBox.TabIndex = 93;
-            this.NEI_Ch25_CheckBox.Text = "Ch25";
-            this.NEI_Ch25_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch25_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch25_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch21_CheckBox
-            // 
-            this.NEI_Ch21_CheckBox.AutoSize = true;
-            this.NEI_Ch21_CheckBox.Location = new System.Drawing.Point(348, 20);
-            this.NEI_Ch21_CheckBox.Name = "NEI_Ch21_CheckBox";
-            this.NEI_Ch21_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch21_CheckBox.TabIndex = 89;
-            this.NEI_Ch21_CheckBox.Text = "Ch21";
-            this.NEI_Ch21_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch21_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch21_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch18_CheckBox
-            // 
-            this.NEI_Ch18_CheckBox.AutoSize = true;
-            this.NEI_Ch18_CheckBox.Location = new System.Drawing.Point(174, 20);
-            this.NEI_Ch18_CheckBox.Name = "NEI_Ch18_CheckBox";
-            this.NEI_Ch18_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch18_CheckBox.TabIndex = 86;
-            this.NEI_Ch18_CheckBox.Text = "Ch18";
-            this.NEI_Ch18_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch18_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch18_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch17_CheckBox
-            // 
-            this.NEI_Ch17_CheckBox.AutoSize = true;
-            this.NEI_Ch17_CheckBox.Location = new System.Drawing.Point(116, 20);
-            this.NEI_Ch17_CheckBox.Name = "NEI_Ch17_CheckBox";
-            this.NEI_Ch17_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch17_CheckBox.TabIndex = 85;
-            this.NEI_Ch17_CheckBox.Text = "Ch17";
-            this.NEI_Ch17_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch17_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch17_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch26_CheckBox
-            // 
-            this.NEI_Ch26_CheckBox.AutoSize = true;
-            this.NEI_Ch26_CheckBox.Location = new System.Drawing.Point(174, 42);
-            this.NEI_Ch26_CheckBox.Name = "NEI_Ch26_CheckBox";
-            this.NEI_Ch26_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch26_CheckBox.TabIndex = 94;
-            this.NEI_Ch26_CheckBox.Text = "Ch26";
-            this.NEI_Ch26_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch26_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch26_CheckBox_CheckedChanged);
-            // 
-            // NEI42_GPIN1_GroupBox
-            // 
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch13_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch1_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch14_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch5_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch9_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch6_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch10_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch8_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch2_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch11_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch7_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch4_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch3_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Controls.Add(this.NEI_Ch12_CheckBox);
-            this.NEI42_GPIN1_GroupBox.Location = new System.Drawing.Point(6, 18);
-            this.NEI42_GPIN1_GroupBox.Name = "NEI42_GPIN1_GroupBox";
-            this.NEI42_GPIN1_GroupBox.Size = new System.Drawing.Size(459, 67);
-            this.NEI42_GPIN1_GroupBox.TabIndex = 58;
-            this.NEI42_GPIN1_GroupBox.TabStop = false;
-            this.NEI42_GPIN1_GroupBox.Text = "GPIN1";
-            // 
-            // NEI_Ch13_CheckBox
-            // 
-            this.NEI_Ch13_CheckBox.AutoSize = true;
-            this.NEI_Ch13_CheckBox.Location = new System.Drawing.Point(232, 42);
-            this.NEI_Ch13_CheckBox.Name = "NEI_Ch13_CheckBox";
-            this.NEI_Ch13_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch13_CheckBox.TabIndex = 95;
-            this.NEI_Ch13_CheckBox.Text = "Ch13";
-            this.NEI_Ch13_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch13_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch13_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch1_CheckBox
-            // 
-            this.NEI_Ch1_CheckBox.AutoSize = true;
-            this.NEI_Ch1_CheckBox.Location = new System.Drawing.Point(6, 20);
-            this.NEI_Ch1_CheckBox.Name = "NEI_Ch1_CheckBox";
-            this.NEI_Ch1_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch1_CheckBox.TabIndex = 83;
-            this.NEI_Ch1_CheckBox.Text = "Ch1";
-            this.NEI_Ch1_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch1_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch1_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch14_CheckBox
-            // 
-            this.NEI_Ch14_CheckBox.AutoSize = true;
-            this.NEI_Ch14_CheckBox.Location = new System.Drawing.Point(290, 42);
-            this.NEI_Ch14_CheckBox.Name = "NEI_Ch14_CheckBox";
-            this.NEI_Ch14_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch14_CheckBox.TabIndex = 96;
-            this.NEI_Ch14_CheckBox.Text = "Ch14";
-            this.NEI_Ch14_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch14_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch14_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch5_CheckBox
-            // 
-            this.NEI_Ch5_CheckBox.AutoSize = true;
-            this.NEI_Ch5_CheckBox.Location = new System.Drawing.Point(232, 20);
-            this.NEI_Ch5_CheckBox.Name = "NEI_Ch5_CheckBox";
-            this.NEI_Ch5_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch5_CheckBox.TabIndex = 87;
-            this.NEI_Ch5_CheckBox.Text = "Ch5";
-            this.NEI_Ch5_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch5_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch5_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch9_CheckBox
-            // 
-            this.NEI_Ch9_CheckBox.AutoSize = true;
-            this.NEI_Ch9_CheckBox.Location = new System.Drawing.Point(6, 42);
-            this.NEI_Ch9_CheckBox.Name = "NEI_Ch9_CheckBox";
-            this.NEI_Ch9_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch9_CheckBox.TabIndex = 91;
-            this.NEI_Ch9_CheckBox.Text = "Ch9";
-            this.NEI_Ch9_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch9_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch9_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch6_CheckBox
-            // 
-            this.NEI_Ch6_CheckBox.AutoSize = true;
-            this.NEI_Ch6_CheckBox.Location = new System.Drawing.Point(290, 20);
-            this.NEI_Ch6_CheckBox.Name = "NEI_Ch6_CheckBox";
-            this.NEI_Ch6_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch6_CheckBox.TabIndex = 88;
-            this.NEI_Ch6_CheckBox.Text = "Ch6";
-            this.NEI_Ch6_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch6_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch6_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch10_CheckBox
-            // 
-            this.NEI_Ch10_CheckBox.AutoSize = true;
-            this.NEI_Ch10_CheckBox.Location = new System.Drawing.Point(58, 42);
-            this.NEI_Ch10_CheckBox.Name = "NEI_Ch10_CheckBox";
-            this.NEI_Ch10_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch10_CheckBox.TabIndex = 92;
-            this.NEI_Ch10_CheckBox.Text = "Ch10";
-            this.NEI_Ch10_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch10_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch10_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch8_CheckBox
-            // 
-            this.NEI_Ch8_CheckBox.AutoSize = true;
-            this.NEI_Ch8_CheckBox.Location = new System.Drawing.Point(406, 20);
-            this.NEI_Ch8_CheckBox.Name = "NEI_Ch8_CheckBox";
-            this.NEI_Ch8_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch8_CheckBox.TabIndex = 90;
-            this.NEI_Ch8_CheckBox.Text = "Ch8";
-            this.NEI_Ch8_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch8_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch8_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch2_CheckBox
-            // 
-            this.NEI_Ch2_CheckBox.AutoSize = true;
-            this.NEI_Ch2_CheckBox.Location = new System.Drawing.Point(58, 20);
-            this.NEI_Ch2_CheckBox.Name = "NEI_Ch2_CheckBox";
-            this.NEI_Ch2_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch2_CheckBox.TabIndex = 84;
-            this.NEI_Ch2_CheckBox.Text = "Ch2";
-            this.NEI_Ch2_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch2_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch2_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch11_CheckBox
-            // 
-            this.NEI_Ch11_CheckBox.AutoSize = true;
-            this.NEI_Ch11_CheckBox.Location = new System.Drawing.Point(116, 42);
-            this.NEI_Ch11_CheckBox.Name = "NEI_Ch11_CheckBox";
-            this.NEI_Ch11_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch11_CheckBox.TabIndex = 93;
-            this.NEI_Ch11_CheckBox.Text = "Ch11";
-            this.NEI_Ch11_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch11_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch11_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch7_CheckBox
-            // 
-            this.NEI_Ch7_CheckBox.AutoSize = true;
-            this.NEI_Ch7_CheckBox.Location = new System.Drawing.Point(348, 20);
-            this.NEI_Ch7_CheckBox.Name = "NEI_Ch7_CheckBox";
-            this.NEI_Ch7_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch7_CheckBox.TabIndex = 89;
-            this.NEI_Ch7_CheckBox.Text = "Ch7";
-            this.NEI_Ch7_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch7_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch7_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch4_CheckBox
-            // 
-            this.NEI_Ch4_CheckBox.AutoSize = true;
-            this.NEI_Ch4_CheckBox.Location = new System.Drawing.Point(174, 20);
-            this.NEI_Ch4_CheckBox.Name = "NEI_Ch4_CheckBox";
-            this.NEI_Ch4_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch4_CheckBox.TabIndex = 86;
-            this.NEI_Ch4_CheckBox.Text = "Ch4";
-            this.NEI_Ch4_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch4_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch4_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch3_CheckBox
-            // 
-            this.NEI_Ch3_CheckBox.AutoSize = true;
-            this.NEI_Ch3_CheckBox.Location = new System.Drawing.Point(116, 20);
-            this.NEI_Ch3_CheckBox.Name = "NEI_Ch3_CheckBox";
-            this.NEI_Ch3_CheckBox.Size = new System.Drawing.Size(46, 16);
-            this.NEI_Ch3_CheckBox.TabIndex = 85;
-            this.NEI_Ch3_CheckBox.Text = "Ch3";
-            this.NEI_Ch3_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch3_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch3_CheckBox_CheckedChanged);
-            // 
-            // NEI_Ch12_CheckBox
-            // 
-            this.NEI_Ch12_CheckBox.AutoSize = true;
-            this.NEI_Ch12_CheckBox.Location = new System.Drawing.Point(174, 42);
-            this.NEI_Ch12_CheckBox.Name = "NEI_Ch12_CheckBox";
-            this.NEI_Ch12_CheckBox.Size = new System.Drawing.Size(52, 16);
-            this.NEI_Ch12_CheckBox.TabIndex = 94;
-            this.NEI_Ch12_CheckBox.Text = "Ch12";
-            this.NEI_Ch12_CheckBox.UseVisualStyleBackColor = true;
-            this.NEI_Ch12_CheckBox.CheckedChanged += new System.EventHandler(this.NEI_Ch12_CheckBox_CheckedChanged);
-            // 
             // Fire_Select_GroupBox
             // 
-            this.Fire_Select_GroupBox.Controls.Add(this.NEI_Select_RadioButton);
             this.Fire_Select_GroupBox.Controls.Add(this.Fire12Byte_Select_RadioButton);
             this.Fire_Select_GroupBox.Controls.Add(this.Fire10Byte_Select_RadioButton);
             this.Fire_Select_GroupBox.Location = new System.Drawing.Point(6, 6);
             this.Fire_Select_GroupBox.Name = "Fire_Select_GroupBox";
-            this.Fire_Select_GroupBox.Size = new System.Drawing.Size(202, 70);
-            this.Fire_Select_GroupBox.TabIndex = 3;
+            this.Fire_Select_GroupBox.Size = new System.Drawing.Size(147, 70);
+            this.Fire_Select_GroupBox.TabIndex = 7;
             this.Fire_Select_GroupBox.TabStop = false;
             this.Fire_Select_GroupBox.Text = "소방프로토콜";
-            // 
-            // NEI_Select_RadioButton
-            // 
-            this.NEI_Select_RadioButton.AutoSize = true;
-            this.NEI_Select_RadioButton.Location = new System.Drawing.Point(6, 30);
-            this.NEI_Select_RadioButton.Name = "NEI_Select_RadioButton";
-            this.NEI_Select_RadioButton.Size = new System.Drawing.Size(55, 16);
-            this.NEI_Select_RadioButton.TabIndex = 0;
-            this.NEI_Select_RadioButton.Text = "NEI42";
-            this.NEI_Select_RadioButton.UseVisualStyleBackColor = true;
-            this.NEI_Select_RadioButton.CheckedChanged += new System.EventHandler(this.NEI_Select_RadioButton_CheckedChanged);
             // 
             // Fire12Byte_Select_RadioButton
             // 
             this.Fire12Byte_Select_RadioButton.AutoSize = true;
-            this.Fire12Byte_Select_RadioButton.Location = new System.Drawing.Point(133, 30);
+            this.Fire12Byte_Select_RadioButton.Location = new System.Drawing.Point(74, 32);
             this.Fire12Byte_Select_RadioButton.Name = "Fire12Byte_Select_RadioButton";
             this.Fire12Byte_Select_RadioButton.Size = new System.Drawing.Size(60, 16);
             this.Fire12Byte_Select_RadioButton.TabIndex = 2;
@@ -4488,7 +4575,7 @@
             // Fire10Byte_Select_RadioButton
             // 
             this.Fire10Byte_Select_RadioButton.AutoSize = true;
-            this.Fire10Byte_Select_RadioButton.Location = new System.Drawing.Point(67, 30);
+            this.Fire10Byte_Select_RadioButton.Location = new System.Drawing.Point(8, 32);
             this.Fire10Byte_Select_RadioButton.Name = "Fire10Byte_Select_RadioButton";
             this.Fire10Byte_Select_RadioButton.Size = new System.Drawing.Size(60, 16);
             this.Fire10Byte_Select_RadioButton.TabIndex = 1;
@@ -4501,21 +4588,21 @@
             // 
             this.Tx_Str_listBox.FormattingEnabled = true;
             this.Tx_Str_listBox.ItemHeight = 12;
-            this.Tx_Str_listBox.Location = new System.Drawing.Point(788, 42);
+            this.Tx_Str_listBox.Location = new System.Drawing.Point(749, 42);
             this.Tx_Str_listBox.Name = "Tx_Str_listBox";
             this.Tx_Str_listBox.Size = new System.Drawing.Size(184, 448);
             this.Tx_Str_listBox.TabIndex = 17;
             // 
             // Tx_Single_textBox
             // 
-            this.Tx_Single_textBox.Location = new System.Drawing.Point(905, 549);
+            this.Tx_Single_textBox.Location = new System.Drawing.Point(866, 549);
             this.Tx_Single_textBox.Name = "Tx_Single_textBox";
             this.Tx_Single_textBox.Size = new System.Drawing.Size(297, 21);
             this.Tx_Single_textBox.TabIndex = 18;
             // 
             // Tx_One_button
             // 
-            this.Tx_One_button.Location = new System.Drawing.Point(930, 492);
+            this.Tx_One_button.Location = new System.Drawing.Point(891, 492);
             this.Tx_One_button.Name = "Tx_One_button";
             this.Tx_One_button.Size = new System.Drawing.Size(84, 30);
             this.Tx_One_button.TabIndex = 21;
@@ -4525,7 +4612,7 @@
             // 
             // Delay_textBox
             // 
-            this.Delay_textBox.Location = new System.Drawing.Point(857, 498);
+            this.Delay_textBox.Location = new System.Drawing.Point(818, 498);
             this.Delay_textBox.Name = "Delay_textBox";
             this.Delay_textBox.Size = new System.Drawing.Size(67, 21);
             this.Delay_textBox.TabIndex = 24;
@@ -4533,7 +4620,7 @@
             // 
             // Tx_Multi_button
             // 
-            this.Tx_Multi_button.Location = new System.Drawing.Point(1020, 492);
+            this.Tx_Multi_button.Location = new System.Drawing.Point(981, 492);
             this.Tx_Multi_button.Name = "Tx_Multi_button";
             this.Tx_Multi_button.Size = new System.Drawing.Size(84, 30);
             this.Tx_Multi_button.TabIndex = 25;
@@ -4543,7 +4630,7 @@
             // 
             // Tx_Single_Button
             // 
-            this.Tx_Single_Button.Location = new System.Drawing.Point(1208, 543);
+            this.Tx_Single_Button.Location = new System.Drawing.Point(1169, 543);
             this.Tx_Single_Button.Name = "Tx_Single_Button";
             this.Tx_Single_Button.Size = new System.Drawing.Size(84, 30);
             this.Tx_Single_Button.TabIndex = 26;
@@ -4554,7 +4641,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(786, 503);
+            this.label10.Location = new System.Drawing.Point(747, 503);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 12);
             this.label10.TabIndex = 41;
@@ -4562,7 +4649,7 @@
             // 
             // Tx_Str_Insert_Button
             // 
-            this.Tx_Str_Insert_Button.Location = new System.Drawing.Point(788, 539);
+            this.Tx_Str_Insert_Button.Location = new System.Drawing.Point(749, 539);
             this.Tx_Str_Insert_Button.Name = "Tx_Str_Insert_Button";
             this.Tx_Str_Insert_Button.Size = new System.Drawing.Size(49, 31);
             this.Tx_Str_Insert_Button.TabIndex = 42;
@@ -4572,7 +4659,7 @@
             // 
             // Tx_Str_Delete_Button
             // 
-            this.Tx_Str_Delete_Button.Location = new System.Drawing.Point(843, 539);
+            this.Tx_Str_Delete_Button.Location = new System.Drawing.Point(804, 539);
             this.Tx_Str_Delete_Button.Name = "Tx_Str_Delete_Button";
             this.Tx_Str_Delete_Button.Size = new System.Drawing.Size(52, 31);
             this.Tx_Str_Delete_Button.TabIndex = 43;
@@ -4580,14 +4667,14 @@
             this.Tx_Str_Delete_Button.UseVisualStyleBackColor = true;
             this.Tx_Str_Delete_Button.Click += new System.EventHandler(this.Tx_Str_Delete_Button_Click);
             // 
-            // Fire10Byte_GroupBox
+            // Monitoring_listBox
             // 
-            this.Fire10Byte_GroupBox.FormattingEnabled = true;
-            this.Fire10Byte_GroupBox.ItemHeight = 12;
-            this.Fire10Byte_GroupBox.Location = new System.Drawing.Point(978, 42);
-            this.Fire10Byte_GroupBox.Name = "Fire10Byte_GroupBox";
-            this.Fire10Byte_GroupBox.Size = new System.Drawing.Size(410, 448);
-            this.Fire10Byte_GroupBox.TabIndex = 44;
+            this.Monitoring_listBox.FormattingEnabled = true;
+            this.Monitoring_listBox.ItemHeight = 12;
+            this.Monitoring_listBox.Location = new System.Drawing.Point(939, 42);
+            this.Monitoring_listBox.Name = "Monitoring_listBox";
+            this.Monitoring_listBox.Size = new System.Drawing.Size(446, 448);
+            this.Monitoring_listBox.TabIndex = 44;
             // 
             // serialPort1
             // 
@@ -4595,7 +4682,7 @@
             // 
             // listBox2_Clr_Button
             // 
-            this.listBox2_Clr_Button.Location = new System.Drawing.Point(1336, 492);
+            this.listBox2_Clr_Button.Location = new System.Drawing.Point(1297, 492);
             this.listBox2_Clr_Button.Name = "listBox2_Clr_Button";
             this.listBox2_Clr_Button.Size = new System.Drawing.Size(52, 31);
             this.listBox2_Clr_Button.TabIndex = 47;
@@ -4606,7 +4693,7 @@
             // Serial_Time_label
             // 
             this.Serial_Time_label.AutoSize = true;
-            this.Serial_Time_label.Location = new System.Drawing.Point(978, 28);
+            this.Serial_Time_label.Location = new System.Drawing.Point(939, 28);
             this.Serial_Time_label.Name = "Serial_Time_label";
             this.Serial_Time_label.Size = new System.Drawing.Size(34, 12);
             this.Serial_Time_label.TabIndex = 48;
@@ -4615,7 +4702,7 @@
             // Data_Str_label
             // 
             this.Data_Str_label.AutoSize = true;
-            this.Data_Str_label.Location = new System.Drawing.Point(1136, 28);
+            this.Data_Str_label.Location = new System.Drawing.Point(1097, 28);
             this.Data_Str_label.Name = "Data_Str_label";
             this.Data_Str_label.Size = new System.Drawing.Size(66, 12);
             this.Data_Str_label.TabIndex = 49;
@@ -4624,7 +4711,7 @@
             // Length_label
             // 
             this.Length_label.AutoSize = true;
-            this.Length_label.Location = new System.Drawing.Point(1268, 27);
+            this.Length_label.Location = new System.Drawing.Point(1229, 27);
             this.Length_label.Name = "Length_label";
             this.Length_label.Size = new System.Drawing.Size(43, 12);
             this.Length_label.TabIndex = 50;
@@ -4633,17 +4720,50 @@
             // TRx_label
             // 
             this.TRx_label.AutoSize = true;
-            this.TRx_label.Location = new System.Drawing.Point(1317, 28);
+            this.TRx_label.Location = new System.Drawing.Point(1307, 28);
             this.TRx_label.Name = "TRx_label";
             this.TRx_label.Size = new System.Drawing.Size(78, 12);
             this.TRx_label.TabIndex = 51;
             this.TRx_label.Text = "Tx/Rx Count";
             // 
+            // Multi_Stop_button
+            // 
+            this.Multi_Stop_button.Location = new System.Drawing.Point(1071, 492);
+            this.Multi_Stop_button.Name = "Multi_Stop_button";
+            this.Multi_Stop_button.Size = new System.Drawing.Size(84, 30);
+            this.Multi_Stop_button.TabIndex = 52;
+            this.Multi_Stop_button.Text = "연속 정지";
+            this.Multi_Stop_button.UseVisualStyleBackColor = true;
+            this.Multi_Stop_button.Click += new System.EventHandler(this.Multi_Stop_button_Click);
+            // 
+            // Hex_con_Tx_Str_listBox_checkBox
+            // 
+            this.Hex_con_Tx_Str_listBox_checkBox.AutoSize = true;
+            this.Hex_con_Tx_Str_listBox_checkBox.Location = new System.Drawing.Point(749, 9);
+            this.Hex_con_Tx_Str_listBox_checkBox.Name = "Hex_con_Tx_Str_listBox_checkBox";
+            this.Hex_con_Tx_Str_listBox_checkBox.Size = new System.Drawing.Size(74, 16);
+            this.Hex_con_Tx_Str_listBox_checkBox.TabIndex = 53;
+            this.Hex_con_Tx_Str_listBox_checkBox.Text = "Hex 변환";
+            this.Hex_con_Tx_Str_listBox_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // Hex_con_Monitoring_listBox_checkBox2
+            // 
+            this.Hex_con_Monitoring_listBox_checkBox2.AutoSize = true;
+            this.Hex_con_Monitoring_listBox_checkBox2.Location = new System.Drawing.Point(941, 9);
+            this.Hex_con_Monitoring_listBox_checkBox2.Name = "Hex_con_Monitoring_listBox_checkBox2";
+            this.Hex_con_Monitoring_listBox_checkBox2.Size = new System.Drawing.Size(74, 16);
+            this.Hex_con_Monitoring_listBox_checkBox2.TabIndex = 54;
+            this.Hex_con_Monitoring_listBox_checkBox2.Text = "Hex 변환";
+            this.Hex_con_Monitoring_listBox_checkBox2.UseVisualStyleBackColor = true;
+            // 
             // NTEC_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1403, 667);
+            this.ClientSize = new System.Drawing.Size(1408, 589);
+            this.Controls.Add(this.Hex_con_Monitoring_listBox_checkBox2);
+            this.Controls.Add(this.Hex_con_Tx_Str_listBox_checkBox);
+            this.Controls.Add(this.Multi_Stop_button);
             this.Controls.Add(this.TRx_label);
             this.Controls.Add(this.Length_label);
             this.Controls.Add(this.Data_Str_label);
@@ -4651,7 +4771,7 @@
             this.Controls.Add(this.Tx_Multi_button);
             this.Controls.Add(this.listBox2_Clr_Button);
             this.Controls.Add(this.Tx_One_button);
-            this.Controls.Add(this.Fire10Byte_GroupBox);
+            this.Controls.Add(this.Monitoring_listBox);
             this.Controls.Add(this.Tx_Str_Delete_Button);
             this.Controls.Add(this.Tx_Str_Insert_Button);
             this.Controls.Add(this.label10);
@@ -4675,42 +4795,37 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox_Port_Number);
             this.Controls.Add(this.button_Connect);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.NTEC_TabControl);
             this.Name = "NTEC_Form";
             this.Text = "NTEC_Firmware_Test_App";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.NTEC_TabControl.ResumeLayout(false);
+            this.NRG16_TabPage.ResumeLayout(false);
+            this.NRG16_TabPage.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.NRT16_TabPage.ResumeLayout(false);
+            this.NRT16_TabPage.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.NRT40_TabPage.ResumeLayout(false);
+            this.NRT40_TabPage.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.MPR_TabPage.ResumeLayout(false);
+            this.MPR_TabPage.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.NCS01_TabPage.ResumeLayout(false);
+            this.NCS01_TabPage.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.NEI_ID_CMD_GroupBox.ResumeLayout(false);
-            this.NEI_ID_CMD_GroupBox.PerformLayout();
-            this.Fire12Byte_Total_GroupBox.ResumeLayout(false);
-            this.Fire12Byte_Total_GroupBox.PerformLayout();
-            this.Fire10Byte_Total_GroupBox.ResumeLayout(false);
-            this.Fire10Byte_Total_GroupBox.PerformLayout();
+            this.NEI42_TabPage.ResumeLayout(false);
+            this.NEI42_TabPage.PerformLayout();
             this.NEI42_GPIN_Total_GroupBox.ResumeLayout(false);
             this.NEI42_GPIN3_GroupBox.ResumeLayout(false);
             this.NEI42_GPIN3_GroupBox.PerformLayout();
@@ -4718,6 +4833,13 @@
             this.NEI42_GPIN2_GroupBox.PerformLayout();
             this.NEI42_GPIN1_GroupBox.ResumeLayout(false);
             this.NEI42_GPIN1_GroupBox.PerformLayout();
+            this.Fire_TabPage.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.Fire12Byte_Total_GroupBox.ResumeLayout(false);
+            this.Fire12Byte_Total_GroupBox.PerformLayout();
+            this.Fire10Byte_Total_GroupBox.ResumeLayout(false);
+            this.Fire10Byte_Total_GroupBox.PerformLayout();
             this.Fire_Select_GroupBox.ResumeLayout(false);
             this.Fire_Select_GroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -4744,8 +4866,8 @@
         private System.Windows.Forms.Button button_DbSave;
         private System.Windows.Forms.Button button_DbLoad;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl NTEC_TabControl;
+        private System.Windows.Forms.TabPage NMC44_TabPage;
         private System.Windows.Forms.ListBox Tx_Str_listBox;
         private System.Windows.Forms.TextBox Tx_Single_textBox;
         private System.Windows.Forms.Button NRG_Insert_Button;
@@ -4753,7 +4875,7 @@
         private System.Windows.Forms.TextBox Delay_textBox;
         private System.Windows.Forms.Button Tx_Multi_button;
         private System.Windows.Forms.Button Tx_Single_Button;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage NRG16_TabPage;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox NRG_Ch31_CheckBox;
         private System.Windows.Forms.CheckBox NRG_Ch32_CheckBox;
@@ -4788,7 +4910,7 @@
         private System.Windows.Forms.CheckBox NRG_Ch2_CheckBox;
         private System.Windows.Forms.CheckBox NRG_Ch3_CheckBox;
         private System.Windows.Forms.CheckBox NRG_Ch4_CheckBox;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage NRT16_TabPage;
         private System.Windows.Forms.Label NRT16_ID_Label;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox NDT_Ch31_CheckBox;
@@ -4828,7 +4950,7 @@
         private System.Windows.Forms.Button Tx_Str_Insert_Button;
         private System.Windows.Forms.Button Tx_Str_Delete_Button;
         private System.Windows.Forms.Label NRG16_ID_Label;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage NRT40_TabPage;
         private System.Windows.Forms.Label NRT40_ID_Label;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox NRT_Ch15_CheckBox;
@@ -4871,7 +4993,7 @@
         private System.Windows.Forms.CheckBox NRT_Ch18_CheckBox;
         private System.Windows.Forms.CheckBox NRT_Ch19_CheckBox;
         private System.Windows.Forms.CheckBox NRT_Ch20_CheckBox;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage MPR_TabPage;
         private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.DomainUpDown domainUpDown2;
         private System.Windows.Forms.Label label11;
@@ -4916,7 +5038,7 @@
         private System.Windows.Forms.CheckBox checkBox142;
         private System.Windows.Forms.CheckBox checkBox143;
         private System.Windows.Forms.CheckBox checkBox144;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage NCS01_TabPage;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.CheckBox checkBox145;
         private System.Windows.Forms.CheckBox checkBox146;
@@ -4958,8 +5080,8 @@
         private System.Windows.Forms.CheckBox checkBox182;
         private System.Windows.Forms.CheckBox checkBox183;
         private System.Windows.Forms.CheckBox checkBox184;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.ListBox Fire10Byte_GroupBox;
+        private System.Windows.Forms.TabPage NEI42_TabPage;
+        private System.Windows.Forms.ListBox Monitoring_listBox;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Button listBox2_Clr_Button;
         private System.Windows.Forms.Label Serial_Time_label;
@@ -4986,12 +5108,6 @@
         private System.Windows.Forms.ComboBox NCS01_ID_10_comboBox;
         private System.Windows.Forms.Label NCS01_ID_Label;
         private System.Windows.Forms.ComboBox NCS_Cmd_comboBox;
-        private System.Windows.Forms.RadioButton Fire12Byte_Select_RadioButton;
-        private System.Windows.Forms.RadioButton Fire10Byte_Select_RadioButton;
-        private System.Windows.Forms.RadioButton NEI_Select_RadioButton;
-        private System.Windows.Forms.GroupBox Fire_Select_GroupBox;
-        private System.Windows.Forms.GroupBox Fire12Byte_Total_GroupBox;
-        private System.Windows.Forms.GroupBox Fire10Byte_Total_GroupBox;
         private System.Windows.Forms.GroupBox NEI42_GPIN_Total_GroupBox;
         private System.Windows.Forms.GroupBox NEI42_GPIN3_GroupBox;
         private System.Windows.Forms.CheckBox NEI_Ch41_CheckBox;
@@ -5038,30 +5154,19 @@
         private System.Windows.Forms.CheckBox NEI_Ch4_CheckBox;
         private System.Windows.Forms.CheckBox NEI_Ch3_CheckBox;
         private System.Windows.Forms.CheckBox NEI_Ch12_CheckBox;
-        private System.Windows.Forms.GroupBox NEI_ID_CMD_GroupBox;
-        private System.Windows.Forms.Label NEI42_CMD_Label;
-        private System.Windows.Forms.ComboBox NEI42_ID_1_comboBox;
-        private System.Windows.Forms.Label NEI42_ID_Label;
-        private System.Windows.Forms.ComboBox NEI42_ID_10_comboBox;
-        private System.Windows.Forms.ComboBox NEI42_Cmd_comboBox;
-        private System.Windows.Forms.Button Fire_Insert_Button;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Gaedan_ID_1_ConboBox;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Gaedan_ID_10_ConboBox;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Seperate_ID_ConboBox;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Floor_ID_1_ConboBox;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Floor_ID_10_ConboBox;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Dong_ID_1_ConboBox;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Dong_ID_10_ConboBox;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label FIRE10Byte_Gaedan_ID_Label;
-        private System.Windows.Forms.Label FIRE10Byte_Dong_ID_Label;
-        private System.Windows.Forms.Label FIRE10Byte_Floor_ID_Label;
-        private System.Windows.Forms.Label FIRE10Byte_Seperate_ID_Label;
+        private System.Windows.Forms.Button NEI_Insert_Button;
+        private System.Windows.Forms.Button Multi_Stop_button;
+        private System.Windows.Forms.TabPage Fire_TabPage;
+        private System.Windows.Forms.GroupBox Fire12Byte_Total_GroupBox;
+        private System.Windows.Forms.Button Fire12Byte_Reset_Button;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button Fire12Byte_Audio_Stop_Button;
         private System.Windows.Forms.Label FIRE12Byte_Floor_ID_Label;
+        private System.Windows.Forms.Button Fire12Byte_Audio_Start_Button;
         private System.Windows.Forms.ComboBox FIRE12Byte_Dong_ID_10_ConboBox;
+        private System.Windows.Forms.Button Fire12Byte_Stop_Button;
         private System.Windows.Forms.Label FIRE12Byte_Gaedan_ID_Label;
+        private System.Windows.Forms.Button Fire12Byte_Start_Button;
         private System.Windows.Forms.ComboBox FIRE12Byte_Dong_ID_1_ConboBox;
         private System.Windows.Forms.Label FIRE12Byte_Dong_ID_Label;
         private System.Windows.Forms.ComboBox FIRE12Byte_Floor_ID_10_ConboBox;
@@ -5069,16 +5174,43 @@
         private System.Windows.Forms.ComboBox FIRE12Byte_Floor_ID_1_ConboBox;
         private System.Windows.Forms.ComboBox FIRE12Byte_Gaedan_ID_1_ConboBox;
         private System.Windows.Forms.ComboBox FIRE12Byte_Gaedan_ID_10_ConboBox;
+        private System.Windows.Forms.GroupBox Fire10Byte_Total_GroupBox;
         private System.Windows.Forms.Button Fire10Byte_Reset_Button;
         private System.Windows.Forms.Button Fire10Byte_Audio_Stop_Button;
         private System.Windows.Forms.Button Fire10Byte_Audio_Start_Button;
         private System.Windows.Forms.Button Fire10Byte_Stop_Button;
+        private System.Windows.Forms.Label FIRE10Byte_Seperate_ID_Label;
         private System.Windows.Forms.Button Fire10Byte_Start_Button;
-        private System.Windows.Forms.Button Fire12Byte_Reset_Button;
-        private System.Windows.Forms.Button Fire12Byte_Audio_Stop_Button;
-        private System.Windows.Forms.Button Fire12Byte_Audio_Start_Button;
-        private System.Windows.Forms.Button Fire12Byte_Stop_Button;
-        private System.Windows.Forms.Button Fire12Byte_Start_Button;
+        private System.Windows.Forms.Label FIRE10Byte_Floor_ID_Label;
+        private System.Windows.Forms.Label FIRE10Byte_Gaedan_ID_Label;
+        private System.Windows.Forms.Label FIRE10Byte_Dong_ID_Label;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Gaedan_ID_1_ConboBox;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Gaedan_ID_10_ConboBox;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Seperate_ID_ConboBox;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Floor_ID_1_ConboBox;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Floor_ID_10_ConboBox;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Dong_ID_1_ConboBox;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Dong_ID_10_ConboBox;
+        private System.Windows.Forms.GroupBox Fire_Select_GroupBox;
+        private System.Windows.Forms.RadioButton Fire12Byte_Select_RadioButton;
+        private System.Windows.Forms.RadioButton Fire10Byte_Select_RadioButton;
+        private System.Windows.Forms.Label NEI42_CMD_Label;
+        private System.Windows.Forms.ComboBox NEI42_ID_1_comboBox;
+        private System.Windows.Forms.Label NEI42_ID_Label;
+        private System.Windows.Forms.ComboBox NEI42_ID_10_comboBox;
+        private System.Windows.Forms.ComboBox NEI42_Cmd_comboBox;
+        private System.Windows.Forms.Button Fire_Insert_Button;
+        private System.Windows.Forms.Label FIRE10Byte_Operate_Label;
+        private System.Windows.Forms.ComboBox FIRE10Byte_Operate_ConboBox;
+        private System.Windows.Forms.Label FIRE12Byte_Operate_Label;
+        private System.Windows.Forms.ComboBox FIRE12Byte_Operate_ConboBox;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.RadioButton Auto_RadioButton;
+        private System.Windows.Forms.RadioButton Manual_RadioButton;
+        private System.Windows.Forms.CheckBox Hex_con_Tx_Str_listBox_checkBox;
+        private System.Windows.Forms.CheckBox Hex_con_Monitoring_listBox_checkBox2;
     }
 }
 
