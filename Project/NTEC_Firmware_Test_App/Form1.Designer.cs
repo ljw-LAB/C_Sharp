@@ -48,6 +48,13 @@
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.NTEC_TabControl = new System.Windows.Forms.TabControl();
             this.NMC44_TabPage = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.NRG16_TabPage = new System.Windows.Forms.TabPage();
             this.NRG16_CMD_Label = new System.Windows.Forms.Label();
             this.NRG16_ID_1_comboBox = new System.Windows.Forms.ComboBox();
@@ -325,6 +332,13 @@
             this.NEI_Ch3_CheckBox = new System.Windows.Forms.CheckBox();
             this.NEI_Ch12_CheckBox = new System.Windows.Forms.CheckBox();
             this.Fire_TabPage = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.Auto_RadioButton = new System.Windows.Forms.RadioButton();
             this.Manual_RadioButton = new System.Windows.Forms.RadioButton();
@@ -363,7 +377,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.FIRE10Byte_Gaedan_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
             this.FIRE10Byte_Seperate_ID_ConboBox = new System.Windows.Forms.ComboBox();
             this.FIRE10Byte_Floor_ID_1_ConboBox = new System.Windows.Forms.ComboBox();
             this.FIRE10Byte_Floor_ID_10_ConboBox = new System.Windows.Forms.ComboBox();
@@ -389,9 +402,77 @@
             this.Length_label = new System.Windows.Forms.Label();
             this.TRx_label = new System.Windows.Forms.Label();
             this.Multi_Stop_button = new System.Windows.Forms.Button();
-            this.Hex_con_Tx_Str_listBox_checkBox = new System.Windows.Forms.CheckBox();
             this.Hex_con_Monitoring_listBox_checkBox2 = new System.Windows.Forms.CheckBox();
+            this.Fire_Data_Received_checkBox = new System.Windows.Forms.CheckBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.comboBox17 = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.comboBox28 = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.comboBox27 = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.comboBox29 = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.comboBox21 = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.comboBox20 = new System.Windows.Forms.ComboBox();
+            this.comboBox25 = new System.Windows.Forms.ComboBox();
+            this.comboBox26 = new System.Windows.Forms.ComboBox();
+            this.comboBox30 = new System.Windows.Forms.ComboBox();
+            this.comboBox31 = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.comboBox18 = new System.Windows.Forms.ComboBox();
+            this.comboBox19 = new System.Windows.Forms.ComboBox();
+            this.comboBox22 = new System.Windows.Forms.ComboBox();
+            this.comboBox23 = new System.Windows.Forms.ComboBox();
+            this.comboBox24 = new System.Windows.Forms.ComboBox();
+            this.comboBox32 = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.comboBox33 = new System.Windows.Forms.ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.comboBox34 = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.NTEC_TabControl.SuspendLayout();
+            this.NMC44_TabPage.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.NRG16_TabPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -414,6 +495,16 @@
             this.Fire12Byte_Total_GroupBox.SuspendLayout();
             this.Fire10Byte_Total_GroupBox.SuspendLayout();
             this.Fire_Select_GroupBox.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_Connect
@@ -601,18 +692,125 @@
             this.NTEC_TabControl.Location = new System.Drawing.Point(231, 20);
             this.NTEC_TabControl.Name = "NTEC_TabControl";
             this.NTEC_TabControl.SelectedIndex = 0;
-            this.NTEC_TabControl.Size = new System.Drawing.Size(492, 550);
+            this.NTEC_TabControl.Size = new System.Drawing.Size(492, 651);
             this.NTEC_TabControl.TabIndex = 16;
             // 
             // NMC44_TabPage
             // 
+            this.NMC44_TabPage.Controls.Add(this.groupBox16);
+            this.NMC44_TabPage.Controls.Add(this.groupBox17);
+            this.NMC44_TabPage.Controls.Add(this.groupBox15);
+            this.NMC44_TabPage.Controls.Add(this.groupBox19);
+            this.NMC44_TabPage.Controls.Add(this.groupBox18);
+            this.NMC44_TabPage.Controls.Add(this.groupBox14);
+            this.NMC44_TabPage.Controls.Add(this.groupBox13);
+            this.NMC44_TabPage.Controls.Add(this.groupBox12);
+            this.NMC44_TabPage.Controls.Add(this.groupBox11);
+            this.NMC44_TabPage.Controls.Add(this.groupBox10);
+            this.NMC44_TabPage.Controls.Add(this.groupBox9);
+            this.NMC44_TabPage.Controls.Add(this.label8);
+            this.NMC44_TabPage.Controls.Add(this.comboBox1);
+            this.NMC44_TabPage.Controls.Add(this.comboBox2);
+            this.NMC44_TabPage.Controls.Add(this.comboBox3);
+            this.NMC44_TabPage.Controls.Add(this.label13);
+            this.NMC44_TabPage.Controls.Add(this.button5);
             this.NMC44_TabPage.Location = new System.Drawing.Point(4, 22);
             this.NMC44_TabPage.Name = "NMC44_TabPage";
             this.NMC44_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NMC44_TabPage.Size = new System.Drawing.Size(484, 524);
-            this.NMC44_TabPage.TabIndex = 0;
+            this.NMC44_TabPage.Size = new System.Drawing.Size(484, 625);
+            this.NMC44_TabPage.TabIndex = 10;
             this.NMC44_TabPage.Text = "NMC44";
             this.NMC44_TabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.comboBox7);
+            this.groupBox9.Controls.Add(this.label17);
+            this.groupBox9.Controls.Add(this.comboBox6);
+            this.groupBox9.Controls.Add(this.label16);
+            this.groupBox9.Controls.Add(this.comboBox5);
+            this.groupBox9.Controls.Add(this.label15);
+            this.groupBox9.Controls.Add(this.comboBox4);
+            this.groupBox9.Controls.Add(this.label14);
+            this.groupBox9.Location = new System.Drawing.Point(7, 64);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(398, 83);
+            this.groupBox9.TabIndex = 51;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "채널 및 볼륨 제어(MUX)";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(132, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 12);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "명령어";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1"});
+            this.comboBox1.Location = new System.Drawing.Point(71, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(57, 20);
+            this.comboBox1.TabIndex = 49;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "0"});
+            this.comboBox2.Location = new System.Drawing.Point(7, 30);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(57, 20);
+            this.comboBox2.TabIndex = 48;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "INIT",
+            "DMY",
+            "MUX",
+            "VOL",
+            "TRB",
+            "BAS",
+            "MOT",
+            "GPO",
+            "FIRL",
+            "EMIC",
+            "FIRP",
+            "FIRE(10Byte)",
+            "FIRE(12Byte)",
+            "VER"});
+            this.comboBox3.Location = new System.Drawing.Point(134, 30);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 20);
+            this.comboBox3.TabIndex = 47;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(5, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 12);
+            this.label13.TabIndex = 44;
+            this.label13.Text = "ID";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(434, 24);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(44, 41);
+            this.button5.TabIndex = 19;
+            this.button5.Text = ">>";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // NRG16_TabPage
             // 
@@ -627,7 +825,7 @@
             this.NRG16_TabPage.Location = new System.Drawing.Point(4, 22);
             this.NRG16_TabPage.Name = "NRG16_TabPage";
             this.NRG16_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NRG16_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NRG16_TabPage.Size = new System.Drawing.Size(484, 625);
             this.NRG16_TabPage.TabIndex = 2;
             this.NRG16_TabPage.Text = "NRG16";
             this.NRG16_TabPage.UseVisualStyleBackColor = true;
@@ -1141,7 +1339,7 @@
             this.NRT16_TabPage.Location = new System.Drawing.Point(4, 22);
             this.NRT16_TabPage.Name = "NRT16_TabPage";
             this.NRT16_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NRT16_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NRT16_TabPage.Size = new System.Drawing.Size(484, 625);
             this.NRT16_TabPage.TabIndex = 3;
             this.NRT16_TabPage.Text = "NRT16";
             this.NRT16_TabPage.UseVisualStyleBackColor = true;
@@ -1655,7 +1853,7 @@
             this.NRT40_TabPage.Location = new System.Drawing.Point(4, 22);
             this.NRT40_TabPage.Name = "NRT40_TabPage";
             this.NRT40_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NRT40_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NRT40_TabPage.Size = new System.Drawing.Size(484, 625);
             this.NRT40_TabPage.TabIndex = 4;
             this.NRT40_TabPage.Text = "NRT40";
             this.NRT40_TabPage.UseVisualStyleBackColor = true;
@@ -2252,7 +2450,7 @@
             this.MPR_TabPage.Location = new System.Drawing.Point(4, 22);
             this.MPR_TabPage.Name = "MPR_TabPage";
             this.MPR_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.MPR_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.MPR_TabPage.Size = new System.Drawing.Size(484, 625);
             this.MPR_TabPage.TabIndex = 5;
             this.MPR_TabPage.Text = "MPR4000";
             this.MPR_TabPage.UseVisualStyleBackColor = true;
@@ -2743,7 +2941,7 @@
             this.NCS01_TabPage.Location = new System.Drawing.Point(4, 22);
             this.NCS01_TabPage.Name = "NCS01_TabPage";
             this.NCS01_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NCS01_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NCS01_TabPage.Size = new System.Drawing.Size(484, 625);
             this.NCS01_TabPage.TabIndex = 6;
             this.NCS01_TabPage.Text = "NCS01";
             this.NCS01_TabPage.UseVisualStyleBackColor = true;
@@ -3302,7 +3500,7 @@
             this.NEI42_TabPage.Location = new System.Drawing.Point(4, 22);
             this.NEI42_TabPage.Name = "NEI42_TabPage";
             this.NEI42_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NEI42_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.NEI42_TabPage.Size = new System.Drawing.Size(484, 625);
             this.NEI42_TabPage.TabIndex = 7;
             this.NEI42_TabPage.Text = "NEI42";
             this.NEI42_TabPage.UseVisualStyleBackColor = true;
@@ -3310,7 +3508,7 @@
             // NEI42_CMD_Label
             // 
             this.NEI42_CMD_Label.AutoSize = true;
-            this.NEI42_CMD_Label.Location = new System.Drawing.Point(133, 15);
+            this.NEI42_CMD_Label.Location = new System.Drawing.Point(132, 15);
             this.NEI42_CMD_Label.Name = "NEI42_CMD_Label";
             this.NEI42_CMD_Label.Size = new System.Drawing.Size(41, 12);
             this.NEI42_CMD_Label.TabIndex = 67;
@@ -3337,7 +3535,7 @@
             "D",
             "E",
             "F"});
-            this.NEI42_ID_1_comboBox.Location = new System.Drawing.Point(70, 30);
+            this.NEI42_ID_1_comboBox.Location = new System.Drawing.Point(71, 30);
             this.NEI42_ID_1_comboBox.Name = "NEI42_ID_1_comboBox";
             this.NEI42_ID_1_comboBox.Size = new System.Drawing.Size(57, 20);
             this.NEI42_ID_1_comboBox.TabIndex = 66;
@@ -3345,7 +3543,7 @@
             // NEI42_ID_Label
             // 
             this.NEI42_ID_Label.AutoSize = true;
-            this.NEI42_ID_Label.Location = new System.Drawing.Point(4, 15);
+            this.NEI42_ID_Label.Location = new System.Drawing.Point(5, 15);
             this.NEI42_ID_Label.Name = "NEI42_ID_Label";
             this.NEI42_ID_Label.Size = new System.Drawing.Size(16, 12);
             this.NEI42_ID_Label.TabIndex = 63;
@@ -3372,7 +3570,7 @@
             "D",
             "E",
             "F"});
-            this.NEI42_ID_10_comboBox.Location = new System.Drawing.Point(6, 30);
+            this.NEI42_ID_10_comboBox.Location = new System.Drawing.Point(7, 30);
             this.NEI42_ID_10_comboBox.Name = "NEI42_ID_10_comboBox";
             this.NEI42_ID_10_comboBox.Size = new System.Drawing.Size(57, 20);
             this.NEI42_ID_10_comboBox.TabIndex = 65;
@@ -3385,7 +3583,7 @@
             "DMY",
             "VER",
             "INIT"});
-            this.NEI42_Cmd_comboBox.Location = new System.Drawing.Point(133, 30);
+            this.NEI42_Cmd_comboBox.Location = new System.Drawing.Point(134, 30);
             this.NEI42_Cmd_comboBox.Name = "NEI42_Cmd_comboBox";
             this.NEI42_Cmd_comboBox.Size = new System.Drawing.Size(121, 20);
             this.NEI42_Cmd_comboBox.TabIndex = 64;
@@ -3945,6 +4143,13 @@
             // 
             // Fire_TabPage
             // 
+            this.Fire_TabPage.Controls.Add(this.button3);
+            this.Fire_TabPage.Controls.Add(this.button4);
+            this.Fire_TabPage.Controls.Add(this.label7);
+            this.Fire_TabPage.Controls.Add(this.button1);
+            this.Fire_TabPage.Controls.Add(this.textBox2);
+            this.Fire_TabPage.Controls.Add(this.listBox1);
+            this.Fire_TabPage.Controls.Add(this.button2);
             this.Fire_TabPage.Controls.Add(this.groupBox8);
             this.Fire_TabPage.Controls.Add(this.Fire_Insert_Button);
             this.Fire_TabPage.Controls.Add(this.Fire12Byte_Total_GroupBox);
@@ -3953,10 +4158,72 @@
             this.Fire_TabPage.Location = new System.Drawing.Point(4, 22);
             this.Fire_TabPage.Name = "Fire_TabPage";
             this.Fire_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Fire_TabPage.Size = new System.Drawing.Size(484, 524);
+            this.Fire_TabPage.Size = new System.Drawing.Size(484, 625);
             this.Fire_TabPage.TabIndex = 8;
             this.Fire_TabPage.Text = "Fire(10, 12Byte)";
             this.Fire_TabPage.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(376, 414);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(84, 30);
+            this.button3.TabIndex = 60;
+            this.button3.Text = "연속 전송";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(286, 414);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 30);
+            this.button4.TabIndex = 59;
+            this.button4.Text = "한번 전송";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(305, 493);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 12);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "Delay(ms)";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(376, 452);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 30);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "연속 전송";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(376, 488);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(67, 21);
+            this.textBox2.TabIndex = 57;
+            this.textBox2.Text = "500";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(6, 415);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(274, 208);
+            this.listBox1.TabIndex = 57;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(286, 452);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 30);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "한번 전송";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -4001,6 +4268,7 @@
             this.Fire_Insert_Button.TabIndex = 54;
             this.Fire_Insert_Button.Text = ">>";
             this.Fire_Insert_Button.UseVisualStyleBackColor = true;
+            this.Fire_Insert_Button.Click += new System.EventHandler(this.Fire_Insert_Button_Click);
             // 
             // Fire12Byte_Total_GroupBox
             // 
@@ -4046,6 +4314,7 @@
             this.Fire12Byte_Reset_Button.TabIndex = 83;
             this.Fire12Byte_Reset_Button.Text = "전체 복구 신호";
             this.Fire12Byte_Reset_Button.UseVisualStyleBackColor = true;
+            this.Fire12Byte_Reset_Button.Click += new System.EventHandler(this.Fire12Byte_Reset_Button_Click);
             // 
             // FIRE12Byte_Operate_ConboBox
             // 
@@ -4079,6 +4348,7 @@
             this.Fire12Byte_Audio_Stop_Button.TabIndex = 82;
             this.Fire12Byte_Audio_Stop_Button.Text = "연동정지";
             this.Fire12Byte_Audio_Stop_Button.UseVisualStyleBackColor = true;
+            this.Fire12Byte_Audio_Stop_Button.Click += new System.EventHandler(this.Fire12Byte_Audio_Stop_Button_Click);
             // 
             // FIRE12Byte_Floor_ID_Label
             // 
@@ -4097,6 +4367,7 @@
             this.Fire12Byte_Audio_Start_Button.TabIndex = 81;
             this.Fire12Byte_Audio_Start_Button.Text = "연동정상";
             this.Fire12Byte_Audio_Start_Button.UseVisualStyleBackColor = true;
+            this.Fire12Byte_Audio_Start_Button.Click += new System.EventHandler(this.Fire12Byte_Audio_Start_Button_Click);
             // 
             // FIRE12Byte_Dong_ID_10_ConboBox
             // 
@@ -4126,6 +4397,7 @@
             this.Fire12Byte_Stop_Button.TabIndex = 80;
             this.Fire12Byte_Stop_Button.Text = "화재정지";
             this.Fire12Byte_Stop_Button.UseVisualStyleBackColor = true;
+            this.Fire12Byte_Stop_Button.Click += new System.EventHandler(this.Fire12Byte_Stop_Button_Click);
             // 
             // FIRE12Byte_Gaedan_ID_Label
             // 
@@ -4144,6 +4416,7 @@
             this.Fire12Byte_Start_Button.TabIndex = 79;
             this.Fire12Byte_Start_Button.Text = "화재발생";
             this.Fire12Byte_Start_Button.UseVisualStyleBackColor = true;
+            this.Fire12Byte_Start_Button.Click += new System.EventHandler(this.Fire12Byte_Start_Button_Click);
             // 
             // FIRE12Byte_Dong_ID_1_ConboBox
             // 
@@ -4279,7 +4552,6 @@
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.label12);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.label9);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Gaedan_ID_1_ConboBox);
-            this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Gaedan_ID_10_ConboBox);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Seperate_ID_ConboBox);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Floor_ID_1_ConboBox);
             this.Fire10Byte_Total_GroupBox.Controls.Add(this.FIRE10Byte_Floor_ID_10_ConboBox);
@@ -4324,6 +4596,7 @@
             this.Fire10Byte_Reset_Button.TabIndex = 78;
             this.Fire10Byte_Reset_Button.Text = "전체 복구 신호";
             this.Fire10Byte_Reset_Button.UseVisualStyleBackColor = true;
+            this.Fire10Byte_Reset_Button.Click += new System.EventHandler(this.Fire10Byte_Reset_Button_Click);
             // 
             // Fire10Byte_Audio_Stop_Button
             // 
@@ -4333,6 +4606,7 @@
             this.Fire10Byte_Audio_Stop_Button.TabIndex = 77;
             this.Fire10Byte_Audio_Stop_Button.Text = "연동정지";
             this.Fire10Byte_Audio_Stop_Button.UseVisualStyleBackColor = true;
+            this.Fire10Byte_Audio_Stop_Button.Click += new System.EventHandler(this.Fire10Byte_Audio_Stop_Button_Click);
             // 
             // Fire10Byte_Audio_Start_Button
             // 
@@ -4342,6 +4616,7 @@
             this.Fire10Byte_Audio_Start_Button.TabIndex = 76;
             this.Fire10Byte_Audio_Start_Button.Text = "연동정상";
             this.Fire10Byte_Audio_Start_Button.UseVisualStyleBackColor = true;
+            this.Fire10Byte_Audio_Start_Button.Click += new System.EventHandler(this.Fire10Byte_Audio_Start_Button_Click);
             // 
             // Fire10Byte_Stop_Button
             // 
@@ -4351,6 +4626,7 @@
             this.Fire10Byte_Stop_Button.TabIndex = 75;
             this.Fire10Byte_Stop_Button.Text = "화재정지";
             this.Fire10Byte_Stop_Button.UseVisualStyleBackColor = true;
+            this.Fire10Byte_Stop_Button.Click += new System.EventHandler(this.Fire10Byte_Stop_Button_Click);
             // 
             // FIRE10Byte_Seperate_ID_Label
             // 
@@ -4369,6 +4645,7 @@
             this.Fire10Byte_Start_Button.TabIndex = 53;
             this.Fire10Byte_Start_Button.Text = "화재발생";
             this.Fire10Byte_Start_Button.UseVisualStyleBackColor = true;
+            this.Fire10Byte_Start_Button.Click += new System.EventHandler(this.Fire10Byte_Start_Button_Click);
             // 
             // FIRE10Byte_Floor_ID_Label
             // 
@@ -4430,30 +4707,10 @@
             "7",
             "8",
             "9"});
-            this.FIRE10Byte_Gaedan_ID_1_ConboBox.Location = new System.Drawing.Point(166, 55);
+            this.FIRE10Byte_Gaedan_ID_1_ConboBox.Location = new System.Drawing.Point(102, 55);
             this.FIRE10Byte_Gaedan_ID_1_ConboBox.Name = "FIRE10Byte_Gaedan_ID_1_ConboBox";
-            this.FIRE10Byte_Gaedan_ID_1_ConboBox.Size = new System.Drawing.Size(57, 20);
+            this.FIRE10Byte_Gaedan_ID_1_ConboBox.Size = new System.Drawing.Size(121, 20);
             this.FIRE10Byte_Gaedan_ID_1_ConboBox.TabIndex = 69;
-            // 
-            // FIRE10Byte_Gaedan_ID_10_ConboBox
-            // 
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox.FormattingEnabled = true;
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"});
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox.Location = new System.Drawing.Point(102, 55);
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox.Name = "FIRE10Byte_Gaedan_ID_10_ConboBox";
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox.Size = new System.Drawing.Size(57, 20);
-            this.FIRE10Byte_Gaedan_ID_10_ConboBox.TabIndex = 68;
             // 
             // FIRE10Byte_Seperate_ID_ConboBox
             // 
@@ -4588,9 +4845,9 @@
             // 
             this.Tx_Str_listBox.FormattingEnabled = true;
             this.Tx_Str_listBox.ItemHeight = 12;
-            this.Tx_Str_listBox.Location = new System.Drawing.Point(749, 42);
+            this.Tx_Str_listBox.Location = new System.Drawing.Point(749, 38);
             this.Tx_Str_listBox.Name = "Tx_Str_listBox";
-            this.Tx_Str_listBox.Size = new System.Drawing.Size(184, 448);
+            this.Tx_Str_listBox.Size = new System.Drawing.Size(312, 448);
             this.Tx_Str_listBox.TabIndex = 17;
             // 
             // Tx_Single_textBox
@@ -4671,7 +4928,7 @@
             // 
             this.Monitoring_listBox.FormattingEnabled = true;
             this.Monitoring_listBox.ItemHeight = 12;
-            this.Monitoring_listBox.Location = new System.Drawing.Point(939, 42);
+            this.Monitoring_listBox.Location = new System.Drawing.Point(1067, 38);
             this.Monitoring_listBox.Name = "Monitoring_listBox";
             this.Monitoring_listBox.Size = new System.Drawing.Size(446, 448);
             this.Monitoring_listBox.TabIndex = 44;
@@ -4682,7 +4939,7 @@
             // 
             // listBox2_Clr_Button
             // 
-            this.listBox2_Clr_Button.Location = new System.Drawing.Point(1297, 492);
+            this.listBox2_Clr_Button.Location = new System.Drawing.Point(1461, 491);
             this.listBox2_Clr_Button.Name = "listBox2_Clr_Button";
             this.listBox2_Clr_Button.Size = new System.Drawing.Size(52, 31);
             this.listBox2_Clr_Button.TabIndex = 47;
@@ -4693,7 +4950,7 @@
             // Serial_Time_label
             // 
             this.Serial_Time_label.AutoSize = true;
-            this.Serial_Time_label.Location = new System.Drawing.Point(939, 28);
+            this.Serial_Time_label.Location = new System.Drawing.Point(1067, 24);
             this.Serial_Time_label.Name = "Serial_Time_label";
             this.Serial_Time_label.Size = new System.Drawing.Size(34, 12);
             this.Serial_Time_label.TabIndex = 48;
@@ -4702,7 +4959,7 @@
             // Data_Str_label
             // 
             this.Data_Str_label.AutoSize = true;
-            this.Data_Str_label.Location = new System.Drawing.Point(1097, 28);
+            this.Data_Str_label.Location = new System.Drawing.Point(1225, 24);
             this.Data_Str_label.Name = "Data_Str_label";
             this.Data_Str_label.Size = new System.Drawing.Size(66, 12);
             this.Data_Str_label.TabIndex = 49;
@@ -4711,7 +4968,7 @@
             // Length_label
             // 
             this.Length_label.AutoSize = true;
-            this.Length_label.Location = new System.Drawing.Point(1229, 27);
+            this.Length_label.Location = new System.Drawing.Point(1357, 23);
             this.Length_label.Name = "Length_label";
             this.Length_label.Size = new System.Drawing.Size(43, 12);
             this.Length_label.TabIndex = 50;
@@ -4720,7 +4977,7 @@
             // TRx_label
             // 
             this.TRx_label.AutoSize = true;
-            this.TRx_label.Location = new System.Drawing.Point(1307, 28);
+            this.TRx_label.Location = new System.Drawing.Point(1435, 24);
             this.TRx_label.Name = "TRx_label";
             this.TRx_label.Size = new System.Drawing.Size(78, 12);
             this.TRx_label.TabIndex = 51;
@@ -4736,33 +4993,935 @@
             this.Multi_Stop_button.UseVisualStyleBackColor = true;
             this.Multi_Stop_button.Click += new System.EventHandler(this.Multi_Stop_button_Click);
             // 
-            // Hex_con_Tx_Str_listBox_checkBox
-            // 
-            this.Hex_con_Tx_Str_listBox_checkBox.AutoSize = true;
-            this.Hex_con_Tx_Str_listBox_checkBox.Location = new System.Drawing.Point(749, 9);
-            this.Hex_con_Tx_Str_listBox_checkBox.Name = "Hex_con_Tx_Str_listBox_checkBox";
-            this.Hex_con_Tx_Str_listBox_checkBox.Size = new System.Drawing.Size(74, 16);
-            this.Hex_con_Tx_Str_listBox_checkBox.TabIndex = 53;
-            this.Hex_con_Tx_Str_listBox_checkBox.Text = "Hex 변환";
-            this.Hex_con_Tx_Str_listBox_checkBox.UseVisualStyleBackColor = true;
-            // 
             // Hex_con_Monitoring_listBox_checkBox2
             // 
             this.Hex_con_Monitoring_listBox_checkBox2.AutoSize = true;
-            this.Hex_con_Monitoring_listBox_checkBox2.Location = new System.Drawing.Point(941, 9);
+            this.Hex_con_Monitoring_listBox_checkBox2.Location = new System.Drawing.Point(1067, 5);
             this.Hex_con_Monitoring_listBox_checkBox2.Name = "Hex_con_Monitoring_listBox_checkBox2";
             this.Hex_con_Monitoring_listBox_checkBox2.Size = new System.Drawing.Size(74, 16);
             this.Hex_con_Monitoring_listBox_checkBox2.TabIndex = 54;
             this.Hex_con_Monitoring_listBox_checkBox2.Text = "Hex 변환";
             this.Hex_con_Monitoring_listBox_checkBox2.UseVisualStyleBackColor = true;
             // 
+            // Fire_Data_Received_checkBox
+            // 
+            this.Fire_Data_Received_checkBox.AutoSize = true;
+            this.Fire_Data_Received_checkBox.Location = new System.Drawing.Point(749, 5);
+            this.Fire_Data_Received_checkBox.Name = "Fire_Data_Received_checkBox";
+            this.Fire_Data_Received_checkBox.Size = new System.Drawing.Size(74, 16);
+            this.Fire_Data_Received_checkBox.TabIndex = 55;
+            this.Fire_Data_Received_checkBox.Text = "Hex 변환";
+            this.Fire_Data_Received_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "0(OFF)",
+            "1(마이크/차임)",
+            "2(Input Ch1)",
+            "3(Input Ch2)",
+            "4(Input Ch3)",
+            "5(Input Ch4)",
+            "6(우선순위 외부 입력)"});
+            this.comboBox4.Location = new System.Drawing.Point(6, 41);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(140, 20);
+            this.comboBox4.TabIndex = 53;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(36, 26);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.TabIndex = 52;
+            this.label14.Text = "입력채널";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "A1(Output Ch1)",
+            "A2(Output Ch2)",
+            "A3(Output Ch3)",
+            "A4(Output Ch4)"});
+            this.comboBox5.Location = new System.Drawing.Point(152, 41);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(97, 20);
+            this.comboBox5.TabIndex = 55;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(172, 26);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 12);
+            this.label15.TabIndex = 54;
+            this.label15.Text = "출력채널";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "0(MUTE)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "a(MAX)"});
+            this.comboBox6.Location = new System.Drawing.Point(255, 41);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(57, 20);
+            this.comboBox6.TabIndex = 57;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(269, 26);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(29, 12);
+            this.label16.TabIndex = 56;
+            this.label16.Text = "볼륨";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "0(Fire(RPI))",
+            "1(EM MIC)",
+            "2(PC)",
+            "3(NCS)",
+            "4(AUX1)",
+            "5(AUX2)",
+            "6(AUX3)",
+            "7(MPR5000)"});
+            this.comboBox7.Location = new System.Drawing.Point(318, 41);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(74, 20);
+            this.comboBox7.TabIndex = 59;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(330, 14);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 24);
+            this.label17.TabIndex = 58;
+            this.label17.Text = "외부입력\r\n우선순위";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.comboBox9);
+            this.groupBox10.Controls.Add(this.label20);
+            this.groupBox10.Controls.Add(this.label19);
+            this.groupBox10.Controls.Add(this.comboBox10);
+            this.groupBox10.Location = new System.Drawing.Point(7, 152);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(175, 83);
+            this.groupBox10.TabIndex = 60;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "볼륨 제어(VOL)";
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            "0(MUTE)",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "a(MAX)"});
+            this.comboBox9.Location = new System.Drawing.Point(109, 35);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(57, 20);
+            this.comboBox9.TabIndex = 63;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(125, 20);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(29, 12);
+            this.label19.TabIndex = 62;
+            this.label19.Text = "볼륨";
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "A1(Output Ch1)",
+            "A2(Output Ch2)",
+            "A3(Output Ch3)",
+            "A4(Output Ch4)"});
+            this.comboBox10.Location = new System.Drawing.Point(6, 35);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(97, 20);
+            this.comboBox10.TabIndex = 61;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(25, 20);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(53, 12);
+            this.label20.TabIndex = 60;
+            this.label20.Text = "출력채널";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.comboBox8);
+            this.groupBox11.Controls.Add(this.label18);
+            this.groupBox11.Controls.Add(this.label23);
+            this.groupBox11.Controls.Add(this.comboBox11);
+            this.groupBox11.Location = new System.Drawing.Point(7, 241);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(175, 83);
+            this.groupBox11.TabIndex = 64;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Treble 제어";
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.comboBox8.Location = new System.Drawing.Point(109, 35);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(57, 20);
+            this.comboBox8.TabIndex = 63;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(25, 20);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 12);
+            this.label18.TabIndex = 60;
+            this.label18.Text = "출력채널";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(125, 20);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(29, 12);
+            this.label23.TabIndex = 62;
+            this.label23.Text = "볼륨";
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            "A1(Output Ch1)",
+            "A2(Output Ch2)",
+            "A3(Output Ch3)",
+            "A4(Output Ch4)"});
+            this.comboBox11.Location = new System.Drawing.Point(6, 35);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(97, 20);
+            this.comboBox11.TabIndex = 61;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.comboBox12);
+            this.groupBox12.Controls.Add(this.label24);
+            this.groupBox12.Controls.Add(this.label25);
+            this.groupBox12.Controls.Add(this.comboBox13);
+            this.groupBox12.Location = new System.Drawing.Point(188, 241);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(186, 83);
+            this.groupBox12.TabIndex = 64;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Base 제어";
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.comboBox12.Location = new System.Drawing.Point(109, 35);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(57, 20);
+            this.comboBox12.TabIndex = 63;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(25, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(53, 12);
+            this.label24.TabIndex = 60;
+            this.label24.Text = "출력채널";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(125, 20);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(29, 12);
+            this.label25.TabIndex = 62;
+            this.label25.Text = "볼륨";
+            // 
+            // comboBox13
+            // 
+            this.comboBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            "A1(Output Ch1)",
+            "A2(Output Ch2)",
+            "A3(Output Ch3)",
+            "A4(Output Ch4)"});
+            this.comboBox13.Location = new System.Drawing.Point(6, 35);
+            this.comboBox13.Name = "comboBox13";
+            this.comboBox13.Size = new System.Drawing.Size(97, 20);
+            this.comboBox13.TabIndex = 61;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.comboBox15);
+            this.groupBox13.Controls.Add(this.label26);
+            this.groupBox13.Controls.Add(this.comboBox14);
+            this.groupBox13.Controls.Add(this.label27);
+            this.groupBox13.Location = new System.Drawing.Point(303, 153);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(175, 83);
+            this.groupBox13.TabIndex = 65;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "GPOUT 제어";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.comboBox17);
+            this.groupBox14.Controls.Add(this.label29);
+            this.groupBox14.Location = new System.Drawing.Point(188, 153);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(109, 83);
+            this.groupBox14.TabIndex = 64;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "채널 모니터링";
+            // 
+            // comboBox17
+            // 
+            this.comboBox17.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox17.FormattingEnabled = true;
+            this.comboBox17.Items.AddRange(new object[] {
+            "1(Output Ch1)",
+            "2(Output Ch2)",
+            "3(Output Ch3)",
+            "4(Output Ch4)"});
+            this.comboBox17.Location = new System.Drawing.Point(6, 35);
+            this.comboBox17.Name = "comboBox17";
+            this.comboBox17.Size = new System.Drawing.Size(97, 20);
+            this.comboBox17.TabIndex = 55;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(29, 20);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(53, 12);
+            this.label29.TabIndex = 54;
+            this.label29.Text = "출력채널";
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.comboBox16);
+            this.groupBox18.Controls.Add(this.label28);
+            this.groupBox18.Location = new System.Drawing.Point(167, 330);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox18.Size = new System.Drawing.Size(103, 83);
+            this.groupBox18.TabIndex = 65;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "화재 LED 제어";
+            // 
+            // comboBox16
+            // 
+            this.comboBox16.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox16.FormattingEnabled = true;
+            this.comboBox16.Items.AddRange(new object[] {
+            "0(화재 해제)",
+            "1(화재 발생)"});
+            this.comboBox16.Location = new System.Drawing.Point(6, 35);
+            this.comboBox16.Name = "comboBox16";
+            this.comboBox16.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox16.Size = new System.Drawing.Size(91, 20);
+            this.comboBox16.TabIndex = 55;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(25, 20);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(52, 12);
+            this.label28.TabIndex = 54;
+            this.label28.Text = "ON/OFF";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.comboBox28);
+            this.groupBox19.Controls.Add(this.label40);
+            this.groupBox19.Location = new System.Drawing.Point(276, 330);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox19.Size = new System.Drawing.Size(114, 83);
+            this.groupBox19.TabIndex = 66;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "EM MIC 제어";
+            // 
+            // comboBox28
+            // 
+            this.comboBox28.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox28.FormattingEnabled = true;
+            this.comboBox28.Items.AddRange(new object[] {
+            "0(EM MIC 해제)",
+            "1(EM MIC 발생)"});
+            this.comboBox28.Location = new System.Drawing.Point(6, 35);
+            this.comboBox28.Name = "comboBox28";
+            this.comboBox28.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox28.Size = new System.Drawing.Size(102, 20);
+            this.comboBox28.TabIndex = 55;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(31, 20);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(52, 12);
+            this.label40.TabIndex = 54;
+            this.label40.Text = "ON/OFF";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.label31);
+            this.groupBox17.Controls.Add(this.label30);
+            this.groupBox17.Controls.Add(this.comboBox30);
+            this.groupBox17.Controls.Add(this.comboBox31);
+            this.groupBox17.Controls.Add(this.comboBox25);
+            this.groupBox17.Controls.Add(this.comboBox26);
+            this.groupBox17.Controls.Add(this.comboBox20);
+            this.groupBox17.Controls.Add(this.comboBox27);
+            this.groupBox17.Controls.Add(this.label39);
+            this.groupBox17.Controls.Add(this.comboBox29);
+            this.groupBox17.Controls.Add(this.label41);
+            this.groupBox17.Location = new System.Drawing.Point(7, 419);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(471, 83);
+            this.groupBox17.TabIndex = 66;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "소방 12Byte 수신 시, 제어";
+            // 
+            // comboBox27
+            // 
+            this.comboBox27.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox27.FormattingEnabled = true;
+            this.comboBox27.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox27.Location = new System.Drawing.Point(199, 39);
+            this.comboBox27.Name = "comboBox27";
+            this.comboBox27.Size = new System.Drawing.Size(34, 20);
+            this.comboBox27.TabIndex = 59;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(203, 24);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(65, 12);
+            this.label39.TabIndex = 58;
+            this.label39.Text = "동(십 / 일)";
+            // 
+            // comboBox29
+            // 
+            this.comboBox29.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox29.FormattingEnabled = true;
+            this.comboBox29.Items.AddRange(new object[] {
+            "N(화재발생)",
+            "F(화재정지)",
+            "e(연동정상)",
+            "E(연동정지)",
+            "R(전체복구)"});
+            this.comboBox29.Location = new System.Drawing.Point(6, 39);
+            this.comboBox29.Name = "comboBox29";
+            this.comboBox29.Size = new System.Drawing.Size(83, 20);
+            this.comboBox29.TabIndex = 55;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(15, 24);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(63, 12);
+            this.label41.TabIndex = 54;
+            this.label41.Text = "동작(기능)";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.comboBox21);
+            this.groupBox15.Controls.Add(this.label33);
+            this.groupBox15.Location = new System.Drawing.Point(7, 330);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(154, 83);
+            this.groupBox15.TabIndex = 65;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "화재 수신반 제어";
+            // 
+            // comboBox21
+            // 
+            this.comboBox21.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox21.FormattingEnabled = true;
+            this.comboBox21.Items.AddRange(new object[] {
+            "0(NEI42)",
+            "1(10Byte)",
+            "2(12Byte)",
+            "3(현재 프로토콜 값 요청)"});
+            this.comboBox21.Location = new System.Drawing.Point(6, 39);
+            this.comboBox21.Name = "comboBox21";
+            this.comboBox21.Size = new System.Drawing.Size(140, 20);
+            this.comboBox21.TabIndex = 55;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(38, 23);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(81, 12);
+            this.label33.TabIndex = 54;
+            this.label33.Text = "프로토콜 설정";
+            // 
+            // comboBox20
+            // 
+            this.comboBox20.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox20.FormattingEnabled = true;
+            this.comboBox20.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox20.Location = new System.Drawing.Point(239, 39);
+            this.comboBox20.Name = "comboBox20";
+            this.comboBox20.Size = new System.Drawing.Size(34, 20);
+            this.comboBox20.TabIndex = 60;
+            // 
+            // comboBox25
+            // 
+            this.comboBox25.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox25.FormattingEnabled = true;
+            this.comboBox25.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox25.Location = new System.Drawing.Point(335, 39);
+            this.comboBox25.Name = "comboBox25";
+            this.comboBox25.Size = new System.Drawing.Size(34, 20);
+            this.comboBox25.TabIndex = 62;
+            // 
+            // comboBox26
+            // 
+            this.comboBox26.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox26.FormattingEnabled = true;
+            this.comboBox26.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox26.Location = new System.Drawing.Point(296, 39);
+            this.comboBox26.Name = "comboBox26";
+            this.comboBox26.Size = new System.Drawing.Size(34, 20);
+            this.comboBox26.TabIndex = 61;
+            // 
+            // comboBox30
+            // 
+            this.comboBox30.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox30.FormattingEnabled = true;
+            this.comboBox30.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox30.Location = new System.Drawing.Point(427, 39);
+            this.comboBox30.Name = "comboBox30";
+            this.comboBox30.Size = new System.Drawing.Size(34, 20);
+            this.comboBox30.TabIndex = 64;
+            // 
+            // comboBox31
+            // 
+            this.comboBox31.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox31.FormattingEnabled = true;
+            this.comboBox31.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox31.Location = new System.Drawing.Point(387, 39);
+            this.comboBox31.Name = "comboBox31";
+            this.comboBox31.Size = new System.Drawing.Size(34, 20);
+            this.comboBox31.TabIndex = 63;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(296, 24);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(77, 12);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "계단(십 / 일)";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(390, 24);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(65, 12);
+            this.label31.TabIndex = 66;
+            this.label31.Text = "층(십 / 일)";
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.label32);
+            this.groupBox16.Controls.Add(this.comboBox34);
+            this.groupBox16.Controls.Add(this.label37);
+            this.groupBox16.Controls.Add(this.label34);
+            this.groupBox16.Controls.Add(this.comboBox33);
+            this.groupBox16.Controls.Add(this.label36);
+            this.groupBox16.Controls.Add(this.comboBox18);
+            this.groupBox16.Controls.Add(this.comboBox32);
+            this.groupBox16.Controls.Add(this.label35);
+            this.groupBox16.Controls.Add(this.comboBox19);
+            this.groupBox16.Controls.Add(this.comboBox24);
+            this.groupBox16.Controls.Add(this.comboBox23);
+            this.groupBox16.Controls.Add(this.comboBox22);
+            this.groupBox16.Location = new System.Drawing.Point(7, 508);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(471, 83);
+            this.groupBox16.TabIndex = 67;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "소방 10Byte 수신 시, 제어";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(390, 24);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(65, 12);
+            this.label32.TabIndex = 66;
+            this.label32.Text = "층(십 / 일)";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(296, 24);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(77, 12);
+            this.label34.TabIndex = 65;
+            this.label34.Text = "계단(십 / 일)";
+            // 
+            // comboBox18
+            // 
+            this.comboBox18.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox18.FormattingEnabled = true;
+            this.comboBox18.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox18.Location = new System.Drawing.Point(427, 39);
+            this.comboBox18.Name = "comboBox18";
+            this.comboBox18.Size = new System.Drawing.Size(34, 20);
+            this.comboBox18.TabIndex = 64;
+            // 
+            // comboBox19
+            // 
+            this.comboBox19.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox19.FormattingEnabled = true;
+            this.comboBox19.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox19.Location = new System.Drawing.Point(387, 39);
+            this.comboBox19.Name = "comboBox19";
+            this.comboBox19.Size = new System.Drawing.Size(34, 20);
+            this.comboBox19.TabIndex = 63;
+            // 
+            // comboBox22
+            // 
+            this.comboBox22.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox22.FormattingEnabled = true;
+            this.comboBox22.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox22.Location = new System.Drawing.Point(335, 39);
+            this.comboBox22.Name = "comboBox22";
+            this.comboBox22.Size = new System.Drawing.Size(34, 20);
+            this.comboBox22.TabIndex = 62;
+            // 
+            // comboBox23
+            // 
+            this.comboBox23.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox23.FormattingEnabled = true;
+            this.comboBox23.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox23.Location = new System.Drawing.Point(295, 39);
+            this.comboBox23.Name = "comboBox23";
+            this.comboBox23.Size = new System.Drawing.Size(34, 20);
+            this.comboBox23.TabIndex = 61;
+            // 
+            // comboBox24
+            // 
+            this.comboBox24.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox24.FormattingEnabled = true;
+            this.comboBox24.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox24.Location = new System.Drawing.Point(239, 39);
+            this.comboBox24.Name = "comboBox24";
+            this.comboBox24.Size = new System.Drawing.Size(34, 20);
+            this.comboBox24.TabIndex = 60;
+            // 
+            // comboBox32
+            // 
+            this.comboBox32.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox32.FormattingEnabled = true;
+            this.comboBox32.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox32.Location = new System.Drawing.Point(199, 39);
+            this.comboBox32.Name = "comboBox32";
+            this.comboBox32.Size = new System.Drawing.Size(34, 20);
+            this.comboBox32.TabIndex = 59;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(204, 24);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(65, 12);
+            this.label35.TabIndex = 58;
+            this.label35.Text = "동(십 / 일)";
+            // 
+            // comboBox33
+            // 
+            this.comboBox33.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox33.FormattingEnabled = true;
+            this.comboBox33.Items.AddRange(new object[] {
+            "F(화재발생)",
+            "C(화재정지)",
+            "D(연동정상)",
+            "B(연동정지)",
+            "A(전체복구)"});
+            this.comboBox33.Location = new System.Drawing.Point(6, 39);
+            this.comboBox33.Name = "comboBox33";
+            this.comboBox33.Size = new System.Drawing.Size(83, 20);
+            this.comboBox33.TabIndex = 55;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(15, 24);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(63, 12);
+            this.label36.TabIndex = 54;
+            this.label36.Text = "동작(기능)";
+            // 
+            // comboBox34
+            // 
+            this.comboBox34.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox34.FormattingEnabled = true;
+            this.comboBox34.Items.AddRange(new object[] {
+            "F(지상층)",
+            "B(지하층)",
+            "P(옥탑층)",
+            "K(주차장)"});
+            this.comboBox34.Location = new System.Drawing.Point(100, 39);
+            this.comboBox34.Name = "comboBox34";
+            this.comboBox34.Size = new System.Drawing.Size(85, 20);
+            this.comboBox34.TabIndex = 57;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(116, 24);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(51, 12);
+            this.label37.TabIndex = 56;
+            this.label37.Text = "층(구분)";
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Items.AddRange(new object[] {
+            "1(GPOUT 1Ch)",
+            "2(GPOUT 2Ch)",
+            "3(GPOUT 3Ch)",
+            "4(GPOUT 4Ch)"});
+            this.comboBox14.Location = new System.Drawing.Point(6, 35);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(97, 20);
+            this.comboBox14.TabIndex = 65;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(42, 20);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(29, 12);
+            this.label27.TabIndex = 64;
+            this.label27.Text = "채널";
+            // 
+            // comboBox15
+            // 
+            this.comboBox15.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox15.FormattingEnabled = true;
+            this.comboBox15.Items.AddRange(new object[] {
+            "0(OFF)",
+            "1(ON)"});
+            this.comboBox15.Location = new System.Drawing.Point(112, 35);
+            this.comboBox15.Name = "comboBox15";
+            this.comboBox15.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.comboBox15.Size = new System.Drawing.Size(57, 20);
+            this.comboBox15.TabIndex = 67;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(113, 20);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(52, 12);
+            this.label26.TabIndex = 66;
+            this.label26.Text = "ON/OFF";
+            // 
             // NTEC_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1408, 589);
+            this.ClientSize = new System.Drawing.Size(1525, 683);
+            this.Controls.Add(this.NTEC_TabControl);
+            this.Controls.Add(this.Fire_Data_Received_checkBox);
             this.Controls.Add(this.Hex_con_Monitoring_listBox_checkBox2);
-            this.Controls.Add(this.Hex_con_Tx_Str_listBox_checkBox);
             this.Controls.Add(this.Multi_Stop_button);
             this.Controls.Add(this.TRx_label);
             this.Controls.Add(this.Length_label);
@@ -4795,11 +5954,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox_Port_Number);
             this.Controls.Add(this.button_Connect);
-            this.Controls.Add(this.NTEC_TabControl);
             this.Name = "NTEC_Form";
             this.Text = "NTEC_Firmware_Test_App";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.NTEC_TabControl.ResumeLayout(false);
+            this.NMC44_TabPage.ResumeLayout(false);
+            this.NMC44_TabPage.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.NRG16_TabPage.ResumeLayout(false);
             this.NRG16_TabPage.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -4834,6 +5996,7 @@
             this.NEI42_GPIN1_GroupBox.ResumeLayout(false);
             this.NEI42_GPIN1_GroupBox.PerformLayout();
             this.Fire_TabPage.ResumeLayout(false);
+            this.Fire_TabPage.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.Fire12Byte_Total_GroupBox.ResumeLayout(false);
@@ -4842,6 +6005,26 @@
             this.Fire10Byte_Total_GroupBox.PerformLayout();
             this.Fire_Select_GroupBox.ResumeLayout(false);
             this.Fire_Select_GroupBox.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4867,7 +6050,6 @@
         private System.Windows.Forms.Button button_DbLoad;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.TabControl NTEC_TabControl;
-        private System.Windows.Forms.TabPage NMC44_TabPage;
         private System.Windows.Forms.ListBox Tx_Str_listBox;
         private System.Windows.Forms.TextBox Tx_Single_textBox;
         private System.Windows.Forms.Button NRG_Insert_Button;
@@ -5187,7 +6369,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox FIRE10Byte_Gaedan_ID_1_ConboBox;
-        private System.Windows.Forms.ComboBox FIRE10Byte_Gaedan_ID_10_ConboBox;
         private System.Windows.Forms.ComboBox FIRE10Byte_Seperate_ID_ConboBox;
         private System.Windows.Forms.ComboBox FIRE10Byte_Floor_ID_1_ConboBox;
         private System.Windows.Forms.ComboBox FIRE10Byte_Floor_ID_10_ConboBox;
@@ -5209,8 +6390,89 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.RadioButton Auto_RadioButton;
         private System.Windows.Forms.RadioButton Manual_RadioButton;
-        private System.Windows.Forms.CheckBox Hex_con_Tx_Str_listBox_checkBox;
         private System.Windows.Forms.CheckBox Hex_con_Monitoring_listBox_checkBox2;
+        private System.Windows.Forms.CheckBox Fire_Data_Received_checkBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage NMC44_TabPage;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.ComboBox comboBox17;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.ComboBox comboBox28;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.ComboBox comboBox27;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox comboBox29;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.ComboBox comboBox21;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox comboBox20;
+        private System.Windows.Forms.ComboBox comboBox30;
+        private System.Windows.Forms.ComboBox comboBox31;
+        private System.Windows.Forms.ComboBox comboBox25;
+        private System.Windows.Forms.ComboBox comboBox26;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.ComboBox comboBox34;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.ComboBox comboBox33;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.ComboBox comboBox32;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ComboBox comboBox19;
+        private System.Windows.Forms.ComboBox comboBox24;
+        private System.Windows.Forms.ComboBox comboBox23;
+        private System.Windows.Forms.ComboBox comboBox22;
+        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.Label label26;
     }
 }
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text;
+using System.Collections.Generic;
+using System.Collections.Specialized;
 
 namespace NTEC_Firmware_Test_App
 {
@@ -42,11 +44,10 @@ namespace NTEC_Firmware_Test_App
         byte NEI_Temp_data_29_36Ch_data = 0x00;
         byte NEI_Temp_data_37_42Ch_data = 0x00;
 
-
-
         public NTEC_Form()
         {
             InitializeComponent();
+           
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,6 +78,10 @@ namespace NTEC_Firmware_Test_App
             comboBox_Port_StopBits.Text = "1";
             comboBox_Port_FlowControl.Text = "None";
 
+            Auto_RadioButton.Checked = true;
+            Fire12Byte_Select_RadioButton.Checked = true;
+
+            Hex_con_Monitoring_listBox_checkBox2.Checked = true;
             //DomainUpDown.DomainUpDownItemCollection NRT40_domainUpDown_1_collection = this.NRT40_domainUpDown_1.Items;
             //DomainUpDown.DomainUpDownItemCollection NRT40_domainUpDown_10_collection = this.NRT40_domainUpDown_10.Items;
             //DomainUpDown.DomainUpDownItemCollection NRT16_domainUpDown_1_collection  =  this.NRT16_domainUpDown_1.Items;
@@ -157,7 +162,6 @@ namespace NTEC_Firmware_Test_App
                     serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), comboBox_Port_Parity.SelectedItem.ToString(), true);            // Parity은 Parity 형식의 Enum 이므로 형변환하여 할당
                     serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), comboBox_Port_StopBits.SelectedItem.ToString(), true);     // StopBits은 Parity 형식의 Enum이므로 형변환하여 할당
                     serialPort1.Handshake = (Handshake)Enum.Parse(typeof(Handshake), comboBox_Port_FlowControl.SelectedItem.ToString(), true); // Handshake은 Parity 형식의 Enum이므로 형변환하여 할당
-                                                                                                                                               /* C# 전송시 1ms로 세팅해도 송신시 약 30ms 딜레이 주지 못함 시리얼 부분 작성 후 검토 할 것*/
 
                     //serialPort1.ReadTimeout = 10;                                                                                             // 딜레이 문제 송신쪽으로 30ms간격밖에 전송하지 못함??.
                     //serialPort1.WriteTimeout = 50;
@@ -227,18 +231,111 @@ namespace NTEC_Firmware_Test_App
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            string s = serialPort1.ReadLine();
-            this.BeginInvoke((new Action(delegate { ShowValue(s); })));
+            //string str = "";
+            //int readCnt = serialPort1.BytesToRead;
+            //byte[] rebyte = new byte[12];
+
+            ////StringBuilder myStringBuilder = new StringBuilder(str, 12);
+
+            //if (Fire_Data_Received_checkBox.Checked == false)
+            //{
+
+            //    string s = serialPort1.ReadLine();
+            //    this.BeginInvoke((new Action(delegate { ShowValue(s); })));
+
+            //}
+            //else
+            //{
+            //    if (readCnt > 11)
+            //    {
+            //        int temp = serialPort1.Read(rebyte, 0, rebyte.Length);
+            //    }
+
+            //    foreach (var b in rebyte)
+            //    {
+            //        if (b != 0x00 && b != 0x0a)
+            //        {
+            //            str += (b.ToString("X2")) + " ";
+
+            //        }
+            //        else
+            //        {
+            //            str += (b.ToString("X2"));
+            //        }
+            //    }
+            //    if(!str.Contains("00"))
+            //    {
+            //        Monitoring_listBox.Items.Add(str);
+
+            //    }
+            //}
+
+            string str = "";
+            int readCnt = serialPort1.BytesToRead;
+            byte[] rebyte = new byte[readCnt];
+
+            //StringBuilder myStringBuilder = new StringBuilder(str, 12);
+
+            if (Fire_Data_Received_checkBox.Checked == false)
+            {
+                string s = serialPort1.ReadLine();
+                this.BeginInvoke((new Action(delegate { ShowValue(s); })));
+            }
+            else
+            {
+                if (readCnt > 11)
+                {
+                    int temp = serialPort1.Read(rebyte, 0, rebyte.Length);
+                }
+
+                foreach (var b in rebyte)
+                {
+                    str += (b.ToString("X2")) + " ";
+                }
+
+
+            }
+
+            //if (!(str.Contains("00")) && str.Length == 36)
+            if (!(str.Contains("00")) && str.Length == 36)
+            {
+                //Monitoring_listBox.Items.Remove(str);
+                Monitoring_listBox.Items.Add(str + (Rx_Str_Cnt++).ToString());
+
+            }
+            //Monitoring_listBox.Items.Add(Rx_Str_Cnt++);
+            //else
+            //{
+            //    Monitoring_listBox.Items.Add(str);
+            //}
+            //else if (str.EndsWith("03"))
+            //{
+            //    Monitoring_listBox.Items.Add(str + "\n");
+            //}
+
+            //Monitoring_listBox.Items.Add(str + Environment.NewLine);
+            //textBox1.AppendText(str);
+            //str_1 = textBox1.Text.ToString();
+            //str.Replace("\n", "");
+            //textBox1.Text += Environment.NewLine;
+            //Monitoring_listBox.Items.Add(str);
+            //textBox1.Clear();
+
+            //textBox1.Clear();
+            //Monitoring_listBox.Items.Add(textBox1.Text.ToString());
+            //Monitoring_listBox.Items.Add(myStringBuilder);
         }
 
         private void ShowValue(string s)
         {
+            string str = "";
+
+            byte[] arr_byteStr = Encoding.Default.GetBytes(s);
+            
             if (Hex_con_Monitoring_listBox_checkBox2.Checked == true)
             {
-                string str = "";
-                //int readCnt = s.Length;
-                //byte[] rebyte = new byte[readCnt-1];
-                byte[] arr_byteStr = Encoding.Default.GetBytes(s);
+                int readCnt = s.Length;
+                byte[] rebyte = new byte[readCnt - 1];
 
                 foreach (var b in arr_byteStr)
                 {
@@ -2256,82 +2353,6 @@ namespace NTEC_Firmware_Test_App
             }
         }
 
-        private void Fire10Byte_Start_Button_Click(object sender, EventArgs e)
-        {
-            //for (i = 1; i < 8; i++)
-            //    sum_fire ^= str[i];
-            //sum_fire == str[9]
-        }
-
-        private void Fire10Byte_Stop_Button_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Fire10Byte_Audio_Start_Button_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Fire10Byte_Audio_Stop_Button_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Fire10Byte_Reset_Button_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Fire12Byte_Start_Button_Click(object sender, EventArgs e)
-        {
-            int sum_fire = 0x00;
-            //Byte Fire_12Byte_Start_Command = 0x4E;
-            switch (FIRE12Byte_Operate_ConboBox.SelectedItem.ToString())
-            {
-                case "화재발생":
-                    sum_fire = (0x02 + Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) + 0x4e + 0x03) % 16 + 0x30;
-                    //0x02 + Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) + 0x4e + sum_fire + 0x03;
-                    break;
-                case "화재정지":
-                    sum_fire = (0x02 + Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) + 0x46 + 0x03) % 16 + 0x30;
-                    break;
-                case "연동정상":
-                    sum_fire = (0x02 + Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) + 0x45 + 0x03) % 16 + 0x30;
-                    break;
-                case "연동정지":
-                    sum_fire = (0x02 + Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) + 0x65 + 0x03) % 16 + 0x30;
-                    break;
-                case "전체 복구 신호":
-                    sum_fire = (0x02 + Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) + 0x52 + 0x03) % 16 + 0x30;
-                    break;
-            }
-
-            //sum_fire = (0x02 + em_data[1] + em_data[2] + 0x2D + em_data[4] + em_data[5] + 0x2D + em_data[7] + em_data[8] + em_data[9] + 0x03) % 16 + 0x30;
-
-        }
-
-        private void Fire12Byte_Stop_Button_Click(object sender, EventArgs e)
-        {
-            //Byte Fire_12Byte_Stop_Command = 0x4E;
-            //FIRE10Byte_Dong_ID_10_ConboBox.SelectedItem + FIRE10Byte_Dong_ID_1_ConboBox.SelectedItem + FIRE10Byte_Gaedan_ID_10_ConboBox.SelectedItem + FIRE10Byte_Gaedan_ID_1_ConboBox.SelectedItem + FIRE10Byte_Floor_ID_10_ConboBox.SelectedItem + FIRE10Byte_Floor_ID_1_ConboBox.SelectedItem;
-        }
-
-        private void Fire12Byte_Audio_Start_Button_Click(object sender, EventArgs e)
-        {
-            //Byte Fire_12Byte_Audio_Start = 0x65;
-        }
-
-        private void Fire12Byte_Audio_Stop_Button_Click(object sender, EventArgs e)
-        {
-            //Byte Fire_12Byte_Audio_Stop = 0x45;
-        }
-
-        private void Fire12Byte_Reset_Button_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Manual_RadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (Manual_RadioButton.Checked == true)
@@ -2414,6 +2435,302 @@ namespace NTEC_Firmware_Test_App
                 FIRE10Byte_Operate_ConboBox.Enabled = false;
                 FIRE12Byte_Operate_ConboBox.Enabled = false;
             }
+        }
+
+        private void Fire_Insert_Button_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            byte[] byteBuffer_12 = new byte[12];
+            byte[] byteBuffer_10 = new byte[10];
+
+            int sum_fire_12byte = 0x00;
+            int sum_fire_10byte = 0x00;
+
+            if (Auto_RadioButton.Checked == true && Fire12Byte_Select_RadioButton.Checked == true)
+            {
+                byteBuffer_12[0] = 0x02;
+                byteBuffer_12[1] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_12[2] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_12[3] = 0x2D;
+                byteBuffer_12[4] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_12[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_12[6] = 0x2D;
+                byteBuffer_12[7] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_12[8] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_12[11] = 0x03;
+
+                sum_fire_12byte = (byteBuffer_12[0] + byteBuffer_12[1] + byteBuffer_12[2] + byteBuffer_12[3] + byteBuffer_12[4] + byteBuffer_12[5] + byteBuffer_12[6] + byteBuffer_12[7] + byteBuffer_12[8] + byteBuffer_12[9] + byteBuffer_12[11]) % 16 + 0x30;
+
+                byteBuffer_12[10] = Convert.ToByte(sum_fire_12byte);
+
+                switch (FIRE12Byte_Operate_ConboBox.SelectedItem)
+                {
+                    case "화재발생":
+                        byteBuffer_12[9] = 0x4E;
+                        break;
+                    case "화재정지":
+                        byteBuffer_12[9] = 0x46;
+                        break;
+                    case "연동정상":
+                        byteBuffer_12[9] = 0x45;
+                        break;
+                    case "연동정지":
+                        byteBuffer_12[9] = 0x65;
+                        break;
+                    case "전체 복구 신호":
+                        break;
+                }
+
+                foreach (var b in byteBuffer_12)
+                {
+                    str += string.Format("{0:x2} ", b);
+                }
+                Tx_Str_listBox.Items.Add(str);
+            }
+            else if (Auto_RadioButton.Checked == true && Fire10Byte_Select_RadioButton.Checked == true)
+            {
+                sum_fire_10byte = (byte)((0x02 + Convert.ToByte(FIRE10Byte_Dong_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE10Byte_Dong_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE10Byte_Gaedan_ID_1_ConboBox.SelectedItem) + 0x2D + Convert.ToByte(FIRE10Byte_Floor_ID_10_ConboBox.SelectedItem) + Convert.ToByte(FIRE10Byte_Floor_ID_1_ConboBox.SelectedItem) + 0x4e + 0x03) % 16 + 0x30);
+
+                byteBuffer_10[0] = 0x02;
+                byteBuffer_10[2] = Convert.ToByte(Convert.ToByte(FIRE10Byte_Dong_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_10[3] = Convert.ToByte(Convert.ToByte(FIRE10Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_10[4] = Convert.ToByte(Convert.ToByte(FIRE10Byte_Gaedan_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_10[6] = Convert.ToByte(Convert.ToByte(FIRE10Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_10[7] = Convert.ToByte(Convert.ToByte(FIRE10Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_10[8] = 0x03;
+
+                // 이곳부터 수정
+                //sum_fire_10byte = (byteBuffer_12[0] + byteBuffer_12[1] + byteBuffer_12[2] + byteBuffer_12[3] + byteBuffer_12[4] + byteBuffer_12[5] + byteBuffer_12[6] + byteBuffer_12[7] + byteBuffer_12[8] + byteBuffer_12[9] + byteBuffer_12[11]) % 16 + 0x30;
+
+                //byteBuffer_10[10] = Convert.ToByte(sum_fire_10byte);
+
+                switch (FIRE10Byte_Operate_ConboBox.SelectedItem)
+                {
+                    case "화재발생":
+                        byteBuffer_10[1] = 0x46;
+                        break;
+                    case "화재정지":
+                        byteBuffer_10[1] = 0x43;
+                        break;
+                    case "연동정상":
+                        byteBuffer_10[1] = 0x44;
+                        break;
+                    case "연동정지":
+                        byteBuffer_10[1] = 0x42;
+                        break;
+                    case "전체 복구 신호":
+                        break;
+                    default:
+                        MessageBox.Show("잘못된 동작을 입력하셨습니다.!!!");
+                        break;
+                }
+
+                switch (FIRE10Byte_Seperate_ID_ConboBox.SelectedItem)
+                {
+                    case "지상층(0x20)":
+                        byteBuffer_12[5] = 0x20;
+                        break;
+                    case "지하층(B)":
+                        byteBuffer_12[5] = 0x42;
+                        break;
+                    case "주차장(P)":
+                        byteBuffer_12[5] = 0x50;
+                        break;
+                    case "옥탑층(K)":
+                        byteBuffer_12[5] = 0x4B;
+                        break;
+                    default:
+                        MessageBox.Show("잘못된 구분을 입력하셨습니다.!!!");
+                        break;
+                }
+
+                foreach (var b in byteBuffer_10)
+                {
+                    str += string.Format("{0:x2} ", b);
+                }
+                Tx_Str_listBox.Items.Add(str);
+            }
+        }
+
+        private void Fire12Byte_Start_Button_Click(object sender, EventArgs e)
+        {
+            byte[] byteBuffer = new byte[12];
+            int sum_fire = 0x00;
+
+            try
+            {
+                byteBuffer[0] = 0x02;
+                byteBuffer[1] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[2] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[3] = 0x2D;
+                byteBuffer[4] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[6] = 0x2D;
+                byteBuffer[7] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[8] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[9] = 0x4E;
+                byteBuffer[11] = 0x03;
+
+                sum_fire = (byteBuffer[0] + byteBuffer[1] + byteBuffer[2] + byteBuffer[3] + byteBuffer[4] + byteBuffer[5] + byteBuffer[6] + byteBuffer[7] + byteBuffer[8] + byteBuffer[9] + byteBuffer[11]) % 16 + 0x30;
+
+                byteBuffer[10] = Convert.ToByte(sum_fire);
+                serialPort1.Write(byteBuffer, 0, 12);
+            }
+            catch (System.InvalidOperationException)
+            {
+                MessageBox.Show("포트가 열리지 않았습니다.!!!");
+            }
+
+        }
+
+        private void Fire12Byte_Stop_Button_Click(object sender, EventArgs e)
+        {
+            byte[] byteBuffer = new byte[12];
+            int sum_fire = 0x00;
+
+            try
+            {
+                byteBuffer[0] = 0x02;
+                byteBuffer[1] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[2] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[3] = 0x2D;
+                byteBuffer[4] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[6] = 0x2D;
+                byteBuffer[7] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[8] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[9] = 0x46;
+                byteBuffer[11] = 0x03;
+
+                sum_fire = (byteBuffer[0] + byteBuffer[1] + byteBuffer[2] + byteBuffer[3] + byteBuffer[4] + byteBuffer[5] + byteBuffer[6] + byteBuffer[7] + byteBuffer[8] + byteBuffer[9] + byteBuffer[11]) % 16 + 0x30;
+
+                byteBuffer[10] = Convert.ToByte(sum_fire);
+                serialPort1.Write(byteBuffer, 0, 12);
+            }
+            catch (System.InvalidOperationException)
+            {
+                MessageBox.Show("포트가 열리지 않았습니다.!!!");
+            }
+
+        }
+
+        private void Fire12Byte_Audio_Start_Button_Click(object sender, EventArgs e)
+        {
+            byte[] byteBuffer = new byte[12];
+            int sum_fire = 0x00;
+
+            try
+            {
+                byteBuffer[0] = 0x02;
+                byteBuffer[1] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[2] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[3] = 0x2D;
+                byteBuffer[4] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[6] = 0x2D;
+                byteBuffer[7] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[8] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[9] = 0x65;
+                byteBuffer[11] = 0x03;
+
+                sum_fire = (byteBuffer[0] + byteBuffer[1] + byteBuffer[2] + byteBuffer[3] + byteBuffer[4] + byteBuffer[5] + byteBuffer[6] + byteBuffer[7] + byteBuffer[8] + byteBuffer[9] + byteBuffer[11]) % 16 + 0x30;
+
+                byteBuffer[10] = Convert.ToByte(sum_fire);
+                serialPort1.Write(byteBuffer, 0, 12);
+            }
+            catch (System.InvalidOperationException)
+            {
+                MessageBox.Show("포트가 열리지 않았습니다.!!!");
+            }
+
+        }
+
+        private void Fire12Byte_Audio_Stop_Button_Click(object sender, EventArgs e)
+        {
+            byte[] byteBuffer = new byte[12];
+            int sum_fire = 0x00;
+
+            try
+            {
+                byteBuffer[0] = 0x02;
+                byteBuffer[1] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[2] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[3] = 0x2D;
+                byteBuffer[4] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[6] = 0x2D;
+                byteBuffer[7] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[8] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
+                byteBuffer[9] = 0x45;
+                byteBuffer[11] = 0x03;
+
+                sum_fire = (byteBuffer[0] + byteBuffer[1] + byteBuffer[2] + byteBuffer[3] + byteBuffer[4] + byteBuffer[5] + byteBuffer[6] + byteBuffer[7] + byteBuffer[8] + byteBuffer[9] + byteBuffer[11]) % 16 + 0x30;
+
+                byteBuffer[10] = Convert.ToByte(sum_fire);
+                serialPort1.Write(byteBuffer, 0, 12);
+
+            }
+            catch (System.InvalidOperationException)
+            {
+                MessageBox.Show("포트가 열리지 않았습니다.!!!");
+            }
+
+        }
+
+        private void Fire12Byte_Reset_Button_Click(object sender, EventArgs e)
+        {
+            byte[] byteBuffer = new byte[12];
+            int sum_fire = 0x00;
+
+            try
+            {
+                byteBuffer[0] = 0x02; // 2
+                byteBuffer[1] = 0x30; // 48
+                byteBuffer[2] = 0x30; // 48
+                byteBuffer[3] = 0x2D; // 32+13 45
+                byteBuffer[4] = 0x30; // 48
+                byteBuffer[5] = 0x30; // 48
+                byteBuffer[6] = 0x2D; // 45
+                byteBuffer[7] = 0x30; // 48
+                byteBuffer[8] = 0x30; // 48
+                byteBuffer[9] = 0x52; // 82
+                byteBuffer[11] = 0x03; // 3
+
+                sum_fire = (byteBuffer[0] + byteBuffer[1] + byteBuffer[2] + byteBuffer[3] + byteBuffer[4] + byteBuffer[5] + byteBuffer[6] + byteBuffer[7] + byteBuffer[8] + byteBuffer[9] + byteBuffer[11])%16 + 0x30;
+
+                byteBuffer[10] = Convert.ToByte(sum_fire);
+                serialPort1.Write(byteBuffer, 0, 12);
+            }
+            catch (System.InvalidOperationException)
+            {
+                MessageBox.Show("포트가 열리지 않았습니다.!!!");
+            }
+
+        }
+
+        private void Fire10Byte_Start_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Stop_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Audio_Start_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Audio_Stop_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fire10Byte_Reset_Button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
