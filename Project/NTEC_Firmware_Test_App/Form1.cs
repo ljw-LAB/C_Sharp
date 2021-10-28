@@ -57,6 +57,10 @@ namespace NTEC_Firmware_Test_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            NMC_Cmd_comboBox.Text = "INIT";
+            NMC44_ID_10_comboBox.Text = "0";
+            NMC44_ID_1_comboBox.Text = "1";
+
             NRG_Cmd_comboBox.Text = "NOR";
             NRG16_ID_10_comboBox.Text = "0";
             NRG16_ID_1_comboBox.Text = "1";
@@ -1735,15 +1739,15 @@ namespace NTEC_Firmware_Test_App
             }
             else if (NRG_Cmd_comboBox.SelectedItem == null && (NRG16_ID_10_comboBox.SelectedItem != null && NRG16_ID_1_comboBox.SelectedItem != null))
             {
-                MessageBox.Show("NRG16 명령어 선택 오류!!!!!");
+                MessageBox.Show("NRG16 명령어 선택 오류!!!!!", "NRG16 오류");
             }
             else if (NRG_Cmd_comboBox.SelectedItem != null && (NRG16_ID_10_comboBox.SelectedItem == null || NRG16_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NRG16 ID 선택 오류!!!!!");
+                MessageBox.Show("NRG16 ID 선택 오류!!!!!", "NRG16 오류");
             }
             else if (NRG_Cmd_comboBox.SelectedItem == null && (NRG16_ID_10_comboBox.SelectedItem == null || NRG16_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NRG16 명령어, ID 선택 오류!!!!!");
+                MessageBox.Show("NRG16 명령어, ID 선택 오류!!!!!", "NRG16 오류");
             }
 
         }
@@ -1759,15 +1763,15 @@ namespace NTEC_Firmware_Test_App
             }
             else if (NDT_Cmd_comboBox.SelectedItem == null && (NRT16_ID_10_comboBox.SelectedItem != null && NRT16_ID_1_comboBox.SelectedItem != null))
             {
-                MessageBox.Show("NRT16 명령어 선택 오류!!!!!");
+                MessageBox.Show("NRT16 명령어 선택 오류!!!!!", "NRT16 오류");
             }
             else if (NDT_Cmd_comboBox.SelectedItem != null && (NRT16_ID_10_comboBox.SelectedItem == null || NRT16_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NRT16 ID 선택 오류!!!!!");
+                MessageBox.Show("NRT16 ID 선택 오류!!!!!", "NRT16 오류");
             }
             else if (NDT_Cmd_comboBox.SelectedItem == null && (NRT16_ID_10_comboBox.SelectedItem == null || NRT16_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NRT16 명령어, ID 선택 오류!!!!!");
+                MessageBox.Show("NRT16 명령어, ID 선택 오류!!!!!", "NRT16 오류");
             }
         }
 
@@ -1782,15 +1786,15 @@ namespace NTEC_Firmware_Test_App
             }
             else if (NRT_Cmd_comboBox.SelectedItem == null && (NRT40_ID_10_comboBox.SelectedItem != null && NRT40_ID_1_comboBox.SelectedItem != null))
             {
-                MessageBox.Show("NRT40 명령어 선택 오류!!!!!");
+                MessageBox.Show("NRT40 명령어 선택 오류!!!!!", "NRT40 오류");
             }
             else if (NRT_Cmd_comboBox.SelectedItem != null && (NRT40_ID_10_comboBox.SelectedItem == null || NRT40_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NRT40 ID 선택 오류!!!!!");
+                MessageBox.Show("NRT40 ID 선택 오류!!!!!", "NRT40 오류");
             }
             else if (NRT_Cmd_comboBox.SelectedItem == null && (NRT40_ID_10_comboBox.SelectedItem == null || NRT40_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NRT40 명령어, ID 선택 오류!!!!!");
+                MessageBox.Show("NRT40 명령어, ID 선택 오류!!!!!", "NRT40 오류");
             }
         }
 
@@ -1805,15 +1809,15 @@ namespace NTEC_Firmware_Test_App
             }
             else if (NEI42_Cmd_comboBox.SelectedItem == null && (NEI42_ID_10_comboBox.SelectedItem != null && NEI42_ID_1_comboBox.SelectedItem != null))
             {
-                MessageBox.Show("NEI42 명령어 선택 오류!!!!!");
+                MessageBox.Show("NEI42 명령어 선택 오류!!!!!", "NEI42 오류");
             }
             else if (NEI42_Cmd_comboBox.SelectedItem != null && (NEI42_ID_10_comboBox.SelectedItem == null || NEI42_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NEI42 ID 선택 오류!!!!!");
+                MessageBox.Show("NEI42 ID 선택 오류!!!!!", "NEI42 오류");
             }
             else if (NEI42_Cmd_comboBox.SelectedItem == null && (NEI42_ID_10_comboBox.SelectedItem == null || NEI42_ID_1_comboBox.SelectedItem == null))
             {
-                MessageBox.Show("NEI42 명령어, ID 선택 오류!!!!!");
+                MessageBox.Show("NEI42 명령어, ID 선택 오류!!!!!", "NEI42 오류");
             }
         }
 
@@ -2731,6 +2735,346 @@ namespace NTEC_Firmware_Test_App
         private void Fire10Byte_Reset_Button_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void NMC_Cmd_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(NMC_Cmd_comboBox.SelectedItem)
+            {
+                case"INIT":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+
+                    break;
+                case"DMY":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"MUX":
+                    NMC44_MUX_Groupbox.Enabled = true;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"VOL":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = true;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"MOT":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = true;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"GPO":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = true;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"TRB":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = true;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"BAS":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = true;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"FIRP":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = true;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"FIRL":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = true;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"EMIC":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = true;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"FIRE(12Byte)":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = true;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                case"FIRE(10Byte)":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = true;
+                    break;
+                case"VER":
+                    NMC44_MUX_Groupbox.Enabled = false;
+                    NMC44_VOL_Groupbox.Enabled = false;
+                    NMC44_MOT_Groupbox.Enabled = false;
+                    NMC44_GPO_Groupbox.Enabled = false;
+                    NMC44_TRB_Groupbox.Enabled = false;
+                    NMC44_BAS_Groupbox.Enabled = false;
+                    NMC44_FIRP_Groupbox.Enabled = false;
+                    NMC44_FIRL_Groupbox.Enabled = false;
+                    NMC44_EMIC_Groupbox.Enabled = false;
+                    NMC44_FIRE12_Groupbox.Enabled = false;
+                    NMC44_FIRE10_Groupbox.Enabled = false;
+                    break;
+                default:
+                    MessageBox.Show("NMC44 명령어 오류!!!");
+                    break;
+            }
+        }
+
+        private void NMC_Insert_Button_Click(object sender, EventArgs e)
+        {
+            // 한 글자만 선택 또는 입력 받는 combobox 구현 시, 속성에서 ComboBox.AutoCompleteMode SuggestAppend 적용해야함. 한 글자 입력시, 문자열(\n, \r)로 키보드 입력 받기 때문에 제대로 입력을 판별하지 못하는 것으로 추정됨.
+            // https://fishpoint.tistory.com/622 참조
+
+            if(NMC_Cmd_comboBox.SelectedItem != null && (NMC44_ID_10_comboBox.SelectedItem != null && NMC44_ID_1_comboBox.SelectedItem != null))
+            {
+                switch (NMC_Cmd_comboBox.SelectedItem)
+                {
+                    case"INIT":
+                        Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        break;
+                    case"DMY":
+                        Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        break;
+                    case"MUX":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + MUX_Ouput_Ch_comboBox.SelectedItem.ToString().Substring(0, 2) + "," + MUX_Input_Ch_comboBox.SelectedItem.ToString().Substring(0, 1) + "," + MUX_Vol_Select_comboBox.SelectedItem.ToString().Substring(0, 1) + "," + MUX_Ext_Priority_comboBox.SelectedItem.ToString().Substring(0, 1)); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+
+                        }
+                        catch(NullReferenceException)
+                        {
+                            MessageBox.Show("입력채널, 출력채널, 볼륨, 외부 입력 우선순위 확인!!!!!", "채널 및 볼륨 제어(MUX)");
+                        }
+                        break;
+                    case"VOL":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + VOL_Output_Ch_comboBox.SelectedItem.ToString().Substring(0, 2) + "," + VOL_Vol_Select_comboBox.SelectedItem.ToString().Substring(0, 1)); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("출력채널, 볼륨 확인!!!!!", "볼륨 제어(VOL)");
+                        }
+                        break;
+                    case "GPO":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + GPO_Sel_Ch_comboBox.SelectedItem.ToString().Substring(0, 1) + "," + GPO_ON_OFF_comboBox.SelectedItem.ToString().Substring(0, 1)); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("채널, ON/OFF 확인!!!!!", "GPOUT 제어(GPO)");
+                        }
+                        break;
+                    case "MOT":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + MOT_Output_Ch_comboBox.SelectedItem.ToString().Substring(0, 1)); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("출력채널 확인!!!!!", "채널 모니터링(MOT)");
+                        }
+                        break;
+                    case"TRB":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + TRB_Output_Ch_comboBox.SelectedItem.ToString().Substring(0, 2) + "," + TRB_Vol_Select_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("채널, ON/OFF 확인!!!!!", "Treble 제어(TRB)");
+                        }
+                        break;
+                    case"BAS":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + BAS_Output_Ch_comboBox.SelectedItem.ToString().Substring(0, 2) + "," + BAS_Vol_Select_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("출력채널, 볼륨 확인!!!!!", "Base 제어(BAS)");
+                        }
+                        break;
+                    case"FIRP":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + FIRP_Protocol_Sel_comboBox.SelectedItem.ToString().Substring(0, 1)); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("프로토콜 설정 확인!!!!!", "화재 수신반 제어(FIRP)");
+                        }
+                        break;
+                    case"FIRL":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + FIRL_LED_On_Off_comboBox.SelectedItem.ToString().Substring(0, 1)); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("ON/OFF 확인!!!!!", "화재 LED 제어(FIRL)");
+                        }
+                        break;
+                    case"EMIC":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem + "," + EMIC_LED_On_Off_comboBox.SelectedItem.ToString().Substring(0, 1)); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("ON/OFF 확인!!!!!", "EM MIC 제어(EMIC)");
+                        }
+                        break;
+                    case "FIRE(12Byte)":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem.ToString().Substring(0, 4) + "," + FIRE12_Operate_Sel_comboBox.SelectedItem.ToString().Substring(0, 1) + ',' + FIRE12_Dong_ID10_Sel_comboBox.SelectedItem + FIRE12_Dong_ID1_Sel_comboBox.SelectedItem + ',' + FIRE12_Gaedan_ID10_Sel_comboBox.SelectedItem + FIRE12_Gaedan_ID1_Sel_comboBox.SelectedItem + ',' + FIRE12_Floor_ID10_Sel_comboBox.SelectedItem + FIRE12_Floor_ID1_Sel_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("동작(기능), 동(십 / 일), 계단(십 / 일), 층(십 / 일) 확인!!!!!", "소방 12Byte 수신 시, 제어(FIRE)");
+                        }
+                        break;
+                    case"FIRE(10Byte)":
+                        try
+                        {
+                            Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem.ToString().Substring(0, 4) + "," + FIRE10_Operate_Sel_comboBox.SelectedItem.ToString().Substring(0, 1) + "," + FIRE10_Seperate_Sel_comboBox.SelectedItem.ToString().Substring(0, 1) + ',' + FIRE10_Dong_ID10_Sel_comboBox.SelectedItem + FIRE10_Dong_ID1_Sel_comboBox.SelectedItem + ',' + FIRE10_Gaedan_ID10_Sel_comboBox.SelectedItem + FIRE10_Gaedan_ID1_Sel_comboBox.SelectedItem + ',' + FIRE10_Floor_ID10_Sel_comboBox.SelectedItem + FIRE10_Floor_ID1_Sel_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                        }
+                        catch (NullReferenceException)
+                        {
+                            MessageBox.Show("동작(기능), 층(구분), 동(십 / 일), 계단(십 / 일), 층(십 / 일) 확인!!!!!", "소방 10Byte 수신 시, 제어(FIRE)");
+                        }
+                        break;
+                    case"VER":
+                        break;
+                    default:
+                        MessageBox.Show("NMC44 명령어 오류!!!");
+                        break;
+                }
+            }
+            else if (NMC_Cmd_comboBox.SelectedItem == null && (NMC44_ID_10_comboBox.SelectedItem != null && NMC44_ID_1_comboBox.SelectedItem != null))
+            {
+                MessageBox.Show("NMC44 명령어 선택 오류!!!!!");
+            }
+            else if (NMC_Cmd_comboBox.SelectedItem != null && (NMC44_ID_10_comboBox.SelectedItem == null || NMC44_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NMC44 ID 선택 오류!!!!!");
+            }
+            else if (NMC_Cmd_comboBox.SelectedItem == null && (NMC44_ID_10_comboBox.SelectedItem == null || NMC44_ID_1_comboBox.SelectedItem == null))
+            {
+                MessageBox.Show("NMC44 명령어, ID 선택 오류!!!!!");
+            }
         }
     }
 }
