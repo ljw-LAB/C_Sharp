@@ -2753,7 +2753,6 @@ namespace NTEC_Firmware_Test_App
                     NMC44_EMIC_Groupbox.Enabled = false;
                     NMC44_FIRE12_Groupbox.Enabled = false;
                     NMC44_FIRE10_Groupbox.Enabled = false;
-
                     break;
                 case"DMY":
                     NMC44_MUX_Groupbox.Enabled = false;
@@ -3036,7 +3035,7 @@ namespace NTEC_Firmware_Test_App
                             MessageBox.Show("ON/OFF 확인!!!!!", "EM MIC 제어(EMIC)");
                         }
                         break;
-                    case "FIRE(12Byte)":
+                    case"FIRE(12Byte)":
                         try
                         {
                             Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem.ToString().Substring(0, 4) + "," + FIRE12_Operate_Sel_comboBox.SelectedItem.ToString().Substring(0, 1) + ',' + FIRE12_Dong_ID10_Sel_comboBox.SelectedItem + FIRE12_Dong_ID1_Sel_comboBox.SelectedItem + ',' + FIRE12_Gaedan_ID10_Sel_comboBox.SelectedItem + FIRE12_Gaedan_ID1_Sel_comboBox.SelectedItem + ',' + FIRE12_Floor_ID10_Sel_comboBox.SelectedItem + FIRE12_Floor_ID1_Sel_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
@@ -3074,6 +3073,59 @@ namespace NTEC_Firmware_Test_App
             else if (NMC_Cmd_comboBox.SelectedItem == null && (NMC44_ID_10_comboBox.SelectedItem == null || NMC44_ID_1_comboBox.SelectedItem == null))
             {
                 MessageBox.Show("NMC44 명령어, ID 선택 오류!!!!!");
+            }
+        }
+
+        private void MPR_Manual_RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MPR_Manual_RadioButton.Checked == true)
+            {
+                MPR_POWER_ON_OFF_button.Enabled = true;
+                MPR_CD_Control_button.Enabled = true;
+                MPR_CD_Volume_button.Enabled = true;
+                MPR_CD_Track_button.Enabled = true;
+                switch (MPR_Cmd_comboBox.SelectedItem)
+                {
+                    case "Power ON/OFF":
+                        break;
+                    case "CD Control":
+                        break;
+                    case "CD Volume":
+                        break;
+                    case "CD TRACK":
+                        break;
+                    default:
+                        MessageBox.Show("MPR 명령어 오류!!!");
+                        break;
+
+                }
+            }
+        }
+
+        private void MPR_Auto_RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MPR_Auto_RadioButton.Checked == true)
+            {
+                MPR_POWER_ON_OFF_button.Enabled = false;
+                MPR_CD_Control_button.Enabled = false;
+                MPR_CD_Volume_button.Enabled = false;
+                MPR_CD_Track_button.Enabled = false;
+
+                switch (MPR_Cmd_comboBox.SelectedItem)
+                {
+                    case "Power ON/OFF":
+                        break;
+                    case "CD Control":
+                        break;
+                    case "CD Volume":
+                        break;
+                    case "CD TRACK":
+                        break;
+                    default:
+                        MessageBox.Show("MPR 명령어 오류!!!");
+                        break;
+
+                }
             }
         }
     }

@@ -112,8 +112,8 @@
             this.MUX_Vol_Select_comboBox = new System.Windows.Forms.ComboBox();
             this.MUX_Vol_Select_label = new System.Windows.Forms.Label();
             this.MUX_Ouput_Ch_comboBox = new System.Windows.Forms.ComboBox();
-            this.MUX_Ouput_Ch_label = new System.Windows.Forms.Label();
             this.MUX_Input_Ch_comboBox = new System.Windows.Forms.ComboBox();
+            this.MUX_Ouput_Ch_label = new System.Windows.Forms.Label();
             this.MUX_Input_Ch_label = new System.Windows.Forms.Label();
             this.NMC44_CMD_Label = new System.Windows.Forms.Label();
             this.NMC44_ID_1_comboBox = new System.Windows.Forms.ComboBox();
@@ -252,50 +252,36 @@
             this.NRT_Ch3_CheckBox = new System.Windows.Forms.CheckBox();
             this.NRT_Ch4_CheckBox = new System.Windows.Forms.CheckBox();
             this.MPR_TabPage = new System.Windows.Forms.TabPage();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
+            this.MPR_Insert_Button = new System.Windows.Forms.Button();
+            this.MPR_Auto_Manual_Groupbox = new System.Windows.Forms.GroupBox();
+            this.MPR_Auto_RadioButton = new System.Windows.Forms.RadioButton();
+            this.MPR_Manual_RadioButton = new System.Windows.Forms.RadioButton();
+            this.MPR_POWER_ON_OFF_Groupbox = new System.Windows.Forms.GroupBox();
+            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.radioButton17 = new System.Windows.Forms.RadioButton();
+            this.radioButton18 = new System.Windows.Forms.RadioButton();
+            this.MPR_CD_Track_Groupbox = new System.Windows.Forms.GroupBox();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.MPR_CD_Volume_Groupbox = new System.Windows.Forms.GroupBox();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.MPR_CD_Control_Groupbox = new System.Windows.Forms.GroupBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.MPR_Cmd_comboBox = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBox97 = new System.Windows.Forms.CheckBox();
-            this.checkBox98 = new System.Windows.Forms.CheckBox();
-            this.checkBox99 = new System.Windows.Forms.CheckBox();
-            this.checkBox100 = new System.Windows.Forms.CheckBox();
-            this.checkBox101 = new System.Windows.Forms.CheckBox();
-            this.checkBox102 = new System.Windows.Forms.CheckBox();
-            this.checkBox103 = new System.Windows.Forms.CheckBox();
-            this.checkBox104 = new System.Windows.Forms.CheckBox();
-            this.checkBox113 = new System.Windows.Forms.CheckBox();
-            this.checkBox114 = new System.Windows.Forms.CheckBox();
-            this.checkBox115 = new System.Windows.Forms.CheckBox();
-            this.checkBox116 = new System.Windows.Forms.CheckBox();
-            this.checkBox117 = new System.Windows.Forms.CheckBox();
-            this.checkBox118 = new System.Windows.Forms.CheckBox();
-            this.checkBox119 = new System.Windows.Forms.CheckBox();
-            this.checkBox120 = new System.Windows.Forms.CheckBox();
-            this.checkBox121 = new System.Windows.Forms.CheckBox();
-            this.checkBox122 = new System.Windows.Forms.CheckBox();
-            this.checkBox123 = new System.Windows.Forms.CheckBox();
-            this.checkBox124 = new System.Windows.Forms.CheckBox();
-            this.checkBox125 = new System.Windows.Forms.CheckBox();
-            this.checkBox126 = new System.Windows.Forms.CheckBox();
-            this.checkBox127 = new System.Windows.Forms.CheckBox();
-            this.checkBox128 = new System.Windows.Forms.CheckBox();
-            this.checkBox129 = new System.Windows.Forms.CheckBox();
-            this.checkBox130 = new System.Windows.Forms.CheckBox();
-            this.checkBox131 = new System.Windows.Forms.CheckBox();
-            this.checkBox132 = new System.Windows.Forms.CheckBox();
-            this.checkBox133 = new System.Windows.Forms.CheckBox();
-            this.checkBox134 = new System.Windows.Forms.CheckBox();
-            this.checkBox135 = new System.Windows.Forms.CheckBox();
-            this.checkBox136 = new System.Windows.Forms.CheckBox();
-            this.checkBox137 = new System.Windows.Forms.CheckBox();
-            this.checkBox138 = new System.Windows.Forms.CheckBox();
-            this.checkBox139 = new System.Windows.Forms.CheckBox();
-            this.checkBox140 = new System.Windows.Forms.CheckBox();
-            this.checkBox141 = new System.Windows.Forms.CheckBox();
-            this.checkBox142 = new System.Windows.Forms.CheckBox();
-            this.checkBox143 = new System.Windows.Forms.CheckBox();
-            this.checkBox144 = new System.Windows.Forms.CheckBox();
             this.NCS01_TabPage = new System.Windows.Forms.TabPage();
             this.NCS_Insert_Button = new System.Windows.Forms.Button();
             this.NCS01_CMD_Label = new System.Windows.Forms.Label();
@@ -470,6 +456,10 @@
             this.Multi_Stop_button = new System.Windows.Forms.Button();
             this.Hex_con_Monitoring_listBox_checkBox2 = new System.Windows.Forms.CheckBox();
             this.Fire_Data_Received_checkBox = new System.Windows.Forms.CheckBox();
+            this.MPR_POWER_ON_OFF_button = new System.Windows.Forms.Button();
+            this.MPR_CD_Control_button = new System.Windows.Forms.Button();
+            this.MPR_CD_Volume_button = new System.Windows.Forms.Button();
+            this.MPR_CD_Track_button = new System.Windows.Forms.Button();
             this.NTEC_TabControl.SuspendLayout();
             this.NMC44_TabPage.SuspendLayout();
             this.NMC44_FIRE10_Groupbox.SuspendLayout();
@@ -492,7 +482,11 @@
             this.NRT40_TabPage.SuspendLayout();
             this.NRT40_Normal_Groupbox.SuspendLayout();
             this.MPR_TabPage.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.MPR_Auto_Manual_Groupbox.SuspendLayout();
+            this.MPR_POWER_ON_OFF_Groupbox.SuspendLayout();
+            this.MPR_CD_Track_Groupbox.SuspendLayout();
+            this.MPR_CD_Volume_Groupbox.SuspendLayout();
+            this.MPR_CD_Control_Groupbox.SuspendLayout();
             this.NCS01_TabPage.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.NEI42_TabPage.SuspendLayout();
@@ -1607,15 +1601,6 @@
             this.MUX_Ouput_Ch_comboBox.Size = new System.Drawing.Size(111, 20);
             this.MUX_Ouput_Ch_comboBox.TabIndex = 55;
             // 
-            // MUX_Ouput_Ch_label
-            // 
-            this.MUX_Ouput_Ch_label.AutoSize = true;
-            this.MUX_Ouput_Ch_label.Location = new System.Drawing.Point(31, 26);
-            this.MUX_Ouput_Ch_label.Name = "MUX_Ouput_Ch_label";
-            this.MUX_Ouput_Ch_label.Size = new System.Drawing.Size(53, 12);
-            this.MUX_Ouput_Ch_label.TabIndex = 54;
-            this.MUX_Ouput_Ch_label.Text = "출력채널";
-            // 
             // MUX_Input_Ch_comboBox
             // 
             this.MUX_Input_Ch_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -1632,6 +1617,15 @@
             this.MUX_Input_Ch_comboBox.Name = "MUX_Input_Ch_comboBox";
             this.MUX_Input_Ch_comboBox.Size = new System.Drawing.Size(150, 20);
             this.MUX_Input_Ch_comboBox.TabIndex = 53;
+            // 
+            // MUX_Ouput_Ch_label
+            // 
+            this.MUX_Ouput_Ch_label.AutoSize = true;
+            this.MUX_Ouput_Ch_label.Location = new System.Drawing.Point(31, 26);
+            this.MUX_Ouput_Ch_label.Name = "MUX_Ouput_Ch_label";
+            this.MUX_Ouput_Ch_label.Size = new System.Drawing.Size(53, 12);
+            this.MUX_Ouput_Ch_label.TabIndex = 54;
+            this.MUX_Ouput_Ch_label.Text = "출력채널";
             // 
             // MUX_Input_Ch_label
             // 
@@ -3348,10 +3342,17 @@
             // 
             // MPR_TabPage
             // 
-            this.MPR_TabPage.Controls.Add(this.domainUpDown1);
-            this.MPR_TabPage.Controls.Add(this.domainUpDown2);
+            this.MPR_TabPage.Controls.Add(this.MPR_Insert_Button);
+            this.MPR_TabPage.Controls.Add(this.MPR_Auto_Manual_Groupbox);
+            this.MPR_TabPage.Controls.Add(this.MPR_POWER_ON_OFF_Groupbox);
+            this.MPR_TabPage.Controls.Add(this.MPR_CD_Track_Groupbox);
+            this.MPR_TabPage.Controls.Add(this.MPR_CD_Volume_Groupbox);
+            this.MPR_TabPage.Controls.Add(this.MPR_CD_Control_Groupbox);
+            this.MPR_TabPage.Controls.Add(this.label8);
+            this.MPR_TabPage.Controls.Add(this.comboBox1);
+            this.MPR_TabPage.Controls.Add(this.MPR_Cmd_comboBox);
+            this.MPR_TabPage.Controls.Add(this.comboBox3);
             this.MPR_TabPage.Controls.Add(this.label11);
-            this.MPR_TabPage.Controls.Add(this.groupBox5);
             this.MPR_TabPage.Location = new System.Drawing.Point(4, 22);
             this.MPR_TabPage.Name = "MPR_TabPage";
             this.MPR_TabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -3360,479 +3361,347 @@
             this.MPR_TabPage.Text = "MPR4000";
             this.MPR_TabPage.UseVisualStyleBackColor = true;
             // 
-            // domainUpDown1
+            // MPR_Insert_Button
             // 
-            this.domainUpDown1.Location = new System.Drawing.Point(74, 32);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(61, 21);
-            this.domainUpDown1.TabIndex = 43;
-            this.domainUpDown1.Text = "domainUpDown1";
+            this.MPR_Insert_Button.Location = new System.Drawing.Point(434, 24);
+            this.MPR_Insert_Button.Name = "MPR_Insert_Button";
+            this.MPR_Insert_Button.Size = new System.Drawing.Size(44, 41);
+            this.MPR_Insert_Button.TabIndex = 67;
+            this.MPR_Insert_Button.Text = ">>";
+            this.MPR_Insert_Button.UseVisualStyleBackColor = true;
             // 
-            // domainUpDown2
+            // MPR_Auto_Manual_Groupbox
             // 
-            this.domainUpDown2.Location = new System.Drawing.Point(7, 32);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(61, 21);
-            this.domainUpDown2.TabIndex = 42;
-            this.domainUpDown2.Text = "domainUpDown2";
+            this.MPR_Auto_Manual_Groupbox.Controls.Add(this.MPR_Auto_RadioButton);
+            this.MPR_Auto_Manual_Groupbox.Controls.Add(this.MPR_Manual_RadioButton);
+            this.MPR_Auto_Manual_Groupbox.Location = new System.Drawing.Point(267, 15);
+            this.MPR_Auto_Manual_Groupbox.Name = "MPR_Auto_Manual_Groupbox";
+            this.MPR_Auto_Manual_Groupbox.Size = new System.Drawing.Size(125, 35);
+            this.MPR_Auto_Manual_Groupbox.TabIndex = 66;
+            this.MPR_Auto_Manual_Groupbox.TabStop = false;
+            this.MPR_Auto_Manual_Groupbox.Text = "수동/자동";
+            // 
+            // MPR_Auto_RadioButton
+            // 
+            this.MPR_Auto_RadioButton.AutoSize = true;
+            this.MPR_Auto_RadioButton.Location = new System.Drawing.Point(72, 15);
+            this.MPR_Auto_RadioButton.Name = "MPR_Auto_RadioButton";
+            this.MPR_Auto_RadioButton.Size = new System.Drawing.Size(47, 16);
+            this.MPR_Auto_RadioButton.TabIndex = 2;
+            this.MPR_Auto_RadioButton.TabStop = true;
+            this.MPR_Auto_RadioButton.Text = "자동";
+            this.MPR_Auto_RadioButton.UseVisualStyleBackColor = true;
+            this.MPR_Auto_RadioButton.CheckedChanged += new System.EventHandler(this.MPR_Auto_RadioButton_CheckedChanged);
+            // 
+            // MPR_Manual_RadioButton
+            // 
+            this.MPR_Manual_RadioButton.AutoSize = true;
+            this.MPR_Manual_RadioButton.Location = new System.Drawing.Point(6, 15);
+            this.MPR_Manual_RadioButton.Name = "MPR_Manual_RadioButton";
+            this.MPR_Manual_RadioButton.Size = new System.Drawing.Size(47, 16);
+            this.MPR_Manual_RadioButton.TabIndex = 1;
+            this.MPR_Manual_RadioButton.TabStop = true;
+            this.MPR_Manual_RadioButton.Text = "수동";
+            this.MPR_Manual_RadioButton.UseVisualStyleBackColor = true;
+            this.MPR_Manual_RadioButton.CheckedChanged += new System.EventHandler(this.MPR_Manual_RadioButton_CheckedChanged);
+            // 
+            // MPR_POWER_ON_OFF_Groupbox
+            // 
+            this.MPR_POWER_ON_OFF_Groupbox.Controls.Add(this.MPR_POWER_ON_OFF_button);
+            this.MPR_POWER_ON_OFF_Groupbox.Controls.Add(this.radioButton16);
+            this.MPR_POWER_ON_OFF_Groupbox.Controls.Add(this.radioButton17);
+            this.MPR_POWER_ON_OFF_Groupbox.Controls.Add(this.radioButton18);
+            this.MPR_POWER_ON_OFF_Groupbox.Location = new System.Drawing.Point(7, 64);
+            this.MPR_POWER_ON_OFF_Groupbox.Name = "MPR_POWER_ON_OFF_Groupbox";
+            this.MPR_POWER_ON_OFF_Groupbox.Size = new System.Drawing.Size(431, 48);
+            this.MPR_POWER_ON_OFF_Groupbox.TabIndex = 65;
+            this.MPR_POWER_ON_OFF_Groupbox.TabStop = false;
+            this.MPR_POWER_ON_OFF_Groupbox.Text = "Power ON/OFF";
+            // 
+            // radioButton16
+            // 
+            this.radioButton16.AutoSize = true;
+            this.radioButton16.Location = new System.Drawing.Point(203, 20);
+            this.radioButton16.Name = "radioButton16";
+            this.radioButton16.Size = new System.Drawing.Size(162, 16);
+            this.radioButton16.TabIndex = 2;
+            this.radioButton16.TabStop = true;
+            this.radioButton16.Text = "MODE(CD/USB/SD/FM)";
+            this.radioButton16.UseVisualStyleBackColor = true;
+            // 
+            // radioButton17
+            // 
+            this.radioButton17.AutoSize = true;
+            this.radioButton17.Location = new System.Drawing.Point(105, 20);
+            this.radioButton17.Name = "radioButton17";
+            this.radioButton17.Size = new System.Drawing.Size(86, 16);
+            this.radioButton17.TabIndex = 1;
+            this.radioButton17.TabStop = true;
+            this.radioButton17.Text = "Power OFF";
+            this.radioButton17.UseVisualStyleBackColor = true;
+            // 
+            // radioButton18
+            // 
+            this.radioButton18.AutoSize = true;
+            this.radioButton18.Location = new System.Drawing.Point(7, 21);
+            this.radioButton18.Name = "radioButton18";
+            this.radioButton18.Size = new System.Drawing.Size(81, 16);
+            this.radioButton18.TabIndex = 0;
+            this.radioButton18.TabStop = true;
+            this.radioButton18.Text = "Power ON";
+            this.radioButton18.UseVisualStyleBackColor = true;
+            // 
+            // MPR_CD_Track_Groupbox
+            // 
+            this.MPR_CD_Track_Groupbox.Controls.Add(this.MPR_CD_Track_button);
+            this.MPR_CD_Track_Groupbox.Controls.Add(this.radioButton14);
+            this.MPR_CD_Track_Groupbox.Controls.Add(this.radioButton11);
+            this.MPR_CD_Track_Groupbox.Controls.Add(this.radioButton12);
+            this.MPR_CD_Track_Groupbox.Controls.Add(this.radioButton13);
+            this.MPR_CD_Track_Groupbox.Location = new System.Drawing.Point(7, 245);
+            this.MPR_CD_Track_Groupbox.Name = "MPR_CD_Track_Groupbox";
+            this.MPR_CD_Track_Groupbox.Size = new System.Drawing.Size(471, 48);
+            this.MPR_CD_Track_Groupbox.TabIndex = 65;
+            this.MPR_CD_Track_Groupbox.TabStop = false;
+            this.MPR_CD_Track_Groupbox.Text = "CD Track";
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Location = new System.Drawing.Point(36, 20);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(74, 16);
+            this.radioButton14.TabIndex = 4;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "Track Up";
+            this.radioButton14.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(303, 20);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(104, 16);
+            this.radioButton11.TabIndex = 3;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "TRACK DOWN";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(213, 20);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(84, 16);
+            this.radioButton12.TabIndex = 2;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.Text = "TRACK UP";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Location = new System.Drawing.Point(116, 20);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(91, 16);
+            this.radioButton13.TabIndex = 1;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "Track Down";
+            this.radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // MPR_CD_Volume_Groupbox
+            // 
+            this.MPR_CD_Volume_Groupbox.Controls.Add(this.MPR_CD_Volume_button);
+            this.MPR_CD_Volume_Groupbox.Controls.Add(this.radioButton8);
+            this.MPR_CD_Volume_Groupbox.Controls.Add(this.radioButton5);
+            this.MPR_CD_Volume_Groupbox.Controls.Add(this.radioButton6);
+            this.MPR_CD_Volume_Groupbox.Controls.Add(this.radioButton7);
+            this.MPR_CD_Volume_Groupbox.Location = new System.Drawing.Point(7, 191);
+            this.MPR_CD_Volume_Groupbox.Name = "MPR_CD_Volume_Groupbox";
+            this.MPR_CD_Volume_Groupbox.Size = new System.Drawing.Size(471, 48);
+            this.MPR_CD_Volume_Groupbox.TabIndex = 64;
+            this.MPR_CD_Volume_Groupbox.TabStop = false;
+            this.MPR_CD_Volume_Groupbox.Text = "CD Volume";
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(36, 18);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(85, 16);
+            this.radioButton8.TabIndex = 4;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Volume Up";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(321, 18);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(85, 16);
+            this.radioButton5.TabIndex = 3;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "MUTE OFF";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(235, 18);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(80, 16);
+            this.radioButton6.TabIndex = 2;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "MUTE ON";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(127, 18);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(102, 16);
+            this.radioButton7.TabIndex = 1;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Volume Down";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // MPR_CD_Control_Groupbox
+            // 
+            this.MPR_CD_Control_Groupbox.Controls.Add(this.MPR_CD_Control_button);
+            this.MPR_CD_Control_Groupbox.Controls.Add(this.radioButton4);
+            this.MPR_CD_Control_Groupbox.Controls.Add(this.radioButton9);
+            this.MPR_CD_Control_Groupbox.Controls.Add(this.radioButton10);
+            this.MPR_CD_Control_Groupbox.Controls.Add(this.radioButton3);
+            this.MPR_CD_Control_Groupbox.Controls.Add(this.radioButton2);
+            this.MPR_CD_Control_Groupbox.Controls.Add(this.radioButton1);
+            this.MPR_CD_Control_Groupbox.Location = new System.Drawing.Point(7, 118);
+            this.MPR_CD_Control_Groupbox.Name = "MPR_CD_Control_Groupbox";
+            this.MPR_CD_Control_Groupbox.Size = new System.Drawing.Size(337, 67);
+            this.MPR_CD_Control_Groupbox.TabIndex = 63;
+            this.MPR_CD_Control_Groupbox.TabStop = false;
+            this.MPR_CD_Control_Groupbox.Text = "CD Control";
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(203, 41);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(51, 16);
+            this.radioButton4.TabIndex = 5;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Eject";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(105, 41);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(76, 16);
+            this.radioButton9.TabIndex = 4;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "RANDOM";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(7, 42);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(71, 16);
+            this.radioButton10.TabIndex = 3;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "REPEAT";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(203, 20);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(56, 16);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "STOP";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(105, 20);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(63, 16);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "PAUSE";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 21);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(54, 16);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "PLAY";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(132, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 12);
+            this.label8.TabIndex = 61;
+            this.label8.Text = "명령어";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1"});
+            this.comboBox1.Location = new System.Drawing.Point(71, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(57, 20);
+            this.comboBox1.TabIndex = 60;
+            // 
+            // MPR_Cmd_comboBox
+            // 
+            this.MPR_Cmd_comboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.MPR_Cmd_comboBox.FormattingEnabled = true;
+            this.MPR_Cmd_comboBox.Items.AddRange(new object[] {
+            "Power ON/OFF",
+            "CD Control",
+            "CD Volume",
+            "CD TRACK"});
+            this.MPR_Cmd_comboBox.Location = new System.Drawing.Point(134, 30);
+            this.MPR_Cmd_comboBox.Name = "MPR_Cmd_comboBox";
+            this.MPR_Cmd_comboBox.Size = new System.Drawing.Size(121, 20);
+            this.MPR_Cmd_comboBox.TabIndex = 58;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "0"});
+            this.comboBox3.Location = new System.Drawing.Point(7, 30);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(57, 20);
+            this.comboBox3.TabIndex = 59;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 12);
+            this.label11.Location = new System.Drawing.Point(5, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(16, 12);
-            this.label11.TabIndex = 40;
+            this.label11.TabIndex = 57;
             this.label11.Text = "ID";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.checkBox97);
-            this.groupBox5.Controls.Add(this.checkBox98);
-            this.groupBox5.Controls.Add(this.checkBox99);
-            this.groupBox5.Controls.Add(this.checkBox100);
-            this.groupBox5.Controls.Add(this.checkBox101);
-            this.groupBox5.Controls.Add(this.checkBox102);
-            this.groupBox5.Controls.Add(this.checkBox103);
-            this.groupBox5.Controls.Add(this.checkBox104);
-            this.groupBox5.Controls.Add(this.checkBox113);
-            this.groupBox5.Controls.Add(this.checkBox114);
-            this.groupBox5.Controls.Add(this.checkBox115);
-            this.groupBox5.Controls.Add(this.checkBox116);
-            this.groupBox5.Controls.Add(this.checkBox117);
-            this.groupBox5.Controls.Add(this.checkBox118);
-            this.groupBox5.Controls.Add(this.checkBox119);
-            this.groupBox5.Controls.Add(this.checkBox120);
-            this.groupBox5.Controls.Add(this.checkBox121);
-            this.groupBox5.Controls.Add(this.checkBox122);
-            this.groupBox5.Controls.Add(this.checkBox123);
-            this.groupBox5.Controls.Add(this.checkBox124);
-            this.groupBox5.Controls.Add(this.checkBox125);
-            this.groupBox5.Controls.Add(this.checkBox126);
-            this.groupBox5.Controls.Add(this.checkBox127);
-            this.groupBox5.Controls.Add(this.checkBox128);
-            this.groupBox5.Controls.Add(this.checkBox129);
-            this.groupBox5.Controls.Add(this.checkBox130);
-            this.groupBox5.Controls.Add(this.checkBox131);
-            this.groupBox5.Controls.Add(this.checkBox132);
-            this.groupBox5.Controls.Add(this.checkBox133);
-            this.groupBox5.Controls.Add(this.checkBox134);
-            this.groupBox5.Controls.Add(this.checkBox135);
-            this.groupBox5.Controls.Add(this.checkBox136);
-            this.groupBox5.Controls.Add(this.checkBox137);
-            this.groupBox5.Controls.Add(this.checkBox138);
-            this.groupBox5.Controls.Add(this.checkBox139);
-            this.groupBox5.Controls.Add(this.checkBox140);
-            this.groupBox5.Controls.Add(this.checkBox141);
-            this.groupBox5.Controls.Add(this.checkBox142);
-            this.groupBox5.Controls.Add(this.checkBox143);
-            this.groupBox5.Controls.Add(this.checkBox144);
-            this.groupBox5.Location = new System.Drawing.Point(7, 64);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(467, 311);
-            this.groupBox5.TabIndex = 38;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Normal";
-            // 
-            // checkBox97
-            // 
-            this.checkBox97.AutoSize = true;
-            this.checkBox97.Location = new System.Drawing.Point(349, 222);
-            this.checkBox97.Name = "checkBox97";
-            this.checkBox97.Size = new System.Drawing.Size(52, 16);
-            this.checkBox97.TabIndex = 56;
-            this.checkBox97.Text = "Ch39";
-            this.checkBox97.UseVisualStyleBackColor = true;
-            // 
-            // checkBox98
-            // 
-            this.checkBox98.AutoSize = true;
-            this.checkBox98.Location = new System.Drawing.Point(407, 222);
-            this.checkBox98.Name = "checkBox98";
-            this.checkBox98.Size = new System.Drawing.Size(52, 16);
-            this.checkBox98.TabIndex = 57;
-            this.checkBox98.Text = "Ch40";
-            this.checkBox98.UseVisualStyleBackColor = true;
-            // 
-            // checkBox99
-            // 
-            this.checkBox99.AutoSize = true;
-            this.checkBox99.Location = new System.Drawing.Point(233, 222);
-            this.checkBox99.Name = "checkBox99";
-            this.checkBox99.Size = new System.Drawing.Size(52, 16);
-            this.checkBox99.TabIndex = 54;
-            this.checkBox99.Text = "Ch37";
-            this.checkBox99.UseVisualStyleBackColor = true;
-            // 
-            // checkBox100
-            // 
-            this.checkBox100.AutoSize = true;
-            this.checkBox100.Location = new System.Drawing.Point(291, 222);
-            this.checkBox100.Name = "checkBox100";
-            this.checkBox100.Size = new System.Drawing.Size(52, 16);
-            this.checkBox100.TabIndex = 55;
-            this.checkBox100.Text = "Ch38";
-            this.checkBox100.UseVisualStyleBackColor = true;
-            // 
-            // checkBox101
-            // 
-            this.checkBox101.AutoSize = true;
-            this.checkBox101.Location = new System.Drawing.Point(7, 222);
-            this.checkBox101.Name = "checkBox101";
-            this.checkBox101.Size = new System.Drawing.Size(52, 16);
-            this.checkBox101.TabIndex = 50;
-            this.checkBox101.Text = "Ch33";
-            this.checkBox101.UseVisualStyleBackColor = true;
-            // 
-            // checkBox102
-            // 
-            this.checkBox102.AutoSize = true;
-            this.checkBox102.Location = new System.Drawing.Point(59, 222);
-            this.checkBox102.Name = "checkBox102";
-            this.checkBox102.Size = new System.Drawing.Size(52, 16);
-            this.checkBox102.TabIndex = 51;
-            this.checkBox102.Text = "Ch34";
-            this.checkBox102.UseVisualStyleBackColor = true;
-            // 
-            // checkBox103
-            // 
-            this.checkBox103.AutoSize = true;
-            this.checkBox103.Location = new System.Drawing.Point(117, 222);
-            this.checkBox103.Name = "checkBox103";
-            this.checkBox103.Size = new System.Drawing.Size(52, 16);
-            this.checkBox103.TabIndex = 52;
-            this.checkBox103.Text = "Ch35";
-            this.checkBox103.UseVisualStyleBackColor = true;
-            // 
-            // checkBox104
-            // 
-            this.checkBox104.AutoSize = true;
-            this.checkBox104.Location = new System.Drawing.Point(175, 222);
-            this.checkBox104.Name = "checkBox104";
-            this.checkBox104.Size = new System.Drawing.Size(52, 16);
-            this.checkBox104.TabIndex = 53;
-            this.checkBox104.Text = "Ch36";
-            this.checkBox104.UseVisualStyleBackColor = true;
-            // 
-            // checkBox113
-            // 
-            this.checkBox113.AutoSize = true;
-            this.checkBox113.Location = new System.Drawing.Point(349, 164);
-            this.checkBox113.Name = "checkBox113";
-            this.checkBox113.Size = new System.Drawing.Size(52, 16);
-            this.checkBox113.TabIndex = 48;
-            this.checkBox113.Text = "Ch31";
-            this.checkBox113.UseVisualStyleBackColor = true;
-            // 
-            // checkBox114
-            // 
-            this.checkBox114.AutoSize = true;
-            this.checkBox114.Location = new System.Drawing.Point(407, 164);
-            this.checkBox114.Name = "checkBox114";
-            this.checkBox114.Size = new System.Drawing.Size(52, 16);
-            this.checkBox114.TabIndex = 49;
-            this.checkBox114.Text = "Ch32";
-            this.checkBox114.UseVisualStyleBackColor = true;
-            // 
-            // checkBox115
-            // 
-            this.checkBox115.AutoSize = true;
-            this.checkBox115.Location = new System.Drawing.Point(233, 164);
-            this.checkBox115.Name = "checkBox115";
-            this.checkBox115.Size = new System.Drawing.Size(52, 16);
-            this.checkBox115.TabIndex = 46;
-            this.checkBox115.Text = "Ch29";
-            this.checkBox115.UseVisualStyleBackColor = true;
-            // 
-            // checkBox116
-            // 
-            this.checkBox116.AutoSize = true;
-            this.checkBox116.Location = new System.Drawing.Point(291, 164);
-            this.checkBox116.Name = "checkBox116";
-            this.checkBox116.Size = new System.Drawing.Size(52, 16);
-            this.checkBox116.TabIndex = 47;
-            this.checkBox116.Text = "Ch30";
-            this.checkBox116.UseVisualStyleBackColor = true;
-            // 
-            // checkBox117
-            // 
-            this.checkBox117.AutoSize = true;
-            this.checkBox117.Location = new System.Drawing.Point(7, 164);
-            this.checkBox117.Name = "checkBox117";
-            this.checkBox117.Size = new System.Drawing.Size(52, 16);
-            this.checkBox117.TabIndex = 42;
-            this.checkBox117.Text = "Ch25";
-            this.checkBox117.UseVisualStyleBackColor = true;
-            // 
-            // checkBox118
-            // 
-            this.checkBox118.AutoSize = true;
-            this.checkBox118.Location = new System.Drawing.Point(59, 164);
-            this.checkBox118.Name = "checkBox118";
-            this.checkBox118.Size = new System.Drawing.Size(52, 16);
-            this.checkBox118.TabIndex = 43;
-            this.checkBox118.Text = "Ch26";
-            this.checkBox118.UseVisualStyleBackColor = true;
-            // 
-            // checkBox119
-            // 
-            this.checkBox119.AutoSize = true;
-            this.checkBox119.Location = new System.Drawing.Point(117, 164);
-            this.checkBox119.Name = "checkBox119";
-            this.checkBox119.Size = new System.Drawing.Size(52, 16);
-            this.checkBox119.TabIndex = 44;
-            this.checkBox119.Text = "Ch27";
-            this.checkBox119.UseVisualStyleBackColor = true;
-            // 
-            // checkBox120
-            // 
-            this.checkBox120.AutoSize = true;
-            this.checkBox120.Location = new System.Drawing.Point(175, 164);
-            this.checkBox120.Name = "checkBox120";
-            this.checkBox120.Size = new System.Drawing.Size(52, 16);
-            this.checkBox120.TabIndex = 45;
-            this.checkBox120.Text = "Ch28";
-            this.checkBox120.UseVisualStyleBackColor = true;
-            // 
-            // checkBox121
-            // 
-            this.checkBox121.AutoSize = true;
-            this.checkBox121.Location = new System.Drawing.Point(349, 129);
-            this.checkBox121.Name = "checkBox121";
-            this.checkBox121.Size = new System.Drawing.Size(52, 16);
-            this.checkBox121.TabIndex = 40;
-            this.checkBox121.Text = "Ch23";
-            this.checkBox121.UseVisualStyleBackColor = true;
-            // 
-            // checkBox122
-            // 
-            this.checkBox122.AutoSize = true;
-            this.checkBox122.Location = new System.Drawing.Point(407, 129);
-            this.checkBox122.Name = "checkBox122";
-            this.checkBox122.Size = new System.Drawing.Size(52, 16);
-            this.checkBox122.TabIndex = 41;
-            this.checkBox122.Text = "Ch24";
-            this.checkBox122.UseVisualStyleBackColor = true;
-            // 
-            // checkBox123
-            // 
-            this.checkBox123.AutoSize = true;
-            this.checkBox123.Location = new System.Drawing.Point(233, 129);
-            this.checkBox123.Name = "checkBox123";
-            this.checkBox123.Size = new System.Drawing.Size(52, 16);
-            this.checkBox123.TabIndex = 38;
-            this.checkBox123.Text = "Ch21";
-            this.checkBox123.UseVisualStyleBackColor = true;
-            // 
-            // checkBox124
-            // 
-            this.checkBox124.AutoSize = true;
-            this.checkBox124.Location = new System.Drawing.Point(291, 129);
-            this.checkBox124.Name = "checkBox124";
-            this.checkBox124.Size = new System.Drawing.Size(52, 16);
-            this.checkBox124.TabIndex = 39;
-            this.checkBox124.Text = "Ch22";
-            this.checkBox124.UseVisualStyleBackColor = true;
-            // 
-            // checkBox125
-            // 
-            this.checkBox125.AutoSize = true;
-            this.checkBox125.Location = new System.Drawing.Point(7, 129);
-            this.checkBox125.Name = "checkBox125";
-            this.checkBox125.Size = new System.Drawing.Size(52, 16);
-            this.checkBox125.TabIndex = 34;
-            this.checkBox125.Text = "Ch17";
-            this.checkBox125.UseVisualStyleBackColor = true;
-            // 
-            // checkBox126
-            // 
-            this.checkBox126.AutoSize = true;
-            this.checkBox126.Location = new System.Drawing.Point(59, 129);
-            this.checkBox126.Name = "checkBox126";
-            this.checkBox126.Size = new System.Drawing.Size(52, 16);
-            this.checkBox126.TabIndex = 35;
-            this.checkBox126.Text = "Ch18";
-            this.checkBox126.UseVisualStyleBackColor = true;
-            // 
-            // checkBox127
-            // 
-            this.checkBox127.AutoSize = true;
-            this.checkBox127.Location = new System.Drawing.Point(117, 129);
-            this.checkBox127.Name = "checkBox127";
-            this.checkBox127.Size = new System.Drawing.Size(52, 16);
-            this.checkBox127.TabIndex = 36;
-            this.checkBox127.Text = "Ch19";
-            this.checkBox127.UseVisualStyleBackColor = true;
-            // 
-            // checkBox128
-            // 
-            this.checkBox128.AutoSize = true;
-            this.checkBox128.Location = new System.Drawing.Point(175, 129);
-            this.checkBox128.Name = "checkBox128";
-            this.checkBox128.Size = new System.Drawing.Size(52, 16);
-            this.checkBox128.TabIndex = 37;
-            this.checkBox128.Text = "Ch20";
-            this.checkBox128.UseVisualStyleBackColor = true;
-            // 
-            // checkBox129
-            // 
-            this.checkBox129.AutoSize = true;
-            this.checkBox129.Location = new System.Drawing.Point(350, 60);
-            this.checkBox129.Name = "checkBox129";
-            this.checkBox129.Size = new System.Drawing.Size(52, 16);
-            this.checkBox129.TabIndex = 32;
-            this.checkBox129.Text = "Ch15";
-            this.checkBox129.UseVisualStyleBackColor = true;
-            // 
-            // checkBox130
-            // 
-            this.checkBox130.AutoSize = true;
-            this.checkBox130.Location = new System.Drawing.Point(408, 60);
-            this.checkBox130.Name = "checkBox130";
-            this.checkBox130.Size = new System.Drawing.Size(52, 16);
-            this.checkBox130.TabIndex = 33;
-            this.checkBox130.Text = "Ch16";
-            this.checkBox130.UseVisualStyleBackColor = true;
-            // 
-            // checkBox131
-            // 
-            this.checkBox131.AutoSize = true;
-            this.checkBox131.Location = new System.Drawing.Point(234, 60);
-            this.checkBox131.Name = "checkBox131";
-            this.checkBox131.Size = new System.Drawing.Size(52, 16);
-            this.checkBox131.TabIndex = 30;
-            this.checkBox131.Text = "Ch13";
-            this.checkBox131.UseVisualStyleBackColor = true;
-            // 
-            // checkBox132
-            // 
-            this.checkBox132.AutoSize = true;
-            this.checkBox132.Location = new System.Drawing.Point(292, 60);
-            this.checkBox132.Name = "checkBox132";
-            this.checkBox132.Size = new System.Drawing.Size(52, 16);
-            this.checkBox132.TabIndex = 31;
-            this.checkBox132.Text = "Ch14";
-            this.checkBox132.UseVisualStyleBackColor = true;
-            // 
-            // checkBox133
-            // 
-            this.checkBox133.AutoSize = true;
-            this.checkBox133.Location = new System.Drawing.Point(8, 60);
-            this.checkBox133.Name = "checkBox133";
-            this.checkBox133.Size = new System.Drawing.Size(46, 16);
-            this.checkBox133.TabIndex = 26;
-            this.checkBox133.Text = "Ch9";
-            this.checkBox133.UseVisualStyleBackColor = true;
-            // 
-            // checkBox134
-            // 
-            this.checkBox134.AutoSize = true;
-            this.checkBox134.Location = new System.Drawing.Point(60, 60);
-            this.checkBox134.Name = "checkBox134";
-            this.checkBox134.Size = new System.Drawing.Size(52, 16);
-            this.checkBox134.TabIndex = 27;
-            this.checkBox134.Text = "Ch10";
-            this.checkBox134.UseVisualStyleBackColor = true;
-            // 
-            // checkBox135
-            // 
-            this.checkBox135.AutoSize = true;
-            this.checkBox135.Location = new System.Drawing.Point(118, 60);
-            this.checkBox135.Name = "checkBox135";
-            this.checkBox135.Size = new System.Drawing.Size(52, 16);
-            this.checkBox135.TabIndex = 28;
-            this.checkBox135.Text = "Ch11";
-            this.checkBox135.UseVisualStyleBackColor = true;
-            // 
-            // checkBox136
-            // 
-            this.checkBox136.AutoSize = true;
-            this.checkBox136.Location = new System.Drawing.Point(176, 60);
-            this.checkBox136.Name = "checkBox136";
-            this.checkBox136.Size = new System.Drawing.Size(52, 16);
-            this.checkBox136.TabIndex = 29;
-            this.checkBox136.Text = "Ch12";
-            this.checkBox136.UseVisualStyleBackColor = true;
-            // 
-            // checkBox137
-            // 
-            this.checkBox137.AutoSize = true;
-            this.checkBox137.Location = new System.Drawing.Point(350, 25);
-            this.checkBox137.Name = "checkBox137";
-            this.checkBox137.Size = new System.Drawing.Size(46, 16);
-            this.checkBox137.TabIndex = 24;
-            this.checkBox137.Text = "Ch7";
-            this.checkBox137.UseVisualStyleBackColor = true;
-            // 
-            // checkBox138
-            // 
-            this.checkBox138.AutoSize = true;
-            this.checkBox138.Location = new System.Drawing.Point(408, 25);
-            this.checkBox138.Name = "checkBox138";
-            this.checkBox138.Size = new System.Drawing.Size(46, 16);
-            this.checkBox138.TabIndex = 25;
-            this.checkBox138.Text = "Ch8";
-            this.checkBox138.UseVisualStyleBackColor = true;
-            // 
-            // checkBox139
-            // 
-            this.checkBox139.AutoSize = true;
-            this.checkBox139.Location = new System.Drawing.Point(234, 25);
-            this.checkBox139.Name = "checkBox139";
-            this.checkBox139.Size = new System.Drawing.Size(46, 16);
-            this.checkBox139.TabIndex = 22;
-            this.checkBox139.Text = "Ch5";
-            this.checkBox139.UseVisualStyleBackColor = true;
-            // 
-            // checkBox140
-            // 
-            this.checkBox140.AutoSize = true;
-            this.checkBox140.Location = new System.Drawing.Point(292, 25);
-            this.checkBox140.Name = "checkBox140";
-            this.checkBox140.Size = new System.Drawing.Size(46, 16);
-            this.checkBox140.TabIndex = 23;
-            this.checkBox140.Text = "Ch6";
-            this.checkBox140.UseVisualStyleBackColor = true;
-            // 
-            // checkBox141
-            // 
-            this.checkBox141.AutoSize = true;
-            this.checkBox141.Location = new System.Drawing.Point(8, 25);
-            this.checkBox141.Name = "checkBox141";
-            this.checkBox141.Size = new System.Drawing.Size(46, 16);
-            this.checkBox141.TabIndex = 18;
-            this.checkBox141.Text = "Ch1";
-            this.checkBox141.UseVisualStyleBackColor = true;
-            // 
-            // checkBox142
-            // 
-            this.checkBox142.AutoSize = true;
-            this.checkBox142.Location = new System.Drawing.Point(60, 25);
-            this.checkBox142.Name = "checkBox142";
-            this.checkBox142.Size = new System.Drawing.Size(46, 16);
-            this.checkBox142.TabIndex = 19;
-            this.checkBox142.Text = "Ch2";
-            this.checkBox142.UseVisualStyleBackColor = true;
-            // 
-            // checkBox143
-            // 
-            this.checkBox143.AutoSize = true;
-            this.checkBox143.Location = new System.Drawing.Point(118, 25);
-            this.checkBox143.Name = "checkBox143";
-            this.checkBox143.Size = new System.Drawing.Size(46, 16);
-            this.checkBox143.TabIndex = 20;
-            this.checkBox143.Text = "Ch3";
-            this.checkBox143.UseVisualStyleBackColor = true;
-            // 
-            // checkBox144
-            // 
-            this.checkBox144.AutoSize = true;
-            this.checkBox144.Location = new System.Drawing.Point(176, 25);
-            this.checkBox144.Name = "checkBox144";
-            this.checkBox144.Size = new System.Drawing.Size(46, 16);
-            this.checkBox144.TabIndex = 21;
-            this.checkBox144.Text = "Ch4";
-            this.checkBox144.UseVisualStyleBackColor = true;
             // 
             // NCS01_TabPage
             // 
@@ -5918,6 +5787,42 @@
             this.Fire_Data_Received_checkBox.Text = "Hex 변환";
             this.Fire_Data_Received_checkBox.UseVisualStyleBackColor = true;
             // 
+            // MPR_POWER_ON_OFF_button
+            // 
+            this.MPR_POWER_ON_OFF_button.Location = new System.Drawing.Point(382, 15);
+            this.MPR_POWER_ON_OFF_button.Name = "MPR_POWER_ON_OFF_button";
+            this.MPR_POWER_ON_OFF_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_POWER_ON_OFF_button.TabIndex = 68;
+            this.MPR_POWER_ON_OFF_button.Text = "실행";
+            this.MPR_POWER_ON_OFF_button.UseVisualStyleBackColor = true;
+            // 
+            // MPR_CD_Control_button
+            // 
+            this.MPR_CD_Control_button.Location = new System.Drawing.Point(288, 21);
+            this.MPR_CD_Control_button.Name = "MPR_CD_Control_button";
+            this.MPR_CD_Control_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_CD_Control_button.TabIndex = 69;
+            this.MPR_CD_Control_button.Text = "실행";
+            this.MPR_CD_Control_button.UseVisualStyleBackColor = true;
+            // 
+            // MPR_CD_Volume_button
+            // 
+            this.MPR_CD_Volume_button.Location = new System.Drawing.Point(422, 13);
+            this.MPR_CD_Volume_button.Name = "MPR_CD_Volume_button";
+            this.MPR_CD_Volume_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_CD_Volume_button.TabIndex = 70;
+            this.MPR_CD_Volume_button.Text = "실행";
+            this.MPR_CD_Volume_button.UseVisualStyleBackColor = true;
+            // 
+            // MPR_CD_Track_button
+            // 
+            this.MPR_CD_Track_button.Location = new System.Drawing.Point(422, 15);
+            this.MPR_CD_Track_button.Name = "MPR_CD_Track_button";
+            this.MPR_CD_Track_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_CD_Track_button.TabIndex = 71;
+            this.MPR_CD_Track_button.Text = "실행";
+            this.MPR_CD_Track_button.UseVisualStyleBackColor = true;
+            // 
             // NTEC_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -6005,8 +5910,16 @@
             this.NRT40_Normal_Groupbox.PerformLayout();
             this.MPR_TabPage.ResumeLayout(false);
             this.MPR_TabPage.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.MPR_Auto_Manual_Groupbox.ResumeLayout(false);
+            this.MPR_Auto_Manual_Groupbox.PerformLayout();
+            this.MPR_POWER_ON_OFF_Groupbox.ResumeLayout(false);
+            this.MPR_POWER_ON_OFF_Groupbox.PerformLayout();
+            this.MPR_CD_Track_Groupbox.ResumeLayout(false);
+            this.MPR_CD_Track_Groupbox.PerformLayout();
+            this.MPR_CD_Volume_Groupbox.ResumeLayout(false);
+            this.MPR_CD_Volume_Groupbox.PerformLayout();
+            this.MPR_CD_Control_Groupbox.ResumeLayout(false);
+            this.MPR_CD_Control_Groupbox.PerformLayout();
             this.NCS01_TabPage.ResumeLayout(false);
             this.NCS01_TabPage.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -6057,7 +5970,6 @@
         private System.Windows.Forms.TabControl NTEC_TabControl;
         private System.Windows.Forms.ListBox Tx_Str_listBox;
         private System.Windows.Forms.TextBox Tx_Single_textBox;
-        private System.Windows.Forms.Button NRG_Insert_Button;
         private System.Windows.Forms.Button Tx_One_button;
         private System.Windows.Forms.TextBox Delay_textBox;
         private System.Windows.Forms.Button Tx_Multi_button;
@@ -6181,50 +6093,6 @@
         private System.Windows.Forms.CheckBox NRT_Ch19_CheckBox;
         private System.Windows.Forms.CheckBox NRT_Ch20_CheckBox;
         private System.Windows.Forms.TabPage MPR_TabPage;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
-        private System.Windows.Forms.DomainUpDown domainUpDown2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.CheckBox checkBox97;
-        private System.Windows.Forms.CheckBox checkBox98;
-        private System.Windows.Forms.CheckBox checkBox99;
-        private System.Windows.Forms.CheckBox checkBox100;
-        private System.Windows.Forms.CheckBox checkBox101;
-        private System.Windows.Forms.CheckBox checkBox102;
-        private System.Windows.Forms.CheckBox checkBox103;
-        private System.Windows.Forms.CheckBox checkBox104;
-        private System.Windows.Forms.CheckBox checkBox113;
-        private System.Windows.Forms.CheckBox checkBox114;
-        private System.Windows.Forms.CheckBox checkBox115;
-        private System.Windows.Forms.CheckBox checkBox116;
-        private System.Windows.Forms.CheckBox checkBox117;
-        private System.Windows.Forms.CheckBox checkBox118;
-        private System.Windows.Forms.CheckBox checkBox119;
-        private System.Windows.Forms.CheckBox checkBox120;
-        private System.Windows.Forms.CheckBox checkBox121;
-        private System.Windows.Forms.CheckBox checkBox122;
-        private System.Windows.Forms.CheckBox checkBox123;
-        private System.Windows.Forms.CheckBox checkBox124;
-        private System.Windows.Forms.CheckBox checkBox125;
-        private System.Windows.Forms.CheckBox checkBox126;
-        private System.Windows.Forms.CheckBox checkBox127;
-        private System.Windows.Forms.CheckBox checkBox128;
-        private System.Windows.Forms.CheckBox checkBox129;
-        private System.Windows.Forms.CheckBox checkBox130;
-        private System.Windows.Forms.CheckBox checkBox131;
-        private System.Windows.Forms.CheckBox checkBox132;
-        private System.Windows.Forms.CheckBox checkBox133;
-        private System.Windows.Forms.CheckBox checkBox134;
-        private System.Windows.Forms.CheckBox checkBox135;
-        private System.Windows.Forms.CheckBox checkBox136;
-        private System.Windows.Forms.CheckBox checkBox137;
-        private System.Windows.Forms.CheckBox checkBox138;
-        private System.Windows.Forms.CheckBox checkBox139;
-        private System.Windows.Forms.CheckBox checkBox140;
-        private System.Windows.Forms.CheckBox checkBox141;
-        private System.Windows.Forms.CheckBox checkBox142;
-        private System.Windows.Forms.CheckBox checkBox143;
-        private System.Windows.Forms.CheckBox checkBox144;
         private System.Windows.Forms.TabPage NCS01_TabPage;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.CheckBox checkBox145;
@@ -6478,6 +6346,41 @@
         private System.Windows.Forms.Label GPO_Sel_Ch_label;
         private System.Windows.Forms.ComboBox GPO_ON_OFF_comboBox;
         private System.Windows.Forms.Label GPO_ON_OFF_label;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox MPR_Cmd_comboBox;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox MPR_CD_Control_Groupbox;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox MPR_CD_Volume_Groupbox;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.GroupBox MPR_POWER_ON_OFF_Groupbox;
+        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.RadioButton radioButton17;
+        private System.Windows.Forms.RadioButton radioButton18;
+        private System.Windows.Forms.GroupBox MPR_CD_Track_Groupbox;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.GroupBox MPR_Auto_Manual_Groupbox;
+        private System.Windows.Forms.RadioButton MPR_Auto_RadioButton;
+        private System.Windows.Forms.RadioButton MPR_Manual_RadioButton;
+        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.Button MPR_Insert_Button;
+        private System.Windows.Forms.Button NRG_Insert_Button;
+        private System.Windows.Forms.Button MPR_POWER_ON_OFF_button;
+        private System.Windows.Forms.Button MPR_CD_Track_button;
+        private System.Windows.Forms.Button MPR_CD_Volume_button;
+        private System.Windows.Forms.Button MPR_CD_Control_button;
     }
 }
 
