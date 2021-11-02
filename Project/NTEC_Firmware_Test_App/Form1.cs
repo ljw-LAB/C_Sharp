@@ -37,12 +37,12 @@ namespace NTEC_Firmware_Test_App
         byte NRT_Temp_NOR_25_32Ch_data = 0x00; // NRT40 25~32Ch 릴레이 채널 데이터
         byte NRT_Temp_NOR_33_40Ch_data = 0x00; // NRT40 33~40Ch 릴레이 채널 데이터
 
-        byte NEI_Temp_data_1_8Ch_data = 0x00;
-        byte NEI_Temp_data_9_14Ch_data = 0x00;
-        byte NEI_Temp_data_15_22Ch_data = 0x00;
-        byte NEI_Temp_data_23_28Ch_data = 0x00;
-        byte NEI_Temp_data_29_36Ch_data = 0x00;
-        byte NEI_Temp_data_37_42Ch_data = 0x00;
+        byte NEI_Temp_data_1_7Ch_data = 0x00;
+        byte NEI_Temp_data_8_14Ch_data = 0x00;
+        byte NEI_Temp_data_15_21Ch_data = 0x00;
+        byte NEI_Temp_data_22_28Ch_data = 0x00;
+        byte NEI_Temp_data_29_35Ch_data = 0x00;
+        byte NEI_Temp_data_36_42Ch_data = 0x00;
 
         public NTEC_Form()
         {
@@ -1805,7 +1805,7 @@ namespace NTEC_Firmware_Test_App
 
             if (NEI42_Cmd_comboBox.SelectedItem != null && (NEI42_ID_10_comboBox.SelectedItem != null && NEI42_ID_1_comboBox.SelectedItem != null))
             {
-                Tx_Str_listBox.Items.Add("&NEI" + NEI42_ID_10_comboBox.SelectedItem.ToString() + NEI42_ID_1_comboBox.SelectedItem.ToString() + "," + NEI42_Cmd_comboBox.SelectedItem + "," + NEI_Temp_data_1_8Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_9_14Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_15_22Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_23_28Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_29_36Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_37_42Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
+                Tx_Str_listBox.Items.Add("&NEI" + NEI42_ID_10_comboBox.SelectedItem.ToString() + NEI42_ID_1_comboBox.SelectedItem.ToString() + "," + NEI42_Cmd_comboBox.SelectedItem + "," + NEI_Temp_data_1_7Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_8_14Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_15_21Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_22_28Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_29_35Ch_data.ToString("X2").ToLower() + "," + NEI_Temp_data_36_42Ch_data.ToString("X2").ToLower()); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
             }
             else if (NEI42_Cmd_comboBox.SelectedItem == null && (NEI42_ID_10_comboBox.SelectedItem != null && NEI42_ID_1_comboBox.SelectedItem != null))
             {
@@ -1849,11 +1849,11 @@ namespace NTEC_Firmware_Test_App
         {
             if(NEI_Ch1_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x01;
+                NEI_Temp_data_1_7Ch_data += 0x01;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x01;
+                NEI_Temp_data_1_7Ch_data -= 0x01;
 
             }
         }
@@ -1862,11 +1862,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch2_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x02;
+                NEI_Temp_data_1_7Ch_data += 0x02;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x02;
+                NEI_Temp_data_1_7Ch_data -= 0x02;
 
             }
         }
@@ -1875,11 +1875,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch3_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x04;
+                NEI_Temp_data_1_7Ch_data += 0x04;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x04;
+                NEI_Temp_data_1_7Ch_data -= 0x04;
 
             }
         }
@@ -1888,11 +1888,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch4_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x08;
+                NEI_Temp_data_1_7Ch_data += 0x08;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x08;
+                NEI_Temp_data_1_7Ch_data -= 0x08;
 
             }
         }
@@ -1901,11 +1901,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch5_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x10;
+                NEI_Temp_data_1_7Ch_data += 0x10;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x10;
+                NEI_Temp_data_1_7Ch_data -= 0x10;
 
             }
         }
@@ -1914,11 +1914,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch6_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x20;
+                NEI_Temp_data_1_7Ch_data += 0x20;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x20;
+                NEI_Temp_data_1_7Ch_data -= 0x20;
 
             }
         }
@@ -1927,11 +1927,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch7_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x40;
+                NEI_Temp_data_1_7Ch_data += 0x40;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x40;
+                NEI_Temp_data_1_7Ch_data -= 0x40;
 
             }
         }
@@ -1940,11 +1940,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch8_CheckBox.Checked == true)
             {
-                NEI_Temp_data_1_8Ch_data += 0x80;
+                NEI_Temp_data_8_14Ch_data += 0x01;
             }
             else
             {
-                NEI_Temp_data_1_8Ch_data -= 0x80;
+                NEI_Temp_data_8_14Ch_data -= 0x01;
 
             }
         }
@@ -1953,11 +1953,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch9_CheckBox.Checked == true)
             {
-                NEI_Temp_data_9_14Ch_data += 0x01;
+                NEI_Temp_data_8_14Ch_data += 0x02;
             }
             else
             {
-                NEI_Temp_data_9_14Ch_data -= 0x01;
+                NEI_Temp_data_8_14Ch_data -= 0x02;
             }
         }
 
@@ -1965,11 +1965,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch10_CheckBox.Checked == true)
             {
-                NEI_Temp_data_9_14Ch_data += 0x02;
+                NEI_Temp_data_8_14Ch_data += 0x04;
             }
             else
             {
-                NEI_Temp_data_9_14Ch_data -= 0x02;
+                NEI_Temp_data_8_14Ch_data -= 0x04;
             }
         }
 
@@ -1977,11 +1977,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch11_CheckBox.Checked == true)
             {
-                NEI_Temp_data_9_14Ch_data += 0x04;
+                NEI_Temp_data_8_14Ch_data += 0x08;
             }
             else
             {
-                NEI_Temp_data_9_14Ch_data -= 0x04;
+                NEI_Temp_data_8_14Ch_data -= 0x08;
             }
         }
 
@@ -1989,11 +1989,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch12_CheckBox.Checked == true)
             {
-                NEI_Temp_data_9_14Ch_data += 0x08;
+                NEI_Temp_data_8_14Ch_data += 0x10;
             }
             else
             {
-                NEI_Temp_data_9_14Ch_data -= 0x08;
+                NEI_Temp_data_8_14Ch_data -= 0x10;
             }
         }
 
@@ -2001,11 +2001,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch13_CheckBox.Checked == true)
             {
-                NEI_Temp_data_9_14Ch_data += 0x10;
+                NEI_Temp_data_8_14Ch_data += 0x20;
             }
             else
             {
-                NEI_Temp_data_9_14Ch_data -= 0x10;
+                NEI_Temp_data_8_14Ch_data -= 0x20;
             }
         }
 
@@ -2013,11 +2013,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch14_CheckBox.Checked == true)
             {
-                NEI_Temp_data_9_14Ch_data += 0x20;
+                NEI_Temp_data_8_14Ch_data += 0x40;
             }
             else
             {
-                NEI_Temp_data_9_14Ch_data -= 0x20;
+                NEI_Temp_data_8_14Ch_data -= 0x40;
             }
         }
 
@@ -2025,11 +2025,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch15_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x01;
+                NEI_Temp_data_15_21Ch_data += 0x01;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x01;
+                NEI_Temp_data_15_21Ch_data -= 0x01;
             }
         }
 
@@ -2037,11 +2037,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch16_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x02;
+                NEI_Temp_data_15_21Ch_data += 0x02;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x02;
+                NEI_Temp_data_15_21Ch_data -= 0x02;
             }
         }
 
@@ -2049,11 +2049,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch17_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x04;
+                NEI_Temp_data_15_21Ch_data += 0x04;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x04;
+                NEI_Temp_data_15_21Ch_data -= 0x04;
             }
         }
 
@@ -2061,11 +2061,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch18_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x08;
+                NEI_Temp_data_15_21Ch_data += 0x08;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x08;
+                NEI_Temp_data_15_21Ch_data -= 0x08;
             }
         }
 
@@ -2073,11 +2073,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch19_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x10;
+                NEI_Temp_data_15_21Ch_data += 0x10;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x10;
+                NEI_Temp_data_15_21Ch_data -= 0x10;
             }
         }
 
@@ -2085,11 +2085,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch20_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x20;
+                NEI_Temp_data_15_21Ch_data += 0x20;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x20;
+                NEI_Temp_data_15_21Ch_data -= 0x20;
             }
         }
 
@@ -2097,11 +2097,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch21_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x40;
+                NEI_Temp_data_15_21Ch_data += 0x40;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x40;
+                NEI_Temp_data_15_21Ch_data -= 0x40;
             }
         }
 
@@ -2109,11 +2109,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch22_CheckBox.Checked == true)
             {
-                NEI_Temp_data_15_22Ch_data += 0x80;
+                NEI_Temp_data_22_28Ch_data += 0x01;
             }
             else
             {
-                NEI_Temp_data_15_22Ch_data -= 0x80;
+                NEI_Temp_data_22_28Ch_data -= 0x01;
             }
         }
 
@@ -2121,11 +2121,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch23_CheckBox.Checked == true)
             {
-                NEI_Temp_data_23_28Ch_data += 0x01;
+                NEI_Temp_data_22_28Ch_data += 0x02;
             }
             else
             {
-                NEI_Temp_data_23_28Ch_data -= 0x01;
+                NEI_Temp_data_22_28Ch_data -= 0x02;
             }
         }
 
@@ -2133,11 +2133,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch24_CheckBox.Checked == true)
             {
-                NEI_Temp_data_23_28Ch_data += 0x02;
+                NEI_Temp_data_22_28Ch_data += 0x04;
             }
             else
             {
-                NEI_Temp_data_23_28Ch_data -= 0x02;
+                NEI_Temp_data_22_28Ch_data -= 0x04;
             }
         }
 
@@ -2145,11 +2145,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch25_CheckBox.Checked == true)
             {
-                NEI_Temp_data_23_28Ch_data += 0x04;
+                NEI_Temp_data_22_28Ch_data += 0x08;
             }
             else
             {
-                NEI_Temp_data_23_28Ch_data -= 0x04;
+                NEI_Temp_data_22_28Ch_data -= 0x08;
             }
         }
 
@@ -2157,11 +2157,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch26_CheckBox.Checked == true)
             {
-                NEI_Temp_data_23_28Ch_data += 0x08;
+                NEI_Temp_data_22_28Ch_data += 0x10;
             }
             else
             {
-                NEI_Temp_data_23_28Ch_data -= 0x08;
+                NEI_Temp_data_22_28Ch_data -= 0x10;
             }
         }
 
@@ -2169,11 +2169,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch27_CheckBox.Checked == true)
             {
-                NEI_Temp_data_23_28Ch_data += 0x10;
+                NEI_Temp_data_22_28Ch_data += 0x20;
             }
             else
             {
-                NEI_Temp_data_23_28Ch_data -= 0x10;
+                NEI_Temp_data_22_28Ch_data -= 0x20;
             }
         }
 
@@ -2181,11 +2181,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch28_CheckBox.Checked == true)
             {
-                NEI_Temp_data_23_28Ch_data += 0x20;
+                NEI_Temp_data_22_28Ch_data += 0x40;
             }
             else
             {
-                NEI_Temp_data_23_28Ch_data -= 0x20;
+                NEI_Temp_data_22_28Ch_data -= 0x40;
             }
         }
 
@@ -2193,11 +2193,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch29_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x01;
+                NEI_Temp_data_29_35Ch_data += 0x01;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x01;
+                NEI_Temp_data_29_35Ch_data -= 0x01;
             }
         }
 
@@ -2205,11 +2205,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch30_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x02;
+                NEI_Temp_data_29_35Ch_data += 0x02;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x02;
+                NEI_Temp_data_29_35Ch_data -= 0x02;
             }
         }
 
@@ -2217,11 +2217,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch31_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x04;
+                NEI_Temp_data_29_35Ch_data += 0x04;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x04;
+                NEI_Temp_data_29_35Ch_data -= 0x04;
             }
         }
 
@@ -2229,11 +2229,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch32_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x08;
+                NEI_Temp_data_29_35Ch_data += 0x08;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x08;
+                NEI_Temp_data_29_35Ch_data -= 0x08;
             }
         }
 
@@ -2241,11 +2241,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch33_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x10;
+                NEI_Temp_data_29_35Ch_data += 0x10;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x10;
+                NEI_Temp_data_29_35Ch_data -= 0x10;
             }
         }
 
@@ -2253,11 +2253,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch34_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x20;
+                NEI_Temp_data_29_35Ch_data += 0x20;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x20;
+                NEI_Temp_data_29_35Ch_data -= 0x20;
             }
         }
 
@@ -2265,11 +2265,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch35_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x40;
+                NEI_Temp_data_29_35Ch_data += 0x40;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x40;
+                NEI_Temp_data_29_35Ch_data -= 0x40;
             }
         }
 
@@ -2277,11 +2277,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch36_CheckBox.Checked == true)
             {
-                NEI_Temp_data_29_36Ch_data += 0x80;
+                NEI_Temp_data_36_42Ch_data += 0x01;
             }
             else
             {
-                NEI_Temp_data_29_36Ch_data -= 0x80;
+                NEI_Temp_data_36_42Ch_data -= 0x01;
             }
         }
 
@@ -2289,11 +2289,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch37_CheckBox.Checked == true)
             {
-                NEI_Temp_data_37_42Ch_data += 0x01;
+                NEI_Temp_data_36_42Ch_data += 0x02;
             }
             else
             {
-                NEI_Temp_data_37_42Ch_data -= 0x01;
+                NEI_Temp_data_36_42Ch_data -= 0x02;
             }
         }
 
@@ -2301,11 +2301,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch38_CheckBox.Checked == true)
             {
-                NEI_Temp_data_37_42Ch_data += 0x02;
+                NEI_Temp_data_36_42Ch_data += 0x04;
             }
             else
             {
-                NEI_Temp_data_37_42Ch_data -= 0x02;
+                NEI_Temp_data_36_42Ch_data -= 0x04;
             }
         }
 
@@ -2313,11 +2313,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch39_CheckBox.Checked == true)
             {
-                NEI_Temp_data_37_42Ch_data += 0x04;
+                NEI_Temp_data_36_42Ch_data += 0x08;
             }
             else
             {
-                NEI_Temp_data_37_42Ch_data -= 0x04;
+                NEI_Temp_data_36_42Ch_data -= 0x08;
             }
         }
 
@@ -2325,11 +2325,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch40_CheckBox.Checked == true)
             {
-                NEI_Temp_data_37_42Ch_data += 0x08;
+                NEI_Temp_data_36_42Ch_data += 0x10;
             }
             else
             {
-                NEI_Temp_data_37_42Ch_data -= 0x08;
+                NEI_Temp_data_36_42Ch_data -= 0x10;
             }
         }
 
@@ -2337,11 +2337,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch41_CheckBox.Checked == true)
             {
-                NEI_Temp_data_37_42Ch_data += 0x10;
+                NEI_Temp_data_36_42Ch_data += 0x20;
             }
             else
             {
-                NEI_Temp_data_37_42Ch_data -= 0x10;
+                NEI_Temp_data_36_42Ch_data -= 0x20;
             }
         }
 
@@ -2349,11 +2349,11 @@ namespace NTEC_Firmware_Test_App
         {
             if (NEI_Ch42_CheckBox.Checked == true)
             {
-                NEI_Temp_data_37_42Ch_data += 0x20;
+                NEI_Temp_data_36_42Ch_data += 0x40;
             }
             else
             {
-                NEI_Temp_data_37_42Ch_data -= 0x20;
+                NEI_Temp_data_36_42Ch_data -= 0x40;
             }
         }
 
