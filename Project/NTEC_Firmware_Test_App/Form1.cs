@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using System.Text;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.IO;
+using System.Diagnostics;
 
 namespace NTEC_Firmware_Test_App
 {
@@ -49,7 +51,49 @@ namespace NTEC_Firmware_Test_App
             InitializeComponent();
            
         }
+        public void Text_Log_SaveLog()
+        {
+            StreamWriter sw;
+            sw = new StreamWriter("Log.txt");
 
+            int nCount = Monitoring_listBox.Items.Count;
+            for (int i = 0; i < nCount; i++)
+            {
+                sw.WriteLine(Monitoring_listBox.Items[i]);
+            }
+            sw.Close();
+
+            // 기본 편집기로 TXT 파일을 연다             
+            Process.Start("Log.txt");
+        }
+
+        public void Text_Cmd_SaveLog()
+        {
+            StreamWriter sw;
+            sw = new StreamWriter("Cmd.txt");
+
+            int nCount = Tx_Str_listBox.Items.Count;
+            for (int i = 0; i < nCount; i++)
+            {
+                sw.WriteLine(Tx_Str_listBox.Items[i]);
+            }
+            sw.Close();
+
+            // 기본 편집기로 TXT 파일을 연다             
+            Process.Start("Cmd.txt");
+        }
+
+        public void Text_Cmd_Load()
+        {
+            StreamReader reader = new StreamReader("Cmd.txt", System.Text.Encoding.Default);
+
+            //foreach (string s in reader.ReadToEnd().Split('\n'))
+           foreach (string s in System.IO.File.ReadLines("Cmd.txt"))
+            {
+                Tx_Str_listBox.Items.Add(s);
+            }
+            reader.Close();
+        }
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -374,6 +418,7 @@ namespace NTEC_Firmware_Test_App
                 if (Tx_Single_textBox.TextLength != 0)
                 {
                     serialPort1.Write(Tx_Single_textBox.Text + "\r\n");
+                    //Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + Tx_Single_textBox.Text + "      " + (Tx_Single_textBox.Text.Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
                     Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + Tx_Single_textBox.Text + "      " + (Tx_Single_textBox.Text.Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
                     Monitoring_listBox.SelectedIndex = Monitoring_listBox.Items.Count - 1;  // 계속 스크롤이 되도록 처리
                 }
@@ -390,7 +435,7 @@ namespace NTEC_Firmware_Test_App
 
         }
 
-        private void listBox2_Clr_Button_Click(object sender, EventArgs e)
+        private void Monitoring_listBox_Clr_Button_Click(object sender, EventArgs e)
         {
             Monitoring_listBox.Items.Clear(); // 송, 수신 문자열 관련 리스트박스 화면 클리어(지우기)
             Rx_Str_Cnt = 0;
@@ -427,7 +472,8 @@ namespace NTEC_Firmware_Test_App
                     foreach (var item in Tx_Str_listBox.Items)
                     {
                         serialPort1.Write(item.ToString() + "\r\n");
-                        Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                        //Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                        Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "\r\n" + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
                         await Task.Delay(msc);
 
                     }
@@ -456,7 +502,8 @@ namespace NTEC_Firmware_Test_App
                         foreach (var item in Tx_Str_listBox.Items)
                         {
                             serialPort1.Write(item.ToString() + "\r\n");
-                            Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                            //Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
+                            Monitoring_listBox.Items.Add(DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss.ffff") + "    " + item.ToString() + "\r\n" + "      " + (item.ToString().Count() + 2) + "      " + "T" + Tx_Str_Cnt++);
                             await Task.Delay(msc);
                         }
                     }
@@ -2457,15 +2504,12 @@ namespace NTEC_Firmware_Test_App
                 byteBuffer_12[2] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
                 byteBuffer_12[3] = 0x2D;
                 byteBuffer_12[4] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
-                byteBuffer_12[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+                byteBuffer_12[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_1_ConboBox.SelectedItem) | 0x30);
                 byteBuffer_12[6] = 0x2D;
                 byteBuffer_12[7] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
                 byteBuffer_12[8] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
                 byteBuffer_12[11] = 0x03;
 
-                sum_fire_12byte = (byteBuffer_12[0] + byteBuffer_12[1] + byteBuffer_12[2] + byteBuffer_12[3] + byteBuffer_12[4] + byteBuffer_12[5] + byteBuffer_12[6] + byteBuffer_12[7] + byteBuffer_12[8] + byteBuffer_12[9] + byteBuffer_12[11]) % 16 + 0x30;
-
-                byteBuffer_12[10] = Convert.ToByte(sum_fire_12byte);
 
                 switch (FIRE12Byte_Operate_ConboBox.SelectedItem)
                 {
@@ -2484,6 +2528,9 @@ namespace NTEC_Firmware_Test_App
                     case "전체 복구 신호":
                         break;
                 }
+
+                sum_fire_12byte = (byteBuffer_12[0] + byteBuffer_12[1] + byteBuffer_12[2] + byteBuffer_12[3] + byteBuffer_12[4] + byteBuffer_12[5] + byteBuffer_12[6] + byteBuffer_12[7] + byteBuffer_12[8] + byteBuffer_12[9] + byteBuffer_12[11]) % 16 + 0x30;
+                byteBuffer_12[10] = Convert.ToByte(sum_fire_12byte);
 
                 foreach (var b in byteBuffer_12)
                 {
@@ -3056,6 +3103,7 @@ namespace NTEC_Firmware_Test_App
                         }
                         break;
                     case"VER":
+                        Tx_Str_listBox.Items.Add("&NMC" + NMC44_ID_10_comboBox.SelectedItem.ToString() + NMC44_ID_1_comboBox.SelectedItem.ToString() + "," + NMC_Cmd_comboBox.SelectedItem); //복수의 문자열 송신을 위한 리스트 박스에 아이템 추가
                         break;
                     default:
                         MessageBox.Show("NMC44 명령어 오류!!!");
@@ -3124,8 +3172,56 @@ namespace NTEC_Firmware_Test_App
                     default:
                         MessageBox.Show("MPR 명령어 오류!!!");
                         break;
-
                 }
+            }
+        }
+
+        private void MPR_Insert_Button_Click(object sender, EventArgs e)
+        {
+            //byteBuffer_12[1] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_10_ConboBox.SelectedItem) | 0x30);
+            //byteBuffer_12[2] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Dong_ID_1_ConboBox.SelectedItem) | 0x30);
+            //byteBuffer_12[4] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+            //byteBuffer_12[5] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Gaedan_ID_10_ConboBox.SelectedItem) | 0x30);
+            //byteBuffer_12[7] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_10_ConboBox.SelectedItem) | 0x30);
+            //byteBuffer_12[8] = Convert.ToByte(Convert.ToByte(FIRE12Byte_Floor_ID_1_ConboBox.SelectedItem) | 0x30);
+        }
+
+        private void TxTSave_Button_Click(object sender, EventArgs e)
+        {
+            Text_Log_SaveLog();
+        }
+
+        private void TxTSave_Cmd_Button_Click(object sender, EventArgs e)
+        {
+            Text_Cmd_SaveLog();
+        }
+
+        private void TxTLoad_Cmd_Button_Click(object sender, EventArgs e)
+        {
+            Text_Cmd_Load();
+        }
+
+        private void Tx_Str_listBox_Clr_Button_Click(object sender, EventArgs e)
+        {
+            Tx_Str_listBox.Items.Clear();
+        }
+
+        private void NRG16_Clr_Button_Click(object sender, EventArgs e)
+        {
+            foreach(ComboBox comboBox in NRG16_TabPage.Controls.OfType<ComboBox>())
+            {
+                comboBox.SelectedIndex = 0;
+            }
+            foreach (CheckBox checkBox in NRG16_Normal_Groupbox.Controls.OfType<CheckBox>())
+            {
+                checkBox.Checked = false;
+                // do more CheckBox cleanup
+            }
+
+            foreach (CheckBox checkBox in NRG16_EM_Groupbox.Controls.OfType<CheckBox>())
+            {
+                checkBox.Checked = false;
+                // do more CheckBox cleanup
             }
         }
     }

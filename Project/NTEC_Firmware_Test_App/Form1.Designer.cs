@@ -252,25 +252,31 @@
             this.NRT_Ch3_CheckBox = new System.Windows.Forms.CheckBox();
             this.NRT_Ch4_CheckBox = new System.Windows.Forms.CheckBox();
             this.MPR_TabPage = new System.Windows.Forms.TabPage();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.MPR_Insert_Button = new System.Windows.Forms.Button();
             this.MPR_Auto_Manual_Groupbox = new System.Windows.Forms.GroupBox();
             this.MPR_Auto_RadioButton = new System.Windows.Forms.RadioButton();
             this.MPR_Manual_RadioButton = new System.Windows.Forms.RadioButton();
             this.MPR_POWER_ON_OFF_Groupbox = new System.Windows.Forms.GroupBox();
+            this.MPR_POWER_ON_OFF_button = new System.Windows.Forms.Button();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
             this.radioButton17 = new System.Windows.Forms.RadioButton();
             this.radioButton18 = new System.Windows.Forms.RadioButton();
             this.MPR_CD_Track_Groupbox = new System.Windows.Forms.GroupBox();
+            this.MPR_CD_Track_button = new System.Windows.Forms.Button();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.MPR_CD_Volume_Groupbox = new System.Windows.Forms.GroupBox();
+            this.MPR_CD_Volume_button = new System.Windows.Forms.Button();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.MPR_CD_Control_Groupbox = new System.Windows.Forms.GroupBox();
+            this.MPR_CD_Control_button = new System.Windows.Forms.Button();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
@@ -448,7 +454,7 @@
             this.Tx_Str_Delete_Button = new System.Windows.Forms.Button();
             this.Monitoring_listBox = new System.Windows.Forms.ListBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.listBox2_Clr_Button = new System.Windows.Forms.Button();
+            this.Monitoring_listBox_Clr_Button = new System.Windows.Forms.Button();
             this.Serial_Time_label = new System.Windows.Forms.Label();
             this.Data_Str_label = new System.Windows.Forms.Label();
             this.Length_label = new System.Windows.Forms.Label();
@@ -456,10 +462,14 @@
             this.Multi_Stop_button = new System.Windows.Forms.Button();
             this.Hex_con_Monitoring_listBox_checkBox2 = new System.Windows.Forms.CheckBox();
             this.Fire_Data_Received_checkBox = new System.Windows.Forms.CheckBox();
-            this.MPR_POWER_ON_OFF_button = new System.Windows.Forms.Button();
-            this.MPR_CD_Control_button = new System.Windows.Forms.Button();
-            this.MPR_CD_Volume_button = new System.Windows.Forms.Button();
-            this.MPR_CD_Track_button = new System.Windows.Forms.Button();
+            this.TxTSave_Button = new System.Windows.Forms.Button();
+            this.TxTLoad_Cmd_Button = new System.Windows.Forms.Button();
+            this.TxTSave_Cmd_Button = new System.Windows.Forms.Button();
+            this.Tx_Str_listBox_Clr_Button = new System.Windows.Forms.Button();
+            this.NRG16_Clr_Button = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.NTEC_TabControl.SuspendLayout();
             this.NMC44_TabPage.SuspendLayout();
             this.NMC44_FIRE10_Groupbox.SuspendLayout();
@@ -1713,6 +1723,7 @@
             // 
             // NRG16_TabPage
             // 
+            this.NRG16_TabPage.Controls.Add(this.NRG16_Clr_Button);
             this.NRG16_TabPage.Controls.Add(this.NRG16_CMD_Label);
             this.NRG16_TabPage.Controls.Add(this.NRG16_ID_1_comboBox);
             this.NRG16_TabPage.Controls.Add(this.NRG16_ID_10_comboBox);
@@ -2227,6 +2238,7 @@
             // 
             // NRT16_TabPage
             // 
+            this.NRT16_TabPage.Controls.Add(this.button5);
             this.NRT16_TabPage.Controls.Add(this.NRT16_CMD_Label);
             this.NRT16_TabPage.Controls.Add(this.NRT16_ID_1_comboBox);
             this.NRT16_TabPage.Controls.Add(this.NRT16_ID_10_comboBox);
@@ -2742,6 +2754,7 @@
             // 
             // NRT40_TabPage
             // 
+            this.NRT40_TabPage.Controls.Add(this.button6);
             this.NRT40_TabPage.Controls.Add(this.NRT40_CMD_Label);
             this.NRT40_TabPage.Controls.Add(this.NRT40_ID_1_comboBox);
             this.NRT40_TabPage.Controls.Add(this.NRT_Cmd_comboBox);
@@ -3342,6 +3355,8 @@
             // 
             // MPR_TabPage
             // 
+            this.MPR_TabPage.Controls.Add(this.listBox3);
+            this.MPR_TabPage.Controls.Add(this.listBox2);
             this.MPR_TabPage.Controls.Add(this.MPR_Insert_Button);
             this.MPR_TabPage.Controls.Add(this.MPR_Auto_Manual_Groupbox);
             this.MPR_TabPage.Controls.Add(this.MPR_POWER_ON_OFF_Groupbox);
@@ -3361,6 +3376,24 @@
             this.MPR_TabPage.Text = "MPR4000";
             this.MPR_TabPage.UseVisualStyleBackColor = true;
             // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 12;
+            this.listBox3.Location = new System.Drawing.Point(267, 375);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(200, 244);
+            this.listBox3.TabIndex = 68;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 12;
+            this.listBox2.Location = new System.Drawing.Point(7, 375);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(200, 244);
+            this.listBox2.TabIndex = 56;
+            // 
             // MPR_Insert_Button
             // 
             this.MPR_Insert_Button.Location = new System.Drawing.Point(434, 24);
@@ -3369,6 +3402,7 @@
             this.MPR_Insert_Button.TabIndex = 67;
             this.MPR_Insert_Button.Text = ">>";
             this.MPR_Insert_Button.UseVisualStyleBackColor = true;
+            this.MPR_Insert_Button.Click += new System.EventHandler(this.MPR_Insert_Button_Click);
             // 
             // MPR_Auto_Manual_Groupbox
             // 
@@ -3418,6 +3452,15 @@
             this.MPR_POWER_ON_OFF_Groupbox.TabStop = false;
             this.MPR_POWER_ON_OFF_Groupbox.Text = "Power ON/OFF";
             // 
+            // MPR_POWER_ON_OFF_button
+            // 
+            this.MPR_POWER_ON_OFF_button.Location = new System.Drawing.Point(382, 15);
+            this.MPR_POWER_ON_OFF_button.Name = "MPR_POWER_ON_OFF_button";
+            this.MPR_POWER_ON_OFF_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_POWER_ON_OFF_button.TabIndex = 68;
+            this.MPR_POWER_ON_OFF_button.Text = "실행";
+            this.MPR_POWER_ON_OFF_button.UseVisualStyleBackColor = true;
+            // 
             // radioButton16
             // 
             this.radioButton16.AutoSize = true;
@@ -3465,10 +3508,19 @@
             this.MPR_CD_Track_Groupbox.TabStop = false;
             this.MPR_CD_Track_Groupbox.Text = "CD Track";
             // 
+            // MPR_CD_Track_button
+            // 
+            this.MPR_CD_Track_button.Location = new System.Drawing.Point(422, 15);
+            this.MPR_CD_Track_button.Name = "MPR_CD_Track_button";
+            this.MPR_CD_Track_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_CD_Track_button.TabIndex = 71;
+            this.MPR_CD_Track_button.Text = "실행";
+            this.MPR_CD_Track_button.UseVisualStyleBackColor = true;
+            // 
             // radioButton14
             // 
             this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(36, 20);
+            this.radioButton14.Location = new System.Drawing.Point(7, 20);
             this.radioButton14.Name = "radioButton14";
             this.radioButton14.Size = new System.Drawing.Size(74, 16);
             this.radioButton14.TabIndex = 4;
@@ -3479,7 +3531,7 @@
             // radioButton11
             // 
             this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(303, 20);
+            this.radioButton11.Location = new System.Drawing.Point(274, 20);
             this.radioButton11.Name = "radioButton11";
             this.radioButton11.Size = new System.Drawing.Size(104, 16);
             this.radioButton11.TabIndex = 3;
@@ -3490,7 +3542,7 @@
             // radioButton12
             // 
             this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(213, 20);
+            this.radioButton12.Location = new System.Drawing.Point(184, 20);
             this.radioButton12.Name = "radioButton12";
             this.radioButton12.Size = new System.Drawing.Size(84, 16);
             this.radioButton12.TabIndex = 2;
@@ -3501,7 +3553,7 @@
             // radioButton13
             // 
             this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(116, 20);
+            this.radioButton13.Location = new System.Drawing.Point(87, 20);
             this.radioButton13.Name = "radioButton13";
             this.radioButton13.Size = new System.Drawing.Size(91, 16);
             this.radioButton13.TabIndex = 1;
@@ -3523,10 +3575,19 @@
             this.MPR_CD_Volume_Groupbox.TabStop = false;
             this.MPR_CD_Volume_Groupbox.Text = "CD Volume";
             // 
+            // MPR_CD_Volume_button
+            // 
+            this.MPR_CD_Volume_button.Location = new System.Drawing.Point(422, 13);
+            this.MPR_CD_Volume_button.Name = "MPR_CD_Volume_button";
+            this.MPR_CD_Volume_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_CD_Volume_button.TabIndex = 70;
+            this.MPR_CD_Volume_button.Text = "실행";
+            this.MPR_CD_Volume_button.UseVisualStyleBackColor = true;
+            // 
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(36, 18);
+            this.radioButton8.Location = new System.Drawing.Point(7, 18);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(85, 16);
             this.radioButton8.TabIndex = 4;
@@ -3537,7 +3598,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(321, 18);
+            this.radioButton5.Location = new System.Drawing.Point(292, 18);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(85, 16);
             this.radioButton5.TabIndex = 3;
@@ -3548,7 +3609,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(235, 18);
+            this.radioButton6.Location = new System.Drawing.Point(206, 18);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(80, 16);
             this.radioButton6.TabIndex = 2;
@@ -3559,7 +3620,7 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(127, 18);
+            this.radioButton7.Location = new System.Drawing.Point(98, 18);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(102, 16);
             this.radioButton7.TabIndex = 1;
@@ -3582,6 +3643,15 @@
             this.MPR_CD_Control_Groupbox.TabIndex = 63;
             this.MPR_CD_Control_Groupbox.TabStop = false;
             this.MPR_CD_Control_Groupbox.Text = "CD Control";
+            // 
+            // MPR_CD_Control_button
+            // 
+            this.MPR_CD_Control_button.Location = new System.Drawing.Point(288, 21);
+            this.MPR_CD_Control_button.Name = "MPR_CD_Control_button";
+            this.MPR_CD_Control_button.Size = new System.Drawing.Size(43, 27);
+            this.MPR_CD_Control_button.TabIndex = 69;
+            this.MPR_CD_Control_button.Text = "실행";
+            this.MPR_CD_Control_button.UseVisualStyleBackColor = true;
             // 
             // radioButton4
             // 
@@ -3705,6 +3775,7 @@
             // 
             // NCS01_TabPage
             // 
+            this.NCS01_TabPage.Controls.Add(this.button7);
             this.NCS01_TabPage.Controls.Add(this.NCS_Insert_Button);
             this.NCS01_TabPage.Controls.Add(this.NCS01_CMD_Label);
             this.NCS01_TabPage.Controls.Add(this.groupBox7);
@@ -5633,9 +5704,9 @@
             // 
             // Tx_One_button
             // 
-            this.Tx_One_button.Location = new System.Drawing.Point(891, 492);
+            this.Tx_One_button.Location = new System.Drawing.Point(1154, 492);
             this.Tx_One_button.Name = "Tx_One_button";
-            this.Tx_One_button.Size = new System.Drawing.Size(84, 30);
+            this.Tx_One_button.Size = new System.Drawing.Size(71, 31);
             this.Tx_One_button.TabIndex = 21;
             this.Tx_One_button.Text = "한번 전송";
             this.Tx_One_button.UseVisualStyleBackColor = true;
@@ -5643,7 +5714,7 @@
             // 
             // Delay_textBox
             // 
-            this.Delay_textBox.Location = new System.Drawing.Point(818, 498);
+            this.Delay_textBox.Location = new System.Drawing.Point(1081, 497);
             this.Delay_textBox.Name = "Delay_textBox";
             this.Delay_textBox.Size = new System.Drawing.Size(67, 21);
             this.Delay_textBox.TabIndex = 24;
@@ -5651,9 +5722,9 @@
             // 
             // Tx_Multi_button
             // 
-            this.Tx_Multi_button.Location = new System.Drawing.Point(981, 492);
+            this.Tx_Multi_button.Location = new System.Drawing.Point(1230, 492);
             this.Tx_Multi_button.Name = "Tx_Multi_button";
-            this.Tx_Multi_button.Size = new System.Drawing.Size(84, 30);
+            this.Tx_Multi_button.Size = new System.Drawing.Size(71, 31);
             this.Tx_Multi_button.TabIndex = 25;
             this.Tx_Multi_button.Text = "연속 전송";
             this.Tx_Multi_button.UseVisualStyleBackColor = true;
@@ -5672,7 +5743,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(747, 503);
+            this.label10.Location = new System.Drawing.Point(1010, 502);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 12);
             this.label10.TabIndex = 41;
@@ -5711,15 +5782,15 @@
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
-            // listBox2_Clr_Button
+            // Monitoring_listBox_Clr_Button
             // 
-            this.listBox2_Clr_Button.Location = new System.Drawing.Point(1461, 491);
-            this.listBox2_Clr_Button.Name = "listBox2_Clr_Button";
-            this.listBox2_Clr_Button.Size = new System.Drawing.Size(52, 31);
-            this.listBox2_Clr_Button.TabIndex = 47;
-            this.listBox2_Clr_Button.Text = "Clear";
-            this.listBox2_Clr_Button.UseVisualStyleBackColor = true;
-            this.listBox2_Clr_Button.Click += new System.EventHandler(this.listBox2_Clr_Button_Click);
+            this.Monitoring_listBox_Clr_Button.Location = new System.Drawing.Point(1461, 491);
+            this.Monitoring_listBox_Clr_Button.Name = "Monitoring_listBox_Clr_Button";
+            this.Monitoring_listBox_Clr_Button.Size = new System.Drawing.Size(52, 31);
+            this.Monitoring_listBox_Clr_Button.TabIndex = 47;
+            this.Monitoring_listBox_Clr_Button.Text = "Clear";
+            this.Monitoring_listBox_Clr_Button.UseVisualStyleBackColor = true;
+            this.Monitoring_listBox_Clr_Button.Click += new System.EventHandler(this.Monitoring_listBox_Clr_Button_Click);
             // 
             // Serial_Time_label
             // 
@@ -5759,9 +5830,9 @@
             // 
             // Multi_Stop_button
             // 
-            this.Multi_Stop_button.Location = new System.Drawing.Point(1071, 492);
+            this.Multi_Stop_button.Location = new System.Drawing.Point(1307, 492);
             this.Multi_Stop_button.Name = "Multi_Stop_button";
-            this.Multi_Stop_button.Size = new System.Drawing.Size(84, 30);
+            this.Multi_Stop_button.Size = new System.Drawing.Size(71, 31);
             this.Multi_Stop_button.TabIndex = 52;
             this.Multi_Stop_button.Text = "연속 정지";
             this.Multi_Stop_button.UseVisualStyleBackColor = true;
@@ -5787,47 +5858,92 @@
             this.Fire_Data_Received_checkBox.Text = "Hex 변환";
             this.Fire_Data_Received_checkBox.UseVisualStyleBackColor = true;
             // 
-            // MPR_POWER_ON_OFF_button
+            // TxTSave_Button
             // 
-            this.MPR_POWER_ON_OFF_button.Location = new System.Drawing.Point(382, 15);
-            this.MPR_POWER_ON_OFF_button.Name = "MPR_POWER_ON_OFF_button";
-            this.MPR_POWER_ON_OFF_button.Size = new System.Drawing.Size(43, 27);
-            this.MPR_POWER_ON_OFF_button.TabIndex = 68;
-            this.MPR_POWER_ON_OFF_button.Text = "실행";
-            this.MPR_POWER_ON_OFF_button.UseVisualStyleBackColor = true;
+            this.TxTSave_Button.Location = new System.Drawing.Point(1384, 492);
+            this.TxTSave_Button.Name = "TxTSave_Button";
+            this.TxTSave_Button.Size = new System.Drawing.Size(71, 31);
+            this.TxTSave_Button.TabIndex = 56;
+            this.TxTSave_Button.Text = "Text 저장";
+            this.TxTSave_Button.UseVisualStyleBackColor = true;
+            this.TxTSave_Button.Click += new System.EventHandler(this.TxTSave_Button_Click);
             // 
-            // MPR_CD_Control_button
+            // TxTLoad_Cmd_Button
             // 
-            this.MPR_CD_Control_button.Location = new System.Drawing.Point(288, 21);
-            this.MPR_CD_Control_button.Name = "MPR_CD_Control_button";
-            this.MPR_CD_Control_button.Size = new System.Drawing.Size(43, 27);
-            this.MPR_CD_Control_button.TabIndex = 69;
-            this.MPR_CD_Control_button.Text = "실행";
-            this.MPR_CD_Control_button.UseVisualStyleBackColor = true;
+            this.TxTLoad_Cmd_Button.Location = new System.Drawing.Point(826, 491);
+            this.TxTLoad_Cmd_Button.Name = "TxTLoad_Cmd_Button";
+            this.TxTLoad_Cmd_Button.Size = new System.Drawing.Size(96, 31);
+            this.TxTLoad_Cmd_Button.TabIndex = 57;
+            this.TxTLoad_Cmd_Button.Text = "Text 불러오기";
+            this.TxTLoad_Cmd_Button.UseVisualStyleBackColor = true;
+            this.TxTLoad_Cmd_Button.Click += new System.EventHandler(this.TxTLoad_Cmd_Button_Click);
             // 
-            // MPR_CD_Volume_button
+            // TxTSave_Cmd_Button
             // 
-            this.MPR_CD_Volume_button.Location = new System.Drawing.Point(422, 13);
-            this.MPR_CD_Volume_button.Name = "MPR_CD_Volume_button";
-            this.MPR_CD_Volume_button.Size = new System.Drawing.Size(43, 27);
-            this.MPR_CD_Volume_button.TabIndex = 70;
-            this.MPR_CD_Volume_button.Text = "실행";
-            this.MPR_CD_Volume_button.UseVisualStyleBackColor = true;
+            this.TxTSave_Cmd_Button.Location = new System.Drawing.Point(749, 491);
+            this.TxTSave_Cmd_Button.Name = "TxTSave_Cmd_Button";
+            this.TxTSave_Cmd_Button.Size = new System.Drawing.Size(71, 31);
+            this.TxTSave_Cmd_Button.TabIndex = 58;
+            this.TxTSave_Cmd_Button.Text = "Text 저장";
+            this.TxTSave_Cmd_Button.UseVisualStyleBackColor = true;
+            this.TxTSave_Cmd_Button.Click += new System.EventHandler(this.TxTSave_Cmd_Button_Click);
             // 
-            // MPR_CD_Track_button
+            // Tx_Str_listBox_Clr_Button
             // 
-            this.MPR_CD_Track_button.Location = new System.Drawing.Point(422, 15);
-            this.MPR_CD_Track_button.Name = "MPR_CD_Track_button";
-            this.MPR_CD_Track_button.Size = new System.Drawing.Size(43, 27);
-            this.MPR_CD_Track_button.TabIndex = 71;
-            this.MPR_CD_Track_button.Text = "실행";
-            this.MPR_CD_Track_button.UseVisualStyleBackColor = true;
+            this.Tx_Str_listBox_Clr_Button.Location = new System.Drawing.Point(928, 492);
+            this.Tx_Str_listBox_Clr_Button.Name = "Tx_Str_listBox_Clr_Button";
+            this.Tx_Str_listBox_Clr_Button.Size = new System.Drawing.Size(52, 31);
+            this.Tx_Str_listBox_Clr_Button.TabIndex = 59;
+            this.Tx_Str_listBox_Clr_Button.Text = "Clear";
+            this.Tx_Str_listBox_Clr_Button.UseVisualStyleBackColor = true;
+            this.Tx_Str_listBox_Clr_Button.Click += new System.EventHandler(this.Tx_Str_listBox_Clr_Button_Click);
+            // 
+            // NRG16_Clr_Button
+            // 
+            this.NRG16_Clr_Button.Location = new System.Drawing.Point(261, 24);
+            this.NRG16_Clr_Button.Name = "NRG16_Clr_Button";
+            this.NRG16_Clr_Button.Size = new System.Drawing.Size(44, 41);
+            this.NRG16_Clr_Button.TabIndex = 60;
+            this.NRG16_Clr_Button.Text = "Clear";
+            this.NRG16_Clr_Button.UseVisualStyleBackColor = true;
+            this.NRG16_Clr_Button.Click += new System.EventHandler(this.NRG16_Clr_Button_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(261, 24);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(44, 41);
+            this.button5.TabIndex = 61;
+            this.button5.Text = "Clear";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(261, 24);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(44, 41);
+            this.button6.TabIndex = 61;
+            this.button6.Text = "Clear";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(261, 24);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(44, 41);
+            this.button7.TabIndex = 63;
+            this.button7.Text = "Clear";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // NTEC_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1525, 683);
+            this.Controls.Add(this.Tx_Str_listBox_Clr_Button);
+            this.Controls.Add(this.TxTSave_Cmd_Button);
+            this.Controls.Add(this.TxTLoad_Cmd_Button);
+            this.Controls.Add(this.TxTSave_Button);
             this.Controls.Add(this.NTEC_TabControl);
             this.Controls.Add(this.Fire_Data_Received_checkBox);
             this.Controls.Add(this.Hex_con_Monitoring_listBox_checkBox2);
@@ -5837,7 +5953,7 @@
             this.Controls.Add(this.Data_Str_label);
             this.Controls.Add(this.Serial_Time_label);
             this.Controls.Add(this.Tx_Multi_button);
-            this.Controls.Add(this.listBox2_Clr_Button);
+            this.Controls.Add(this.Monitoring_listBox_Clr_Button);
             this.Controls.Add(this.Tx_One_button);
             this.Controls.Add(this.Monitoring_listBox);
             this.Controls.Add(this.Tx_Str_Delete_Button);
@@ -6138,7 +6254,7 @@
         private System.Windows.Forms.TabPage NEI42_TabPage;
         private System.Windows.Forms.ListBox Monitoring_listBox;
         private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Button listBox2_Clr_Button;
+        private System.Windows.Forms.Button Monitoring_listBox_Clr_Button;
         private System.Windows.Forms.Label Serial_Time_label;
         private System.Windows.Forms.Label Data_Str_label;
         private System.Windows.Forms.Label Length_label;
@@ -6381,6 +6497,16 @@
         private System.Windows.Forms.Button MPR_CD_Track_button;
         private System.Windows.Forms.Button MPR_CD_Volume_button;
         private System.Windows.Forms.Button MPR_CD_Control_button;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button TxTSave_Button;
+        private System.Windows.Forms.Button TxTLoad_Cmd_Button;
+        private System.Windows.Forms.Button TxTSave_Cmd_Button;
+        private System.Windows.Forms.Button Tx_Str_listBox_Clr_Button;
+        private System.Windows.Forms.Button NRG16_Clr_Button;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 
